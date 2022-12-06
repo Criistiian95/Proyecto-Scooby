@@ -9,10 +9,11 @@ Somos el Grupo 2, conformado por:
 - Maldonado, Alejandro
 - Rodriguez, Sandra
 - Saban, Brandon Nicolas
+
+
 Tenemos conocimientos básicos en JavaScript y diseño web. 
 
 👩‍💻Proyecto:
-
 El sitio web a crear es un e-commerce abocado a la venta de comida rápida, tal como hamburguesas, complementos y bebidas. Nuestro público será general, ya que apuntaríamos a todos aquellos que coman carnes rojas o bien veganos/vegetarianos, gente que viva cerca, ya que vamos a implementar el servicio de Take Away
 
 📐Arquitectura:
