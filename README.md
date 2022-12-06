@@ -18,6 +18,13 @@ El sitio web a crear es un e-commerce abocado a la venta de comida rápida, tal 
 📐Arquitectura:
 Aplicando las tecnologias adquiridas en el curso full stack ,(entre ellas HTML,CSS ,NodeJS,Express, Js,MongoDB), crearemos el proyecto Ecommerce.
 
+:date: Metodologias:
+Trabajaremos utilizando metodologias agiles y la herramienta Trello para la distribucion de tareas en tablero y trabajar mediante Sprints.
+
+https://trello.com/b/LsRXSaTL/proyecto-integrador-final-grupo-2-scooby
+
+Mediante Zoom, Discord y Whatspp vamos coordinando el trabajo y manteniendo la comunicación.
+
 📝Referencias: 
 1. https://www.valkymia.com/
 2. https://www.mercadolibre.com.ar/
