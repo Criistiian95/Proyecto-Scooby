@@ -26,6 +26,8 @@ https://trello.com/b/LsRXSaTL/proyecto-integrador-final-grupo-2-scooby
 
 Mediante Zoom, Discord y Whatspp vamos coordinando el trabajo y manteniendo la comunicación.
 
+- Link de Figma con los bocetos a color de los wireframes: https://www.figma.com/file/Bo0SwJbhBa5bWToEuBi6ne/Scooby?node-id=93%3A49&t=uUlT3G2p3VmG9iKa-1 
+
 📝Referencias: 
 1. https://www.valkymia.com/
 2. https://www.mercadolibre.com.ar/
