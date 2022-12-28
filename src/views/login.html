@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scooby Burgers</title>
+  <link href="https://fonts.googleapis.com/css2?family=Karma&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+  <div>
+    <header>
+      <h1>Scooby Burgers</h1>
+      <h3 class="myaccount"> Mi Cuenta</h3>
+    </header>
+  </div>
+  <nav>
+    <form action="../../form-result.php" method="post" target="_blank">
+      <input type="search" name="busquedamusica" placeholder="BUSCAR PRODUCTOS" class="searchbar">
+      <input type="submit" value="Buscar" class="buttonsearch">
+    </form>
+  </nav>
+  <main>
+    <article>
+      <h2>Inicia Sesión</h2>
+      <div>
+        <h2>Login</h2>
+      </div>
+      <p>Inicia sesión en una cuenta existente</p>
+      <form action="resultado.html" method="POST">
+        <p><input type="email" name="email" placeholder="Correo Electronico" class="email" required></p>
+        <p><input type="password" name="password" placeholder="Contraseña" class="password" required></p>
+        <form>
+          <div>
+            <label>
+              <input type="checkbox" name="rememberme" value="rememberme" id="tick">
+              <p class="rememberme">RECUÉRDAME</p>
+            </label>
+            <div class="boton">
+              <button type="submit" id="login">LOGIN</button>
+            </div>
+        </form>
+        <h4 class="opcionuno">Crea una nueva cuenta</h4>
+        <h4 class="opciondos">Olvidé mi contraseña</h4>
+    </article>
+  </main>
+  <footer>
+    <div class="containerfooter">
+      <h2 class="footeruno">VISITANOS</h2>
+      <h3 class="footerdos">@scooby_burgers</h3>
+    </div>
+  </footer>
+</body>
+
+</html>

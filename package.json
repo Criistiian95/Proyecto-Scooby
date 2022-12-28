@@ -1,0 +1,28 @@
+{
+  "name": "equipo2_scooby",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "🛒🌐 Ecommerce- Scooby Burguer :dog: :hamburger:",
+  "main": "app.js",
+
+
+  "scripts": {
+    "start": "node app",
+    "dev": "npx nodemon app",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrandonNicolas11/equipo2_Scooby.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BrandonNicolas11/equipo2_Scooby/issues"
+  },
+  "homepage": "https://github.com/BrandonNicolas11/equipo2_Scooby#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
