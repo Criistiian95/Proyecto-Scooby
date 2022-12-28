@@ -1,59 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Scooby Burgers</title>
-  <link href="https://fonts.googleapis.com/css2?family=Karma&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-  <link rel="stylesheet" href="/estilos.css">   
+  <link href="https://fonts.googleapis.com/css2?family=Karma&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/estilos.css">
 </head>
+
 <body>
-  <header>
-    <div class="top-header">
-    <div class="logo">
-    <img src="/images/logosb.svg" alt="logosb">
-     </div>
-    <h1> Scooby Burgers </h1>
-    <div class="form">
-                <div class="input"><i class="fa fa-search"></i> Buscar</div>
-      <div class="submit"></div>
-                </div>
-    <nav>
-      <div>
-    <ul>
-     <li><a href="#">Inicio</a></li>
-     <li><a href="#">Menú</a></li>
-     <li><a href="#">Mis Pedidos</a></li>
-     <li><a href="#">Sucursales</a></li>  
-    </ul>
-      </div>
+  <div>
+    <header>
+      <h1>Scooby Burgers</h1>
+      <h3 class="myaccount"> Mi Cuenta</h3>
+    </header>
+  </div>
+  <nav>
+    <form action="../../form-result.php" method="post" target="_blank">
+      <input type="search" name="busquedamusica" placeholder="BUSCAR PRODUCTOS" class="searchbar">
+      <input type="submit" value="Buscar" class="buttonsearch">
+    </form>
   </nav>
-    <article> 
+  <main>
+    <article>
       <h2>Inicia Sesión</h2>
-      <div><h2>Login</h2></div>
+      <div>
+        <h2>Login</h2>
+      </div>
       <p>Inicia sesión en una cuenta existente</p>
       <form action="resultado.html" method="POST">
-      <p><label for="email">Email:</label> 
-        <input type="email" name="email" id="email" required></p>
-        <p><label for="contraseña">Contraseña:</label> 
-        <input type="password" name="password" id="password" required></p>
+        <p><input type="email" name="email" placeholder="Correo Electronico" class="email" required></p>
+        <p><input type="password" name="password" placeholder="Contraseña" class="password" required></p>
         <form>
-        <label>
-          <input type="checkbox" name="rememberme" value="rememberme" id="rememberme"> RECUÉRDAME
-        </label>  
-        <div class="boton">
-        <button type= "submit" id="login">LOGIN</button>   
-        </div>
-    </form>
+          <div>
+            <label>
+              <input type="checkbox" name="rememberme" value="rememberme" id="tick">
+              <p class="rememberme">RECUÉRDAME</p>
+            </label>
+            <div class="boton">
+              <button type="submit" id="login">LOGIN</button>
+            </div>
+        </form>
+        <h4 class="opcionuno">Crea una nueva cuenta</h4>
+        <h4 class="opciondos">Olvidé mi contraseña</h4>
     </article>
-  </header>
+  </main>
   <footer>
-    <div class="footercontainer">
-    <h2>Visitanos</h2>
-    <p>@scooby_burgers</p>
+    <div class="containerfooter">
+      <h2 class="footeruno">VISITANOS</h2>
+      <h3 class="footerdos">@scooby_burgers</h3>
     </div>
   </footer>
 </body>
+
 </html>
