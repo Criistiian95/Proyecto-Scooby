@@ -1,0 +1,71 @@
+ul.lista{
+	width: 100%;
+	list-style-type: none;
+	margin-top: -20px;
+	margin-bottom: -20px;
+	overflow: hidden;
+	background-color:#D9D9D9;
+	padding: 0px;
+	
+}
+
+li{
+	float: left;
+}
+
+li  .desplegada{
+	display: block;
+	color: #1E150E;/*color letra lista principal*/
+	text-align: left;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+li  .desplegable:hover .desplegada{
+	background-color:#1E150E  ;/*color del mouse*/
+
+}
+
+li.desplegable{
+	display: inline-block;
+}
+
+.contenedor_desplegable{
+	display:none;
+	position: absolute;
+	background-color: #D9D9D9;/*color fondo lista*/
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+	z-index: 1;
+}
+
+.contenedor_desplegable a{
+	color: #1E150E; /*color letra contenido*/
+	padding: 10px 12px;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+}
+
+.contenedor_desplegable a:hover{
+	background-color: #1E150E;
+}
+
+
+.desplegable:hover .contenedor_desplegable{
+	display:block;
+}
+
+li a{
+	display: inline-block;
+	color: #1E150E;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+
+}
+
+li a:hover{
+	background-color:#1E150E ;
+	color: #D9D9D9;
+}

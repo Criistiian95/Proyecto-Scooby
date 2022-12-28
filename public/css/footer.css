@@ -1,0 +1,78 @@
+.footer{
+    margin-top: 70px;
+    display: flex;
+    min-height: 100px;
+    width: 100%;
+    height: auto;
+    background-color: #6352A3;
+}
+
+h4{
+   color: #1E150E;
+   font-weight: bolder;
+   text-decoration: underline;
+   text-align: center;
+}
+
+.redes{
+    margin-left: 10px; 
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.redes a:hover{
+    background-color: #6352A3;
+}
+
+
+.redes #facebok{
+    position: relative;
+    
+    display: flex;
+
+}
+.redes #instagram{
+    position: relative;
+
+    display: flex;
+}
+.redes #twitter{
+    position: relative;
+    
+    display: flex;
+}
+
+.redes #logo_fb{
+    width: 30px;
+    height: 30px;
+}
+
+.redes #logo_ins{
+    width: 30px;
+    height: 30px;
+}
+
+.redes #logo_tw{
+    width: 30px;
+    height: 30px;
+}
+.columna_medio{
+    margin-left: 150px !important;
+    text-align: left;
+    color: #1E150E;
+    font-weight: bolder;
+
+}
+
+.pagos{
+    margin-left: 100px !important;
+    display: flex;
+    
+}
+
+.pagos #logo_pagos{
+    gap: 30px;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+}

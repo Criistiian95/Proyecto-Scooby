@@ -1,12 +1,168 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Scooby Burger</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Karma:wght@300&display=swap">
+	<link rel="stylesheet" type="text/css" href="css/home.css">
+	<link rel="stylesheet" type="text/css" href="css/listas.css">
+	<link rel="stylesheet" type="text/css" href="css/slider.css">
+	<link rel="stylesheet" type="text/css" href="css/pedidas.css">
+	<link rel="stylesheet" type="text/css" href="css/ofertas.css">
+	<link rel="stylesheet" type="text/css" href="css/footer.css">
+
 </head>
+<header>
+    <section class="arriba">
+    <a href="/home.html"><img src="img/logo.png" class="logo"></a>
+	<h1 a href="/home.html"> Scooby Burger</a></h1>
+<div class="buscador">
+    <img src="img/lupa.png" class="lupa">
+	<input class="inp_buscador" placeholder="Buscar Productos...">
+	</div>
+<div class="contenedor_derecha">
+	<img src="img/persona.png" class="persona">
+	<img src="img/carrito.png" class="carrito">
+	</div>
+</header>
 <body>
-    <h1>Home </h1>
+	<section class="menu">
+	<h3>
+		<ul class="lista">
+			<li><a href="/home.html" class="activo">Inicio</a></li>
+			<div class="listas">
+			<li class="desplegable"> <!--dropdown-->
+			<a href="javascript:Void(0)" class="desplegada"> Productos</a> <!--dropbtn-->
+			<div class="contenedor_desplegable"> <!--dropdown-content-->
+				<a href="https://www.google.com">Hamburguesas</a>
+				<a href="https://www.google.com/">Veganas</a>
+				<a href="https://www.google.com/">Bebidas</a>
+				<a href="Tienda.html"> Ver todos</a>
+			</div>
+		</li>
+		</div>
+			<li><a href="carrito"> Mis Pedidos</a></li>
+			<li><a href="sucursales">Sucursales</a></li>
+			</ul>
+			</h3>
+		</section>
+		<section class="slider_principal">
+	<h4 class="contenedor_slider">
+		<ul class="slider">
+			<li id="foto1">
+				<img src="/img/foto2.jpg">
+			</li>
+			<li id="foto2">
+				<img src="/img/foto1.jpg">
+			</li>
+			<li id="foto3">
+				<img src="/img/foto3.jpg">
+			</li>
+			<li id="vegana">
+				<img src="/img/vegana.jpg">
+			</li>
+		</ul>
+
+		<ul class="menu">
+			<li>
+				<a href="#foto1">1</a>
+			</li>
+			<li>
+				<a href="#foto2">2</a>
+			</li>
+			<li>
+				<a href="#foto3">3</a>
+			</li>
+			<li>
+				<a href="#vegana">4</a>
+			</li>
+		</ul>
+	</h4>
+</section>
+<section class="pedidas">
+<div class="mas_pedidas">
+	<p>MAS PEDIDAS</p>
+</div>
+<div class="foto_pedidas">
+	<ul class="lista_fotos">
+		<li id="foto4">
+			<img src="img/foto4.png">
+		</li>
+		<li id="foto5">
+			<img src="img/foto5.jpg">
+		</li>
+		<li id="foto6">
+			<img src="img/foto6.jpg">
+		</li>
+		<li id="vegana2">
+			<img src="img/vegana2.jpg">
+		</li>
+		<li id="vegana3">
+			<img src="img/vegana3.jpg">
+		</li>
+	</ul>
+</div>
+</section>
+<section class="ofertas">
+	<div class="Nuestras_ofertas">
+		<p> NUESTRAS OFERTAS</p>
+	</div>
+	<div class="foto_oferta">
+	<ul class="lista_fotos2">
+		<li id="foto7">
+			<img src="img/foto7.jpg">
+		</li>
+		<li id="foto8">
+			<img src="img/foto8.jpg">
+		</li>
+		<li id="foto9">
+			<img src="img/foto9.jpg">
+		</li>
+		<li id="vegana4">
+			<img src="img/vegana4.jpg">
+		</li>
+		<li id="vegana5">
+			<img src="img/vegana5.jpg">
+		</li>
+	</ul>
+	</div>
+</section>
 </body>
-</html>
+<footer class="footer">
+	<section class="redes">
+	<h4> VISITANOS! </h4>
+	<ul class="lista_redes">
+		<li id="facebook">
+			<a href="facebook.com/Hamburguesas_Scooby"><img src="img/facebook.png" id="logo_fb"></a>
+		</li>
+		<li id="instagram">
+			<a href="instagram.com/Hamburguesas_Scooby"><img src="img/instagram.png" id="logo_ins"></a>
+		</li>
+		<li id="twitter">
+			<a href="twitter.com/Hamburguesas_Scooby"><img src="img/twitter.png" id="logo_tw"></a>
+		</li>
+	</section>
+	<section class="columna_medio">
+		<p>NUESTRA HISTORIA</p>
+		<p>TRABAJA CON NOSOTROS</p>
+		<p>TERMINOS Y CONDICIONES</p>
+		<p>CONTACTO</p>
+	</section>
+	<section class="pagos">
+		<ul id="logo_pagos">
+			<li id="lock">
+				<img src="img/lock.png">
+			</li>
+			<li id="mp">
+				<img src="img/mercado.png">
+			</li>
+			<li id="visa">
+				<img src="img/visa.png">
+			</li>
+			<li id="master">
+				<img src="img/master.png">
+			</li>
+		</ul>
+	</section>
+</footer>
