@@ -3,15 +3,12 @@ import { fileURLToPath } from 'url';
 import express from "express";
 // Routes
 import indexRouter from './src/routes/indexRouter.js';
-
 //
 const __dirname = dirname(fileURLToPath(import.meta.url));
 console.log(__dirname);
 //Server 
-
 const app = express()
 const port = process.env.PORT || 3000;
-
 // Server Config
 app.use(express.static(path.resolve(__dirname,'../public')));
 app.use("/",indexRouter);
