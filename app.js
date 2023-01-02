@@ -13,7 +13,8 @@ const app = express()
 const port = process.env.PORT || 3000;
 
 // Server Config
-app.use(express.static(path.resolve(__dirname,'../public')));
+app.use(express.static(path.resolve(__dirname,'./public')));
+console.log(path.resolve(__dirname,'./public'))
 app.use("/",indexRouter);
 app.use("/*",(req,res,next)=>{
     res.send("Error 404! File Not Found")
