@@ -8,22 +8,44 @@
   <title>Scooby Burgers</title>
   <link href="https://fonts.googleapis.com/css2?family=Karma&display=swap">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="/css/register.css">
+  <link rel="stylesheet" href="/css/listas.css">
+  <link rel="stylesheet" href="/css/home.css">
 </head>
-
+  <header>
+    <section class="arriba">
+    <a href="index.html"><img src="images/logo.png" class="logo"></a>
+	<h1 a href="./index.html"> Scooby Burger</a></h1>
+<div class="buscador">
+    <img src="images/lupa.png" class="lupa">
+	<input class="inp_buscador" placeholder="Buscar Productos...">
+	</div>
+<div class="contenedor_derecha">
+	<img src="images/persona.png" class="persona">
+	<img src="images/carrito.png" class="carrito">
+	</div>
+</header>
 <body>
-  <div>
-    <header>
-      <h1>Scooby Burgers</h1>
-      <h3 class="myaccount"> Mi Cuenta</h3>
-    </header>
-  </div>
-  <nav>
-    <form action="../../form-result.php" method="post" target="_blank">
-      <input type="search" name="busquedamusica" placeholder="BUSCAR PRODUCTOS" class="searchbar">
-      <input type="submit" value="Buscar" class="buttonsearch">
-    </form>
-  </nav>
+	<section class="menu">
+	<h3>
+		<ul class="lista">
+			<li><a href="index.html" class="activo">Inicio</a></li>
+			<div class="listas">
+			<li class="desplegable"> <!--dropdown-->
+			<a href="javascript:Void(0)" class="desplegada"> Productos</a> <!--dropbtn-->
+			<div class="contenedor_desplegable"> <!--dropdown-content-->
+				<a href="https://www.google.com">Hamburguesas</a>
+				<a href="https://www.google.com/">Veganas</a>
+				<a href="https://www.google.com/">Bebidas</a>
+				<a href="Tienda.html"> Ver todos</a>
+			</div>
+		</li>
+		</div>
+			<li><a href="carrito"> Mis Pedidos</a></li>
+			<li><a href="sucursales">Sucursales</a></li>
+			</ul>
+			</h3>
+		</section>
   <main>
     <article>
       <h2>Inicia Sesión</h2>
