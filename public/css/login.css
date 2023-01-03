@@ -177,17 +177,17 @@ h4{
   display: flex;
 }
 
-img#logo_fb {
+.redes img#logo_fb {
   height: 50px;
   width: 50px;
 }
 
-img#logo_ins {
+.redes img#logo_ins {
   height: 50px;
   width: 50px;
 }
 
-img#logo_tw {
+.redes img#logo_tw {
   height: 50px;
   width: 50px;
 }
