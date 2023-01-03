@@ -177,19 +177,19 @@ h4{
   display: flex;
 }
 
-img#logo_fb{
-  width: 50px;
+img#logo_fb {
   height: 50px;
+  width: 50px;
 }
 
-img#logo_ins{
-  width: 50px;
+img#logo_ins {
   height: 50px;
+  width: 50px;
 }
 
-img#logo_tw{
-  width: 50px;
+img#logo_tw {
   height: 50px;
+  width: 50px;
 }
 .columna_medio{
   margin-left: 150px !important;
