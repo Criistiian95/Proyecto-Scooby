@@ -213,12 +213,11 @@ h4{
 }
 
 @media screen and (max-width: 500px) {
+  .buscador {
+    display: flex;
+    margin-left: 264px;
+}
 
-  .formulario{
-      grid-template-columns: 1fr;
-      grid-template-rows: auto auto;
-      column-gap: 0;
   }
 
-}
-  
+
