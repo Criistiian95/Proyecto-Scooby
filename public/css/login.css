@@ -177,17 +177,17 @@ h4{
   display: flex;
 }
 
-.lista_redes #logo_fb {
+img#logo_fb {
   width: 30px;
   height: 30px;
 }
 
-.lista_redes #logo_ins {
+img#logo_ins {
   height: 30px;
   width: 30px;
 }
 
-.lista_redes #logo_tw {
+img#logo_tw {
   height: 30px;
   width: 30px;
 }
