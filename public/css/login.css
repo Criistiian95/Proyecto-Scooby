@@ -217,7 +217,17 @@ h4{
     display: flex;
     margin-left: 264px;
 }
-
+ul.lista {
+  width: 100%;
+  list-style-type: none;
+  margin-top: -20px;
+  margin-bottom: -20px;
+  overflow: hidden;
+  background-color: #D9D9D9;
+  padding: 0px;
+  font-size: 25px;
+  display: flex;
+  justify-content: space-around;
   }
-
+}
 
