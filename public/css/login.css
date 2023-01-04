@@ -212,7 +212,7 @@ img#logo_tw {
   flex-wrap: wrap;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 1024px) {
   .buscador {
     display: flex;
     margin-left: 264px;
