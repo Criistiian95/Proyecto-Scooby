@@ -15,10 +15,10 @@
 </head>
   <header>
     <section class="arriba">
-    <a href="index.html"><img src="images/logo.png" class="logo"></a>
+    <a href="home"><img src="images/logo.png" class="logo"></a>
 	<h1 a href="./index.html"> Scooby Burger</a></h1>
 <div class="buscador">
-    <img src="images/lupa.png" class="lupa">
+  <a href="login"><img src="images/lupa.png" class="lupa">
 	<input class="inp_buscador" placeholder="Buscar Productos...">
 	</div>
 <div class="contenedor_derecha">
@@ -30,20 +30,20 @@
 	<section class="menu">
 	<h3>
 		<ul class="lista">
-			<li><a href="index.html" class="activo">Inicio</a></li>
+			<li><a href="home" class="activo">Inicio</a></li>
 			<div class="listas">
 			<li class="desplegable"> <!--dropdown-->
 			<a href="javascript:Void(0)" class="desplegada"> Productos</a> <!--dropbtn-->
 			<div class="contenedor_desplegable"> <!--dropdown-content-->
-				<a href="https://www.google.com">Hamburguesas</a>
-				<a href="https://www.google.com/">Veganas</a>
-				<a href="https://www.google.com/">Bebidas</a>
-				<a href="Tienda.html"> Ver todos</a>
+				<a href="productDetail">Hamburguesas</a>
+				<a href="productDetail">Veganas</a>
+				<a href="productDetail">Bebidas</a>
+				<a href="productCart"> Ver todos</a>
 			</div>
 		</li>
 		</div>
-			<li><a href="carrito"> Mis Pedidos</a></li>
-			<li><a href="sucursales">Sucursales</a></li>
+			<li><a href="productCart"> Mis Pedidos</a></li>
+			<li><a href="home">Sucursales</a></li>
 			</ul>
 			</h3>
 		</section>
@@ -67,7 +67,7 @@
               <button type="submit" id="login">LOGIN</button>
             </div>
         </form>
-        <h4 class="opcionuno">Crea una nueva cuenta</h4>
+        <a href="register"><h4 class="opcionuno">Crea una nueva cuenta</h4></a>
         <h4 class="opciondos">Olvidé mi contraseña</h4>
     </article>
   </main>
