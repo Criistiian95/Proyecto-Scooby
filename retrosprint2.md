@@ -1,0 +1,2 @@
+En el sprint número dos, pudimos concretar la entrega en tiempo y forma, integrando conceptos vistos en clases de HTML y CSS. 
+El equipo trabajo utilizando metodologías ágiles, se dividieron las tareas correctamente, la comunicación fue fluida y rápida.  Seguiremos así, integrando nuevos conceptos enseñados en clase, otros que aprendamos fuera de clases, comunicandonos y organizandonos, para poder llevar a cabo el proyecto.
