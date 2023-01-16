@@ -120,7 +120,7 @@ header{
     min-height: 20rem;
 }
 
-.list1, .list2{
+.list1{
     background-color: #3D2B6B;
     padding: 1rem;
     display: flex;
@@ -203,3 +203,4 @@ footer{
     font-weight: bolder;
   
   }
+  
