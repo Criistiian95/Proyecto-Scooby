@@ -1,0 +1,33 @@
+<%- include('./partials/head') %>
+<%- include('./partials/header') %>
+<body>
+	<%- include('./partials/menu_arriba') %>
+  
+  <main>
+    <article>
+      <h2>Inicia Sesión</h2>
+      <div>
+        <h2>Login</h2>
+      </div>
+      <p>Inicia sesión en una cuenta existente</p>
+      <form action="resultado.html" method="POST">
+        <p><input type="email" name="email" placeholder="Correo Electronico" class="email" required></p>
+        <p><input type="password" name="password" placeholder="Contraseña" class="password" required></p>
+        <form>
+          <div>
+            <label>
+              <input type="checkbox" name="rememberme" value="rememberme" id="tick">
+              <p class="rememberme">RECUÉRDAME</p>
+            </label>
+            <div class="boton">
+              <button type="submit" id="login">LOGIN</button>
+            </div>
+        </form>
+        <a href="register"><h4 class="opcionuno">Crea una nueva cuenta</h4></a>
+        <h4 class="opciondos">Olvidé mi contraseña</h4>
+    </article>
+  </main>
+  <%- include('./partials/footer') %>
+</body>
+
+</html>

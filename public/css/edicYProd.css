@@ -129,9 +129,7 @@ header{
     margin: 0;
 }
 
-footer{
-    border: 1px solid black;
-}
+
 
 @media screen and (max-width: 500px) {
 
@@ -203,4 +201,6 @@ footer{
     font-weight: bolder;
   
   }
+
+  
   

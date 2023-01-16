@@ -8,6 +8,41 @@ body{
     opacity: 90%;
 }
 
+.lupa{
+    height: 40px; 
+    width: 40px; 
+    margin-top: 20px;
+    opacity: 0;
+}
+
+.buscador{
+    display: flex;
+    margin-left: -10px;
+    
+}
+.persona{
+    height: 40px; 
+    width: 40px; 
+    margin-left: 40px; 
+    margin-top: 20px;
+}
+
+.carrito{
+    height: 40px; 
+    width: 40px; 
+    margin-top: 20px;
+}
+
+div.contenedor_derecha {
+    border: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    right: 13px;
+    display: inline-flex;
+    align-items: center;
+}
+
 .arriba{
     background-color: #6352A3;
     display: flex; 
@@ -23,11 +58,80 @@ body{
     margin-right: 20px;
 }
 
+input{
+    background-color: #fff;
+    border: 1px solid #000;        
+    outline: none;
+    margin-top: 20px;
+    border-radius: 15px;
+    border: 2px solid #000;
+    padding: 5px;
+    display: flex;
+    height: 30px;   
+}
+
+@media (min-width: 576px) and (max-width:991px){
+    .lupa{
+        height: 40px; 
+        width: 40px; 
+        margin-left: 40px; 
+        margin-top: 20px;
+        opacity: 1;
+    }
+    
+    input{
+        background-color: #fff;
+        border: 1px solid #000;        
+        outline: none;
+        margin-top: 20px;
+        border-radius: 15px;
+        border: 2px solid #000;
+        padding: 5px;
+        display: flex;
+        height: 30px;   
+    }
+    
+    .buscador{
+        display: flex;
+        margin-left: 70px;
+        
+    }
+    
+    div.contenedor_derecha{
+        border: none;
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        right: 12px;
+        align-items: center;
+        display: inline-flex;
+    }
+    
+    
+    .persona{
+        height: 40px; 
+        width: 40px; 
+        margin-left: 40px; 
+        margin-top: 20px;
+    }
+    
+    .carrito{
+        height: 40px; 
+        width: 40px; 
+        margin-left: 40px; 
+        margin-top: 20px;
+    }
+    }
+
+@media screen and (min-width: 992px){
+
 .lupa{
     height: 40px; 
     width: 40px; 
     margin-left: 40px; 
     margin-top: 20px;
+    opacity: 3;
+
 }
 
 input{
@@ -71,4 +175,5 @@ div.contenedor_derecha{
     width: 40px; 
     margin-left: 40px; 
     margin-top: 20px;
+}
 }

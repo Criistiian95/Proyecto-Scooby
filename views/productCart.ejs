@@ -1,50 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scooby Burger</title>
-    <link rel="stylesheet" type="text/css" href="/css/footer.css">
-    <link rel="stylesheet" type="text/css" href="/css/carrito.css">
-    <link rel="stylesheet" type="text/css" href="/css/listas.css">
-	<link rel="stylesheet" type="text/css" href="/css/slider.css">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Karma:wght@300&display=swap">
-</head>
-<header>
-    <section class="arriba">
-    <a href="home"><img src="images/Logo.png" class="logo"></a>
-	<h1 a href="./index.html"> Scooby Burger</a></h1>
-<div class="buscador">
-    <a href="login"><img src="images/lupa.png" class="lupa"></a>
-	<input class="inp_buscador" placeholder="Buscar Productos...">
-	</div>
-<div class="contenedor_derecha">
-	<a href="login"><img src="images/persona.png" class="persona"></a>
-	<img src="images/carrito.png" class="carrito">
-	</div>
-</header>
+<%- include('./partials/head') %>
+
+<%- include('./partials/header') %>
 <body>
-    <section class="menu">
-        <h3>
-            <ul class="lista">
-                <li><a href="home" class="activo">Inicio</a></li>
-                <div class="listas">
-                <li class="desplegable"> <!--dropdown-->
-                <a href="javascript:Void(0)" class="desplegada"> Productos</a> <!--dropbtn-->
-                <div class="contenedor_desplegable"> <!--dropdown-content-->
-                    <a href="productDetail">Hamburguesas</a>
-                    <a href="productDetail">Veganas</a>
-                    <a href="productDetail">Bebidas</a>
-                    <a href="productDetail"> Ver todos</a>
-                </div>
-            </li>
-            </div>
-                <li><a href="carrito.html"> Mis Pedidos</a></li>
-                <li><a href="sucursales">Sucursales</a></li>
-                </ul>
-                </h3>
-            </section>
+    <%- include('./partials/menu_arriba') %>
+    
     <h1 class="pedidoTitulo">Mis pedidos</h1>
     <section class="pedidos">
         <div class="caja-1">
@@ -142,41 +101,6 @@
     <a href="#"><button>Pagar</button></a>
 
 </body>
-<footer class="footer">
-	<section class="redes">
-	<h4> VISITANOS! </h4>
-	<ul class="lista_redes">
-		<li id="facebook">
-			<a href="facebook.com/Hamburguesas_Scooby"><img src="images/facebook.png" id="logo_fb"></a>
-		</li>
-		<li id="instagram">
-			<a href="instagram.com/Hamburguesas_Scooby"><img src="images/instagram.png" id="logo_ins"></a>
-		</li>
-		<li id="twitter">
-			<a href="twitter.com/Hamburguesas_Scooby"><img src="images/twitter.png" id="logo_tw"></a>
-		</li>
-	</section>
-	<section class="columna_medio">
-		<p>NUESTRA HISTORIA</p>
-		<p>TRABAJA CON NOSOTROS</p>
-		<p>TERMINOS Y CONDICIONES</p>
-		<p>CONTACTO</p>
-	</section>
-	<section class="pagos">
-		<ul id="logo_pagos">
-			<li id="lock">
-				<img src="images/lock.png">
-			</li>
-			<li id="mp">
-				<img src="images/mercado.png">
-			</li>
-			<li id="visa">
-				<img src="images/visa.png">
-			</li>
-			<li id="master">
-				<img src="images/master.png">
-			</li>
-		</ul>
-	</section>
-</footer>
+<%- include('./partials/footer') %>
+
 </html>

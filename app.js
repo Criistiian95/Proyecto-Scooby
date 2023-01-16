@@ -1,19 +1,22 @@
-import path, { dirname } from "path"
-import { fileURLToPath } from 'url';
-import express from "express";
+
 // Routes
-import indexRouter from './src/routes/indexRouter.js';
-//
-const __dirname = dirname(fileURLToPath(import.meta.url));
-console.log(__dirname);
+
 //Server 
-const app = express()
-const port = process.env.PORT || 3000;
-// Server Config
+const express=require("express");
+const path= require("path");
+const mainRoutes=require("./routes/main")
+const app= express();
+const port = process.env.PORT|| 3000 ;
 app.use(express.static(path.resolve(__dirname,'./public')));
 console.log(path.resolve(__dirname,'./public'))
-app.use("/",indexRouter);
-app.use("/*",(req,res,next)=>{
+
+app.set("view engine", "ejs");
+
+app.set("views", path.join(__dirname,"./views"));
+
+app.use('/', mainRoutes);
+
+app.use("/",(req,res,next)=>{
     res.send("Error 404! File Not Found")
 });
 

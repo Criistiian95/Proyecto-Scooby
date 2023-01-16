@@ -129,9 +129,10 @@ header{
     margin: 0;
 }
 
-footer{
+.footer{
+    margin-top: 700px;
     border: 1px solid black;
-}
+  }
 
 @media screen and (max-width: 500px) {
 
@@ -142,64 +143,3 @@ footer{
     }
 
 }
-footer{
-    border: 1px solid black;
-  }
-  
-  .footer{
-    margin-top: 70px;
-    display: flex;
-    min-height: 100px;
-    width: 100%;
-    height: auto;
-    background-color: #6352A3;
-  }
-  .redes{
-    margin-left: 10px; 
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-  }
-  .redes a:hover{
-    background-color: #6352A3;
-  }
-  
-  
-  .redes #facebok{
-    position: relative;
-    
-    display: flex;
-  
-  }
-  .redes #instagram{
-    position: relative;
-  
-    display: flex;
-  }
-  .redes #twitter{
-    position: relative;
-    
-    display: flex;
-  }
-  
-  #logo_fb {
-    width: 30px;
-    height: 30px;
-  }
-  
-  .redes #logo_ins {
-    height: 30px;
-    width: 30px;
-  }
-  
-  .redes #logo_tw {
-    height: 30px;
-    width: 30px;
-  }
-  .columna_medio{
-    margin-left: 150px !important;
-    text-align: left;
-    color: #1E150E;
-    font-weight: bolder;
-  
-  }
