@@ -9,9 +9,10 @@ ul.lista{
 	
 }
 
-li{
+.lista li{
 	float: left;
 }
+
 
 li  .desplegada{
 	display: block;

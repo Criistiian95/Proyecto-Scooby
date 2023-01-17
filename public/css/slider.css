@@ -12,6 +12,10 @@
     margin: 0;
     list-style: none;
 }
+
+.menu li{
+    float: left;
+}
 .contenedor_slider > ul.slider{
     position: relative;
     width: 100%;

@@ -19,6 +19,11 @@ h4{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+
+}
+
+.lista_redes li{
+	float: left;
 }
 .redes a:hover{
     background-color: #6352A3;

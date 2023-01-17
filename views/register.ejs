@@ -1,8 +1,10 @@
-<%- include('./partials/head') %>
-
-<%- include('./partials/header') %>
+<%- include('./partials/head',{style:"register",title:"Registrarme"}) %>
 
 <body>
+    <%- include('./partials/header') %>
+
+    <%- include('./partials/menu_arriba') %>
+
     <main>
         <div>
             <a href="register"><h2>Registrarme</h2></a>
@@ -14,7 +16,7 @@
                 <li><input type="email" name="" id="" placeholder="Email"></li>
                 <li><input type="password" name="" id="" placeholder="Contraseña"></li>
                 <li><input type="password" name="" id="" placeholder="Repetir Contraseña"></li>
-                <li><span>Fecha de nacimiento<input type="date" name="" id="" placeholder="Fecha de Nacimiento"></span>
+                <li><p class="fecha">Fecha de nacimiento</p><input type="date" name="" id="" placeholder="Fecha de Nacimiento">
                 </li>
             </ul>
             <ul class="list2">
