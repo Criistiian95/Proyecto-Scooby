@@ -1,9 +1,4 @@
-const express = require('express');
-const router = express.Router();
+const fs = require('fs');
+const path = require('path');
 
-// ************ Controller Require ************
-const productsController = require('../controllers/productoController');
-
-
-
-module.exports = router;
+module.exports = controller;
