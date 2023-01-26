@@ -1,7 +1,6 @@
 {
   "name": "equipo2_scooby",
   "version": "1.0.0",
-
   "description": "🛒🌐 Ecommerce- Scooby Burguer :dog: :hamburger:",
   "main": "app.js",
   "scripts": {
