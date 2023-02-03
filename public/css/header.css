@@ -4,7 +4,7 @@
 }
 body{
     margin: 0;
-    background-color: #A091C6;
+    background-color: rgb(65, 52, 100);
     opacity: 90%;
 }
 
@@ -44,7 +44,7 @@ div.contenedor_derecha {
 }
 
 .arriba{
-    background-color: #6352A3;
+    background-color: rgb(79, 66, 130);
     display: flex; 
     justify-content: flex-start;
     box-sizing: border-box;

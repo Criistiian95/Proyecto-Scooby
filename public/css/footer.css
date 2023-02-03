@@ -4,11 +4,11 @@
     min-height: 100px;
     width: 100%;
     height: auto;
-    background-color: #6352A3;
+    background-color: rgb(79, 66, 130);
 }
 
 h4{
-   color: #1E150E;
+   color: rgb(218, 215, 210);;
    font-weight: bolder;
    text-decoration: underline;
    text-align: center;
@@ -26,7 +26,7 @@ h4{
 	float: left;
 }
 .redes a:hover{
-    background-color: #6352A3;
+    background-color: rgb(65, 52, 100);
 }
 
 
@@ -64,7 +64,7 @@ h4{
 .columna_medio{
     margin-left: 150px !important;
     text-align: left;
-    color: #1E150E;
+    color: rgb(218, 215, 210);;
     font-weight: bolder;
 
 }

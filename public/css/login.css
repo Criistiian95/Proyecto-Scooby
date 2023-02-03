@@ -1,145 +1,193 @@
-html{
-  padding: 0%;
-  margin: 0%;
-  font-size: 62.5%;
+*{
+  font-family: 'Karma', serif;
 
 }
 body{
-  height: 100vh;
-  background-color: #B5A6DA;
   margin: 0;
-  font-family: 'Roboto Condensed', sans-serif;
-
-  display: grid;
-  grid-template-rows: auto 1fr auto;
+  background-color: rgb(65, 52, 100);
+  opacity: 90%;
 }
 
-a{
-text-decoration: none;
-color: black;  
+.lupa{
+  height: 40px; 
+  width: 40px; 
+  margin-top: 20px;
+  opacity: 0;
 }
 
-ul{
-  list-style: none;
-  text-align: center;
-}
-
-li span{
-  background-color: white;
-  font-size: 1.6rem;
-  padding: 0 0.5rem;
-}
-
-header{
-  border: 1px solid black;
-  padding: 0;
-
-  font-size: 2.2rem;
-}
-
-.top-header{
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  justify-content: center;
-  align-items: center;
-
-  padding: 0 2rem;
-  grid-template-areas:
-  "logo form huser"
-  ;
-}
-
-.logo{
-  grid-area: logo;
+.buscador{
   display: flex;
-  flex-direction: row;
-  justify-content: left;
+  margin-left: -10px;
+  
+}
+.persona{
+  height: 40px; 
+  width: 40px; 
+  margin-left: 40px; 
+  margin-top: 20px;
+}
+
+.carrito{
+  height: 40px; 
+  width: 40px; 
+  margin-top: 20px;
+}
+
+div.contenedor_derecha {
+  border: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  right: 13px;
+  display: inline-flex;
   align-items: center;
 }
 
-.form{
-  grid-area: form;
-  justify-content: center;
-}
-
-.form input{
+.arriba{
+  background-color: rgb(79, 66, 130);
+  display: flex; 
+  justify-content: flex-start;
+  box-sizing: border-box;
+  box-shadow: 0 2px 5px rgb(0 0 0 / 15%);
   width: 100%;
 }
 
-.headUser{
-  grid-area: huser;
-  justify-content: right;
+.logo{
+  width: 80px; 
+  height: 80px; 
+  margin-right: 20px;
 }
 
-.headUser, .form{
+input{
+  background-color: #fff;
+  border: 1px solid #000;        
+  outline: none;
+  margin-top: 20px;
+  border-radius: 15px;
+  border: 2px solid #000;
+  padding: 5px;
   display: flex;
-  align-items: center;
+  height: 30px;   
 }
-
-.logo img{
-  width: 6.4rem;
-  height: 6.4rem;
+.rec{  width: 20px;
+    height: 15px;
 }
-
-.headerNav{
-  background-color:whitesmoke;
-}
-
-.headerNav ul{
-  display: grid;
-  grid-template-columns: repeat(4,1fr);
-  
-  padding: 0;
-  margin: 0;
-}
-
-.button{
-  background-color: #6352A3;
-  color: white;
-  border-radius: 2px;
-  opacity: 60%;
-  font-size: 2rem;
-}
-
-.divBtn{
-  display:flex ;
-  justify-content: center;
-}
-
-.button:hover,.button:focus{
-  opacity: 100%;
-  cursor: pointer;
-}
-
-.formulario{
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  column-gap: 2.4rem;
-  padding: 2.4rem;
-
-  min-height: 20rem;
-}
-
-.list1, .list2{
-  background-color: #3D2B6B;
-  padding: 1rem;
+.formu{
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  margin: 0;
+}
+.recordar{
+  display: flex;
+}
+.rememberme{
+  margin-left: 10px;
 }
 
-footer{
-  border: 1px solid black;
-}
-
-@media screen and (max-width: 500px) {
-
-  .formulario{
-      grid-template-columns: 1fr;
-      grid-template-rows: auto auto;
-      column-gap: 0;
+@media (min-width: 576px) and (max-width:991px){
+  .lupa{
+      height: 40px; 
+      width: 40px; 
+      margin-left: 40px; 
+      margin-top: 20px;
+      opacity: 1;
+  }
+  
+  input{
+      background-color: #fff;
+      border: 1px solid #000;        
+      outline: none;
+      margin-top: 20px;
+      border-radius: 15px;
+      border: 2px solid #000;
+      padding: 5px;
+      display: flex;
+      height: 30px;   
+  }
+  
+  .buscador{
+      display: flex;
+      margin-left: 70px;
+      
+  }
+  
+  div.contenedor_derecha{
+      border: none;
+      padding: 0;
+      margin: 0;
+      position: absolute;
+      right: 12px;
+      align-items: center;
+      display: inline-flex;
+  }
+  
+  
+  .persona{
+      height: 40px; 
+      width: 40px; 
+      margin-left: 40px; 
+      margin-top: 20px;
+  }
+  
+  .carrito{
+      height: 40px; 
+      width: 40px; 
+      margin-left: 40px; 
+      margin-top: 20px;
+  }
   }
 
+@media screen and (min-width: 992px){
+
+.lupa{
+  height: 40px; 
+  width: 40px; 
+  margin-left: 40px; 
+  margin-top: 20px;
+  opacity: 3;
+
+}
+
+input{
+  background-color: #fff;
+  border: 1px solid #000;        
+  outline: none;
+  margin-top: 20px;
+  border-radius: 15px;
+  border: 2px solid #000;
+  padding: 5px;
+  display: flex;
+  height: 30px;   
+}
+
+.buscador{
+  display: flex;
+  margin-left: 70px;
+  
+}
+
+div.contenedor_derecha{
+  border: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  right: 12px;
+  align-items: center;
+  display: inline-flex;
+}
+
+
+.persona{
+  height: 40px; 
+  width: 40px; 
+  margin-left: 40px; 
+  margin-top: 20px;
+}
+
+.carrito{
+  height: 40px; 
+  width: 40px; 
+  margin-left: 40px; 
+  margin-top: 20px;
+}
 }
   

@@ -4,12 +4,12 @@
 }
 body{
     margin: 0;
-    background-color: #A091C6;
+    background-color: rgb(65, 52, 100);
     opacity: 90%;
 }
 
 .arriba{
-    background-color: #6352A3;
+    background-color:  rgb(79, 66, 130);
     display: flex; 
     justify-content: flex-start;
     box-sizing: border-box;
@@ -95,12 +95,14 @@ div.contenedor_derecha{
 .nombre-hambur{
     font-size: 22px;
     text-align: center;
+   color:rgb(218, 215, 210);
 }
 
 .descrip{
     display: flex;
     text-align: center;
     margin: 0;
+    color:rgb(218, 215, 210);
 }
 
 .comprar{
@@ -124,8 +126,11 @@ button{
     font-weight: bold;
     padding: 8px 20px;
     border: 1px solid black;
-    box-shadow: 2px 2px 18px black;
-    margin-right: 25px
+    border-color: rgb(140, 130, 115);
+    box-shadow: rgb(0 0 0) 2px 2px 18px;;
+    margin-right: 25px;
+    color: #FFFFFF;
+    background: #6b6b6b;
 }
 
 button:hover{
@@ -141,11 +146,11 @@ button:hover{
     margin-bottom: 50px;
 }
 
-.lista{
+.lista2{
     display: flex;
-    background-color: rgb(211, 226, 221);
+    background-color: rgb(38, 57, 52);
     padding: 10px 20px;
-    color: black;
+    color: rgb(232, 230, 227);
     margin: 2px 0;
     border-radius: 7px;
     justify-content: space-between;

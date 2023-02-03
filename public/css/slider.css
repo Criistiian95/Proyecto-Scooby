@@ -1,7 +1,6 @@
 .contenedor_slider{
     margin: auto;
-    background-color:#D9D9D9;
-    width: 70%;
+    background-color:rgb(45, 49, 51);
     max-width: 800px;
     padding: 38px;
     box-sizing: border-box;

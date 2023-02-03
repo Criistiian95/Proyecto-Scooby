@@ -6,7 +6,8 @@ html{
 }
 body{
     height: 100vh;
-    background-color: #B5A6DA;
+    background-color: rgb(65, 52, 100);
+    display: flex; 
     margin: 0;
     font-family: 'Roboto Condensed', sans-serif;
 
@@ -30,12 +31,6 @@ li span{
     padding: 0 0.5rem;
 }
 
-header{
-    border: 1px solid black;
-    padding: 0;
-
-    font-size: 2.2rem;
-}
 
 .top-header{
     display: grid;
@@ -94,11 +89,12 @@ header{
 }
 
 .button{
-    background-color: #6352A3;
-    color: white;
+    background-color: rgb(45, 49, 51);;
+    color: #e8e6e3;
     border-radius: 2px;
     opacity: 60%;
     font-size: 2rem;
+    padding: 1px 6px;
 }
 
 .divBtn{
@@ -121,7 +117,7 @@ header{
 }
 
 .list1{
-    background-color: #3D2B6B;
+    background-color: rgb(49, 34, 86);
     padding: 1rem;
     display: flex;
     flex-direction: column;
@@ -140,67 +136,9 @@ header{
     }
 
 }
-footer{
-    border: 1px solid black;
-  }
+
   
-  .footer{
-    margin-top: 70px;
-    display: flex;
-    min-height: 100px;
-    width: 100%;
-    height: auto;
-    background-color: #6352A3;
-  }
-  .redes{
-    margin-left: 10px; 
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-  }
-  .redes a:hover{
-    background-color: #6352A3;
-  }
-  
-  
-  .redes #facebok{
-    position: relative;
-    
-    display: flex;
-  
-  }
-  .redes #instagram{
-    position: relative;
-  
-    display: flex;
-  }
-  .redes #twitter{
-    position: relative;
-    
-    display: flex;
-  }
-  
-  #logo_fb {
-    width: 30px;
-    height: 30px;
-  }
-  
-  .redes #logo_ins {
-    height: 30px;
-    width: 30px;
-  }
-  
-  .redes #logo_tw {
-    height: 30px;
-    width: 30px;
-  }
-  .columna_medio{
-    margin-left: 150px !important;
-    text-align: left;
-    color: #1E150E;
-    font-weight: bolder;
-  
-  }
+
 
   
   
