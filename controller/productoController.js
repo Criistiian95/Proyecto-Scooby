@@ -9,7 +9,22 @@ const productoController = {
     list: (req, res) => {
         console.log(products);
         res.render('productCart', { products });
+    },
+
+    detail: (req, res) => {
+        const productID = req.params.id;
+
+        const productFound = products.find(function(product){
+            return product.id == productID;
+        })
+
+        if(products){
+            res.render('productDetail', { products: productFound });
+        } else{
+            res.send('error');
+        }
     }
+    
 }
 
 module.exports = productoController;
