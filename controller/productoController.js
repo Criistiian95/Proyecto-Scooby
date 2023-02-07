@@ -8,7 +8,7 @@ const products = JSON.parse(productJson);
 const productoController = {
     list: (req, res) => {
         console.log(products);
-        res.render('productCart', { products });
+        res.render('productCart', { products:products });
     },
 
     detail: (req, res) => {
@@ -23,7 +23,15 @@ const productoController = {
         } else{
             res.send('error');
         }
-    }
+    },
+    create:(req,res)=>{
+
+       res.render('edicYProd');
+       
+    },
+    edit: (req, res) => {
+		const productoEdit = products.find((product) => product.id == req.params.id);
+		res.render('editarProducto', { productoEdit });}
     
 }
 

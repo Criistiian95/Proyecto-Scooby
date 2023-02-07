@@ -1,7 +1,7 @@
 // ************ Require's ************ 
 const express=require("express");
 const path= require("path");
-const productoController = require("./controller/productoController");
+
 const productRouter = require('./routes/producto')
 
 
