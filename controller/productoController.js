@@ -32,7 +32,6 @@ const productoController = {
     edit: (req, res) => {
 		const productoEdit = products.find((product) => product.id == req.params.id);
 		res.render('editarProducto', { productoEdit });}
-    
 }
 
 module.exports = productoController;
