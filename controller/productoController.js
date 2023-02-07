@@ -23,6 +23,10 @@ const productoController = {
         } else{
             res.send('error');
         }
+    },
+
+    create: (req, res) => {
+            res.render('create-product');
     }
     
 }
