@@ -1,10 +1,11 @@
-<%- include('./partials/head',{style:"edicYProd", title:"Editar productos"}) %>
+<%- include('./partials/head',{style:"edicYProd", title:"Editar producto"}) %>
+
 <body>
     <%- include('./partials/header') %>
     <%- include('./partials/menu_arriba') %>
     <main>
         <div>
-            <a href="register"><h2>Registrarme</h2></a>
+            <h2>Editando producto <%= productoEdit.nombre %> </h2>
         </div>
         <section class="formulario">
             <ul class="list1">
@@ -26,16 +27,10 @@
             <button class="button">
                 Subir producto
             </button>
-            <button class="button">
-                Eliminar producto
-            </button>
         </div>
 
     </main>
 </body>
 
+
     <%- include('./partials/footer') %>
-    
-
-
-</html>

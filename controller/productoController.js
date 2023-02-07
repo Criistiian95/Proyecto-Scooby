@@ -8,6 +8,10 @@ const productJson = fs.readFileSync(
 const products = JSON.parse(productJson);
 
 const productoController = {
+    list: (req, res) => {
+        console.log(products);
+        res.render('productCart', { products:products });
+    },
   list: (req, res) => {
     console.log(products);
     res.render("productCart", { products });
@@ -20,18 +24,20 @@ const productoController = {
       return product.id == productID;
     });
 
-    if (products) {
-      res.render("productDetail", { products: productFound });
-    } else {
-      res.send("error");
-    }
-  },
-  create: (req, res) => {
-    res.render("edicYProd");
-  },
-  edit: (req, res) => {
-    res.render("edicYProd", { product: productFound });
-  },
-};
+        if(products){
+            res.render('productDetail', { products: productFound });
+        } else{
+            res.send('error');
+        }
+    },
+    create:(req,res)=>{
+
+       res.render('edicYProd');
+       
+    },
+    edit: (req, res) => {
+		const productoEdit = products.find((product) => product.id == req.params.id);
+		res.render('editarProducto', { productoEdit });}
+}
 
 module.exports = productoController;

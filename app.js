@@ -1,38 +1,20 @@
-// ************ Require's ************ 
-const express=require("express");
-const path= require("path");
-const productoController = require("./controller/productoController");
-const productRouter = require('./routes/producto')
+const express = require("express");
+const path = require("path");
+const mainRoutes = require("./routes/main");
+const adminRoutes = require("./routes/admin");
+const app = express();
+const port = process.env.PORT || 3000;
+app.use(express.static(path.resolve(__dirname, "./public")));
+console.log(path.resolve(__dirname, "./public"));
 
 
-// ************ express() - (don't touch) ************
-const app= express();
-const port = process.env.PORT|| 3000 ;
+app.set("views", path.join(__dirname, "./views"));
 
-
-// ************ Middlewares - (don't touch) ************
-app.use(express.static(path.resolve(__dirname,'./public')));
-console.log(path.resolve(__dirname,'./public'))
-
-
-// ************ Template Engine - (don't touch) ************
-app.set("view engine", "ejs");
-app.set("views", path.join(__dirname,"./views"));
-
-
-// ************ WRITE YOUR CODE FROM HERE ************
-// ************ Route System require and use() ************
-const mainRoutes=require("./routes/main")
-
-
-app.use('/', mainRoutes);
-app.use('/products', productRouter);
-
-
-app.use("/",(req,res,next)=>{
-    res.send("Error 404! File Not Found")
+app.use("/", mainRoutes);
+app.use("/admin", adminRoutes);
+app.use((req, res, next) => {
+  res.send("Error 404! File Not Found");
 });
-
 
 
 // Server Init
