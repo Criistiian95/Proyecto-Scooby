@@ -2,35 +2,35 @@
 <body>
     <%- include('./partials/header') %>
     <%- include('./partials/menu_arriba') %>
-    <main>
-        <div>
+    <main class="lis">
+        <div class="conten">
             <a href="register"><h2>Registrarme</h2></a>
+            <section class="formulario">
+                <ul class="lis">
+                    <li><input type="text" name="" class="lis" placeholder="nombre"></li>
+                    <li><input type="text" name="" class="lis" placeholder="descripcion"></li>
+                    <li><input type="file" name="" class="lis" placeholder=""></li>
+                    <li><input type="number" name="" class="lis" placeholder="precio"></li>
+                    <form class="lis">
+                        
+                        <p>elige una opcion</p>
+                        <p><input class="lis" type="radio" name="estacion" value="con carne"/> menu Hamburguesas</p>
+                        <p><input class="lis" type="radio" name="estacion" value="vegano"/> menu vegano </p>
+                        
+                    </form>
+                </ul>
+            </section>
+            
+            <div class="divBtn">
+                <button class="button">
+                    Subir producto
+                </button>
+                <button class="button">
+                    Eliminar producto
+                </button>
+            </div>
         </div>
-        <section class="formulario">
-            <ul class="list1">
-                <li><input type="text" name="" id="" placeholder="nombre"></li>
-                <li><input type="text" name="" id="" placeholder="descripcion"></li>
-                <li><input type="file" name="" id="" placeholder=""></li>
-                <li><input type="number" name="" id="" placeholder="precio"></li>
-                <form ...>
-
-                    <p>elige una opcion</p>
-                    <p><input type="radio" name="estacion" value="con carne"/> menu Hamburguesas</p>
-                    <p><input type="radio" name="estacion" value="vegano"/> menu vegano </p>
-                      
-                 </form>
-            </ul>
-        </section>
-
-        <div class="divBtn">
-            <button class="button">
-                Subir producto
-            </button>
-            <button class="button">
-                Eliminar producto
-            </button>
-        </div>
-
+            
     </main>
 </body>
 

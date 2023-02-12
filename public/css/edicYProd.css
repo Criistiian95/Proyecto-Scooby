@@ -123,6 +123,7 @@ li span{
     flex-direction: column;
     justify-content: space-between;
     margin: 0;
+    text-align: center;
 }
 
 
@@ -136,9 +137,32 @@ li span{
     }
 
 }
-
+.conten{
+    background-color: rgb(49, 34, 86);
+    text-align: center;
+    margin: 10%;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
   
+.lis{
+    text-align: center;
+    align-content: center;
+    align-items: center;
+}
 
-
-  
-  
+  h2{
+    font-size: 300%;
+  }
+  li{
+    display: flex;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+  }
+  p{
+    text-align: center;
+    align-content: center;
+    align-items: center;
+  }

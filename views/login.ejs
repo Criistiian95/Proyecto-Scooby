@@ -6,26 +6,28 @@
   
   <main>
     <article>
-      <h2>Inicia Sesión</h2>
-      <div>
-        <h2>Login</h2>
+      <div class = 'formLoguin'>
+      <h2 id="log">Inicia Sesión</h2>
+      <div >
+        <h2 id="log">Login</h2>
       </div>
-      <p>Inicia sesión en una cuenta existente</p>
+      <p id="log">Inicia sesión en una cuenta existente</p>
       <form class="formu" action="resultado.html" method="POST">
-        <p><input type="email" name="email" placeholder="Correo Electronico" class="email" required></p>
-        <p><input type="password" name="password" placeholder="Contraseña" class="password" required></p>
+        <p id="log"><input  type="email" name="email" placeholder="Correo Electronico" class="email" required></p>
+        <p id="log"><input  type="password" name="password" placeholder="Contraseña" class="password" required></p>
         <form>
-          <div>
+          <div id="log">
             <div class="recordar">
-              <input class="rec" type="checkbox" name="rememberme" value="rememberme" id="tick"><p class="rememberme">RECUÉRDAME</p>
+              <input id="log" class="rec" type="checkbox" name="rememberme" value="rememberme" id="tick"><p class="rememberme">RECUÉRDAME</p>
             </div>
-            <div class="boton">
+            <div class="boton" id="log">
               <button type="submit" id="login">LOGIN</button>
             </div>
         </form>
-        <a href="register"><h4 class="opcionuno">Crea una nueva cuenta</h4></a>
+        <a href="register"><h4 id="log">Crea una nueva cuenta</h4></a>
         <h4 class="opciondos">Olvidé mi contraseña</h4>
     </article>
+  </div>
   </main>
   <%- include('./partials/footer') %>
 </body>

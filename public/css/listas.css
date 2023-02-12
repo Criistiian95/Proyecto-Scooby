@@ -16,14 +16,14 @@ ul.lista{
 
 li  .desplegada{
 	display: block;
-	color: rgb(218, 215, 210);;/*color letra lista principal*/
+	color: rgb(218, 215, 210);;
 	text-align: left;
 	padding: 14px 16px;
 	text-decoration: none;
 }
 
 li  .desplegable:hover .desplegada{
-	background-color:#1E150E  ;/*color del mouse*/
+	background-color:#1E150E  ;
 
 }
 
@@ -34,14 +34,14 @@ li.desplegable{
 .contenedor_desplegable{
 	display:none;
 	position: absolute;
-	background-color: rgb(45, 49, 51);/*color fondo lista*/
+	background-color: rgb(45, 49, 51);
 	min-width: 160px;
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
 	z-index: 1;
 }
 
 .contenedor_desplegable a{
-	color: rgb(218, 215, 210); /*color letra contenido*/
+	color: rgb(218, 215, 210);
 	padding: 10px 12px;
 	text-decoration: none;
 	display: block;

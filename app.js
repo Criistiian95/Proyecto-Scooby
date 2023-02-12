@@ -18,4 +18,4 @@ app.use((req, res, next) => {
 
 
 // Server Init
-app.listen(port, () => console.log(`Server escuchando en puerto ${port}`));
+app.listen(port, () => console.log('Server escuchando en puerto http://localhost:3000'));

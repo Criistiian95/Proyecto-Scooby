@@ -1,4 +1,4 @@
-.Nuestras_ofertas{
+.Nuestras_ofertas {
     background-color: #6352A3;
     color: #1E150E;
     margin: 60px 0px 0px 0px;
@@ -11,7 +11,7 @@
     width: 100%;
 }
 
-.lista_fotos2{
+.lista_fotos2 {
     display: flex;
     height: 60px;
     overflow: initial;
@@ -22,30 +22,32 @@
 }
 
 
-.lista_fotos2 #foto7{
+.lista_fotos2 #foto7 {
     position: relative;
     height: 115px;
     display: flex;
     margin-right: 0;
 }
-.lista_fotos2 #foto8{
-    position: relative;
-    height: 115px;
-    display: flex;
-}
-.lista_fotos2 #foto9{
+
+.lista_fotos2 #foto8 {
     position: relative;
     height: 115px;
     display: flex;
 }
 
-.lista_fotos2 #vegana4{
+.lista_fotos2 #foto9 {
     position: relative;
     height: 115px;
     display: flex;
 }
 
-.lista_fotos2 #vegana5{
+.lista_fotos2 #vegana4 {
+    position: relative;
+    height: 115px;
+    display: flex;
+}
+
+.lista_fotos2 #vegana5 {
     position: relative;
     height: 115px;
     display: flex;
