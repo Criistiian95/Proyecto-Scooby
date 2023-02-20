@@ -51,16 +51,27 @@ li span{
     justify-content: left;
     align-items: center;
 }
-
-.form{
-    grid-area: form;
-    justify-content: center;
-}
-
-.form input{
-    width: 100%;
-}
-
+.form {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      .form input {
+        width: 90%;
+        height: 30px;
+        margin: 0.5rem;
+      }
+      
+      .form button {
+        padding: 0.5em 1em;
+        background: rgb(100, 200, 255);
+        cursor: pointer;
+      }
 .headUser{
     grid-area: huser;
     justify-content: right;
@@ -109,7 +120,6 @@ li span{
 
 .formulario{
     display: grid;
-    grid-template-columns: repeat(2,1fr);
     column-gap: 2.4rem;
     padding: 2.4rem;
 
@@ -165,4 +175,7 @@ li span{
     text-align: center;
     align-content: center;
     align-items: center;
+  }
+  p{
+    font-size: 20px;
   }

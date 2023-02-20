@@ -12,11 +12,6 @@ const productoController = {
         console.log(products);
         res.render('productCart', { products:products });
     },
-  list: (req, res) => {
-    console.log(products);
-    res.render("productCart", { products });
-  },
-
   detail: (req, res) => {
     const productID = req.params.id;
 
