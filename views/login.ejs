@@ -9,11 +9,18 @@
       <div class = 'formLoguin'>
       <h2 id="log">Inicia Sesión</h2>
       <div >
+
         <h2 id="log">Login</h2>
       </div>
+
+
       <p id="log">Inicia sesión en una cuenta existente</p>
-      <form class="formu" action="resultado.html" method="POST">
-        <p id="log"><input  type="email" name="email" placeholder="Correo Electronico" class="email" required></p>
+      <form class="formu" action="/" method="POST">
+        <p id="log"><input  type="email" name="email" placeholder="Correo Electronico" class="email" required><% if(locals.errors?.email
+        ) {%> 
+          <strong> <%=errors.email.msg %></strong>
+          <%}%>
+          </p>
         <p id="log"><input  type="password" name="password" placeholder="Contraseña" class="password" required></p>
         <form>
           <div id="log">
