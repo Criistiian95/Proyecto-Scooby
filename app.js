@@ -12,7 +12,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(expressSession({secret:"SECRET"}));
 
 
-const port = process.env.PORT || 3002;
 app.use(express.static(path.resolve(__dirname, "./public")));
 console.log(path.resolve(__dirname, "./public"));
 
@@ -27,4 +26,5 @@ app.use((req, res, next) => {
 
 
 // Server Init
+const port = process.env.PORT || 3000;
 app.listen(port, () => console.log('Server escuchando en puerto http://localhost:3000'));

@@ -1,43 +1,46 @@
 <%- include('./partials/head',{style:"edicYProd", title:"Editar productos"}) %>
-<body>
-    <%- include('./partials/header') %>
-    <%- include('./partials/menu_arriba') %>
-    <main class="lis">
-        <div class="conten">
-            <a href="register"><h2>Registrarme</h2></a>
-            <section class="formulario">
-                <form class="form">
-                <ul class = "form input">
-                    <li><input type="text" name=""placeholder="nombre"></li>
-                    <li><input type="text" name=""placeholder="descripcion"></li>
-                    <li><input type="file" name=""placeholder=""></li>
-                    <li><input type="number" name=""placeholder="precio"></li>
-                    <p>elige una opcion</p>
-                    <label>
-                    <input type="radio" name="estacion"/>
-                    <p>menu hamburguesa</p>
-                    <input type="radio" name="estacion"/>
-                    <p>menu vegano</p>
-                </label>
-                </form>
-                </ul>
-            </section>
-            
-            <div class="divBtn">
-                <button class="button">
-                    Subir producto
-                </button>
-                <button class="button">
-                    Eliminar producto
-                </button>
-            </div>
-        </div>
-            
-    </main>
-</body>
+
+    <body>
+        <%- include('./partials/header') %>
+            <%- include('./partials/menu_arriba') %>
+                <main class="lis">
+                    <div class="conten">
+                        <a href="register">
+                            <h2>Registrarme</h2>
+                        </a>
+                        <section class="formulario">
+                            <form class="form">
+                                <ul class="formUl">
+                                    <li class="form_input"><input type="text" name="" placeholder="nombre"></li>
+                                    <li class="form_input"><input type="text" name="" placeholder="descripcion"></li>
+                                    <li class="form_input"><input type="file" name="" placeholder=""></li>
+                                    <li class="form_input" ><input type="number" name="" placeholder="precio"></li>
+                                    <p>elige una opcion</p>
+                                    <div class="menuSelect">
+                                        <input id="ham" type="radio" name="estacion" />
+                                        <label for="ham"><p>menu hamburguesa</p></label>
+                                        <input id="veg" type="radio" name="estacion" />
+                                        <label for="veg"><p>menu vegano</p></label>
+                                    </div>
+                                </ul>
+                            </form>
+                        </section>
+
+                        <div class="divBtn">
+                            <button class="button">
+                                Subir producto
+                            </button>
+                            <button class="button">
+                                Eliminar producto
+                            </button>
+                        </div>
+                    </div>
+
+                </main>
+    </body>
 
     <%- include('./partials/footer') %>
-    
 
 
-</html>
+
+        </html>
