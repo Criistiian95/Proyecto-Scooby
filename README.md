@@ -7,7 +7,6 @@ Somos el Grupo 2, conformado por:
 - Garay, Federico Eduardo
 - Ibañez, Gaspar
 - Maldonado, Alejandro
-- Rodriguez, Sandra
 - Saban, Brandon Nicolas
 
 
