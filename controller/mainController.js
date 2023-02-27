@@ -7,7 +7,7 @@ const controller = {
     login: (req, res) => {
         const errors= validationResult(req);
         if(!errors.isEmpty()){
-            return res.render('index',{session:req.session, errors:errors.mapped()})
+            return res.redirect('index',{session:req.session, errors:errors.mapped()})
         }
         const{email,password}= req.body;
         req.session.email=email;
