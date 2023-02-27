@@ -16,6 +16,7 @@ const productoController = {
     const productID = req.params.id;
 
     const productFound = products.find(function (product) {
+      
       return product.id == productID;
     });
 
