@@ -16,12 +16,16 @@
 
       <p id="log">Inicia sesión en una cuenta existente</p>
       <form class="formu" action="/" method="POST">
-        <p id="log"><input  type="email" name="email" placeholder="Correo Electronico" class="email" required><% if(locals.errors?.email
-        ) {%> 
-          <strong> <%=errors.email.msg %></strong>
+        <p id="log"><input  type="email" name="email" placeholder="Correo Electronico" class="email">
+          <% if (locals.errors && locals.errors.email) { %> 
+          <p> <%=errors.email.msg %></p>
           <%}%>
           </p>
-        <p id="log"><input  type="password" name="password" placeholder="Contraseña" class="password" required></p>
+        <p id="log"><input  type="password" name="password" placeholder="Contraseña" class="password" >
+          <% if (locals.errors && locals.errors.password) { %> 
+            <p> <%=errors.password.msg %></p>
+            <%}%>
+        </p>
         <form>
           <div id="log">
             <div class="recordar">
