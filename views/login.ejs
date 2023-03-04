@@ -18,12 +18,12 @@
       <form class="formu" action="/user/login" method="POST">
         <p id="log"><input  type="email" name="email" placeholder="Correo Electronico" class="email">
           <% if (locals.errors && locals.errors.email) { %> 
-          <p> <%=errors.email.msg %></p>
+          <p> <%= errors.email.msg %></p>
           <%}%>
           </p>
         <p id="log"><input  type="password" name="password" placeholder="Contraseña" class="password" >
           <% if (locals.errors && locals.errors.password) { %> 
-            <p> <%=errors.password.msg %></p>
+            <p> <%= errors.password.msg %></p>
             <%}%>
         </p>
         <form>
@@ -35,6 +35,9 @@
               <button type="submit" id="login">LOGIN</button>
             </div>
         </form>
+        <% if (locals.errorMsg) { %>
+        <p><%= errorMsg %></p>
+        <% } %>
         <a href="register"><h4 id="log">Crea una nueva cuenta</h4></a>
         <h4 class="opciondos">Olvidé mi contraseña</h4>
     </article>

@@ -9,4 +9,5 @@ body("password")
 .notEmpty().withMessage("El campo es requerido"),
 ]
 
+
 module.exports= loginValidations;

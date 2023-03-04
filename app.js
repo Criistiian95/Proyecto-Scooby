@@ -1,6 +1,7 @@
 const express = require("express");
 const expressSession= require("express-session")
 const path = require("path");
+const cookieParser = require("cookie-parser");
 
 const mainRoutes = require("./routes/main");
 const adminRoutes = require("./routes/admin");
@@ -12,7 +13,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(expressSession({secret:"SECRET"}));
-
+app.use(cookieParser());
 
 app.use(express.static(path.resolve(__dirname, "./public")));
 console.log(path.resolve(__dirname, "./public"));
