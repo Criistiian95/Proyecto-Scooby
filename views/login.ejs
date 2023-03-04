@@ -15,7 +15,7 @@
 
 
       <p id="log">Inicia sesión en una cuenta existente</p>
-      <form class="formu" action="/" method="POST">
+      <form class="formu" action="/user/login" method="POST">
         <p id="log"><input  type="email" name="email" placeholder="Correo Electronico" class="email">
           <% if (locals.errors && locals.errors.email) { %> 
           <p> <%=errors.email.msg %></p>

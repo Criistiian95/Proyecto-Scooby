@@ -8,23 +8,24 @@
         <div>
             <a href="register"><h2>Registrarme</h2></a>
         </div>
+        <form method="POST" action="/user/register">
         <section class="formulario">
             <ul class="list1">
-                <li><input type="text" name="" id="" placeholder="Nombre"></li>
-                <li><input type="text" name="" id="" placeholder="Apellido"></li>
-                <li><input type="email" name="" id="" placeholder="Email"></li>
-                <li><input type="password" name="" id="" placeholder="Contraseña"></li>
-                <li><input type="password" name="" id="" placeholder="Repetir Contraseña"></li>
-                <li><p class="fecha">Fecha de nacimiento</p><input type="date" name="" id="" placeholder="Fecha de Nacimiento">
+                <li><input type="text" name="nombre" id="" placeholder="Nombre"></li>
+                <li><input type="text" name="apellido" id="" placeholder="Apellido"></li>
+                <li><input type="email" name="email" id="" placeholder="Email"></li>
+                <li><input type="password" name="contraseña" id="" placeholder="Contraseña"></li>
+                <li><input type="password" name="recontraseña" id="" placeholder="Repetir Contraseña"></li>
+                <li><p class="fecha">Fecha de nacimiento</p><input type="date" name="fecha_de_nacimiento" id="" placeholder="Fecha de Nacimiento">
                 </li>
             </ul>
             <ul class="list2">
-                <li><input type="tel" name="" id="" placeholder="Telefono"></li>
-                <li><input type="text" name="" id="" placeholder="Pais"></li>
-                <li><input type="text" name="" id="" placeholder="Provincia"></li>
-                <li><input type="text" name="" id="" placeholder="Ciudad"></li>
-                <li><input type="number" name="" id="" placeholder="Codigo postal"></li>
-                <li><input type="text" name="" id="" placeholder="Calle y numero"></li>
+                <li><input type="tel" name="telefono" id="" placeholder="Telefono"></li>
+                <li><input type="text" name="pais" id="" placeholder="Pais"></li>
+                <li><input type="text" name="provincia" id="" placeholder="Provincia"></li>
+                <li><input type="text" name="ciudad" id="" placeholder="Ciudad"></li>
+                <li><input type="number" name="codigo_postal" id="" placeholder="Codigo postal"></li>
+                <li><input type="text" name="calle_y_numero" id="" placeholder="Calle y numero"></li>
             </ul>
         </section>
 
@@ -33,7 +34,7 @@
                 Crear Cuenta
             </button>
         </div>
-
+    </form>
     </main>
 </body>
 

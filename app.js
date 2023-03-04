@@ -4,6 +4,8 @@ const path = require("path");
 
 const mainRoutes = require("./routes/main");
 const adminRoutes = require("./routes/admin");
+const productRoutes = require("./routes/producto");
+const userRoutes = require("./routes/user");
 
 const app = express();
 
@@ -20,6 +22,9 @@ app.set("views", path.join(__dirname, "./views"));
 
 app.use("/", mainRoutes);
 app.use("/admin", adminRoutes);
+app.use("/products", productRoutes);
+app.use("/user", userRoutes);
+
 app.use((req, res, next) => {
   res.send("Error 404! File Not Found");
 });

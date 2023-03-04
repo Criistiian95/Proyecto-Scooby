@@ -1,4 +1,6 @@
-const {body}=require("express-validator")
+const {body}=require("express-validator");
+
+
 const loginValidations=[
 body("email")
 .isEmail().withMessage("El formato de email no es valido")

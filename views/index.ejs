@@ -8,10 +8,13 @@
 <section class="slider_principal">
 	<h4 class="contenedor_slider">
 		<ul class="slider">
+		<% products.forEach((product) => { %>
 			<li id="foto1">
-				<img src="images/foto2.jpg">
+				<img src="/images/<%= product.imagen %>">
+				<p><%= product.nombre %></p>
 			</li>
-			<li id="foto2">
+		<% }) %>
+			<!-- <li id="foto2">
 				<img src="images/foto1.jpg">
 			</li>
 			<li id="foto3">
@@ -19,7 +22,7 @@
 			</li>
 			<li id="vegana">
 				<img src="images/vegana.jpg">
-			</li>
+			</li> -->
 		</ul>
 
 		<ul class="menu">
