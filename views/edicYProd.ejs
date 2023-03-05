@@ -9,31 +9,35 @@
                             <h2>Registrarme</h2>
                         </a>
                         <section class="formulario">
-                            <form class="form">
+                            <form class="form" action="/edicYProd" method="POST">
                                 <ul class="formUl">
-                                    <li class="form_input"><input type="text" name="" placeholder="nombre"></li>
-                                    <li class="form_input"><input type="text" name="" placeholder="descripcion"></li>
-                                    <li class="form_input"><input type="file" name="" placeholder=""></li>
-                                    <li class="form_input" ><input type="number" name="" placeholder="precio"></li>
+                                    <li class="form_input"><input type="text" name="nombre" placeholder="nombre"></li>
+                                    <li class="form_input"><input type="text" name="descripcion" placeholder="descripcion"></li>
+                                    <li class="form_input"><input type="file" name="imagen" placeholder=""></li>
+                                    <li class="form_input"><input type="number" name="precio" placeholder="precio"></li>
                                     <p>elige una opcion</p>
                                     <div class="menuSelect">
-                                        <input id="ham" type="radio" name="estacion" />
-                                        <label for="ham"><p>menu hamburguesa</p></label>
-                                        <input id="veg" type="radio" name="estacion" />
-                                        <label for="veg"><p>menu vegano</p></label>
+                                        <input id="ham" type="radio" name="categoria" />
+                                        <label for="ham">
+                                            <p>menu hamburguesa</p>
+                                        </label>
+                                        <input id="veg" type="radio" name="categoria" />
+                                        <label for="veg">
+                                            <p>menu vegano</p>
+                                        </label>
                                     </div>
                                 </ul>
+                                
+                                <div class="divBtn">
+                                    <button type="submit" class="button">
+                                        Subir producto
+                                    </button>
+                                    <button class="button">
+                                        Eliminar producto
+                                    </button>
+                                </div>
                             </form>
                         </section>
-
-                        <div class="divBtn">
-                            <button class="button">
-                                Subir producto
-                            </button>
-                            <button class="button">
-                                Eliminar producto
-                            </button>
-                        </div>
                     </div>
 
                 </main>
