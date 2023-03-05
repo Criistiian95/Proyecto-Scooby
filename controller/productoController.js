@@ -23,15 +23,30 @@ const productoController = {
       res.send("error");
     }
   },
-  create: (req, res) => {
-    res.render("edicYProd");
+  create: (req, res)=>{
+    res.render("productDetail")
   },
-  edit: (req, res) => {
-    const productoEdit = products.find(
-      (product) => product.id == req.params.id
-    );
-    res.render("editarProducto", { productoEdit });
-  },
-};
+  processCreate: (req, res) => {
+    const newObject ={
+      nombre: req.body.nombre,
+      descripcion: req.body.descripcion,
+      imagen: req.body.imagen,
+      precio: req.body.precio,
+      categoria: req.body.categoria
+    }
+    products.push(newObject);
+    fs.writeFileSync(
+      path.join(__dirname, "../data/products.json"),
+      JSON.stringify(products, null, 4),
+      res.redirect("/products"));
+      res.redirect("/index");
+    },
+    edit: (req, res) => {
+      const productoEdit = products.find(
+        (product) => product.id == req.params.id
+        );
+        res.render("editarProducto", { productoEdit });
+      },
+      };
 
 module.exports = productoController;
