@@ -5,7 +5,7 @@ const fs = require("fs")
 const productoController = require("../controller/productoController");
 
 router.get("/list", productoController.list);
-router.get("/detail/:id", productoController.detail);
+router.get("/productDetail/:id", productoController.detail);
 router.post("/edicYProd", productoController.processCreate);
 router.get("/edicYProd", productoController.create);
 router.get("/:id/edit", productoController.edit);

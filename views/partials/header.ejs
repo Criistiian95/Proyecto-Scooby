@@ -1,7 +1,7 @@
 <header>
 	<section class="arriba">
 		<a href="index"><img src="/images/logosb.png" class="logo"></a>
-		<h1 a href="index"> Scooby <br> Burger</a></h1>
+		<h1 > <a class="pagina" href="index"> Scooby <br> Burger</a></h1>
 		<div class="buscador">
 			<img src="/images/lupa.png" class="lupa">
 			<input class="inp_buscador" placeholder="Buscar Productos...">
@@ -9,10 +9,8 @@
 		<div class="contenedor_derecha">
 			<a href="/user/login"><img src="/images/persona.png" class="persona">
 				<% if(locals.session){ %>
-					<h2>Hola <%= session.email%>
-					</h2>
-
-					<% } %>
+					<h2>Hola <%= session.name%> </h2> 
+					<% } %> 
 			</a>
 			<a href="productCart"><img src="/images/carrito.png" class="carrito"></a>
 		</div>

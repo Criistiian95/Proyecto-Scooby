@@ -292,5 +292,33 @@
         "ciudad": "",
         "codigo_postal": "",
         "calle_y_numero": ""
+    },
+    {
+        "id": 22,
+        "nombre": "Cristian",
+        "apellido": "",
+        "email": "nehuen@hotmail.com",
+        "contraseña": "Lunita97",
+        "fecha_de_nacimiento": "",
+        "telefono": "",
+        "pais": "",
+        "provincia": "",
+        "ciudad": "",
+        "codigo_postal": "",
+        "calle_y_numero": ""
+    },
+    {
+        "id": 23,
+        "nombre": "Cristian",
+        "apellido": "Fernandez",
+        "email": "nehuencf@hotmail.com",
+        "contraseña": "$2a$10$PyN2MMHIVfsHsmzh3oTEX.ScD3TF5dR/6bWHdDFIbJBVbupAcRmbu",
+        "fecha_de_nacimiento": "1995-11-12",
+        "telefono": "1128166757",
+        "pais": "Argentina",
+        "provincia": "Buenos Aires",
+        "ciudad": "San Miguel",
+        "codigo_postal": "1661",
+        "calle_y_numero": "Catamarca 2567"
     }
 ]

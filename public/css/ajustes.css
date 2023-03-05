@@ -26,6 +26,12 @@
   a {
     background-color: transparent;
   }
+
+  a.pagina{
+    color: black;
+    text-decoration: none;
+  }
+
   abbr[title] {
     border-bottom: none;
     text-decoration: underline;

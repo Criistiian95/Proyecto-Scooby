@@ -9,6 +9,10 @@ body {
     opacity: 90%;
 }
 
+a .pagina {
+    text-decoration: none;
+}
+
 .lupa {
     height: 40px;
     width: 40px;
