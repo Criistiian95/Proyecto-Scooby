@@ -35,11 +35,7 @@ const productoController = {
       categoria: req.body.categoria
     }
     products.push(newObject);
-    fs.writeFileSync(
-      path.join(__dirname, "../data/products.json"),
-      JSON.stringify(products, null, 4),
-      res.redirect("/products"));
-      res.redirect("/index");
+    writeFileJson(products)
     },
     edit: (req, res) => {
       const productoEdit = products.find(
