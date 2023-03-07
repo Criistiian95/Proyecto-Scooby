@@ -4,7 +4,7 @@
     "nombre": "Shaggy Cheddar",
     "descripcion": "Dos medallones de carne con doble cheddar, salsa picante, y pepinillos",
     "imagen": "foto1.jpg",
-    "categoría": "Soft Flooring and Base",
+    "categoria": "Soft Flooring and Base",
     "precio": "$6.66",
     "oferta": true,
     "mas_pedidas": false,
@@ -15,7 +15,7 @@
     "nombre": "Chinese Foods - Thick Noodles",
     "descripcion": "Timofei",
     "imagen": "foto2.jpg",
-    "categoría": "Asphalt Paving",
+    "categoria": "Asphalt Paving",
     "precio": "$3.16",
     "oferta": false,
     "mas_pedidas": true,
@@ -26,7 +26,7 @@
     "nombre": "Almonds Ground Blanched",
     "descripcion": "Dwain",
     "imagen": "foto3.jpg",
-    "categoría": "Exterior Signage",
+    "categoria": "Exterior Signage",
     "precio": "$5.68",
     "oferta": true,
     "mas_pedidas": false,
@@ -37,7 +37,7 @@
     "nombre": "Food Colouring - Blue",
     "descripcion": "Trevar",
     "imagen": "foto4.jpg",
-    "categoría": "Site Furnishings",
+    "categoria": "Site Furnishings",
     "precio": "$1.23",
     "oferta": false,
     "mas_pedidas": false,
@@ -48,7 +48,7 @@
     "nombre": "Soup - Knorr, Country Bean",
     "descripcion": "Erminie",
     "imagen": "foto5.jpg",
-    "categoría": "Painting & Vinyl Wall Covering",
+    "categoria": "Painting & Vinyl Wall Covering",
     "precio": "$4.56",
     "oferta": true,
     "mas_pedidas": true
@@ -58,7 +58,7 @@
     "nombre": "Soup - Campbells Pasta Fagioli",
     "descripcion": "Laurie",
     "imagen": "foto6.jpg",
-    "categoría": "Construction Clean and Final Clean",
+    "categoria": "Construction Clean and Final Clean",
     "precio": "$4.85",
     "oferta": false,
     "mas_pedidas": false
@@ -68,7 +68,7 @@
     "nombre": "Ice Cream - Life Savers",
     "descripcion": "Paten",
     "imagen": "foto7.jpg",
-    "categoría": "Drywall & Acoustical (MOB)",
+    "categoria": "Drywall & Acoustical (MOB)",
     "precio": "$4.79",
     "oferta": false,
     "mas_pedidas": false
@@ -78,7 +78,7 @@
     "nombre": "Bok Choy - Baby",
     "descripcion": "Vivia",
     "imagen": "foto8.jpg",
-    "categoría": "Granite Surfaces",
+    "categoria": "Granite Surfaces",
     "precio": "$1.93",
     "oferta": false,
     "mas_pedidas": false
@@ -88,7 +88,7 @@
     "nombre": "Bread - Raisin",
     "descripcion": "Una",
     "imagen": "foto9.jpg",
-    "categoría": "Site Furnishings",
+    "categoria": "Site Furnishings",
     "precio": "$5.34",
     "oferta": false,
     "mas_pedidas": false
@@ -98,7 +98,7 @@
     "nombre": "Sauce - Apple, Unsweetened",
     "descripcion": "Mari",
     "imagen": "",
-    "categoría": "Waterproofing & Caulking",
+    "categoria": "Waterproofing & Caulking",
     "precio": "$8.78",
     "oferta": false,
     "mas_pedidas": false
@@ -108,7 +108,7 @@
     "nombre": "Wine - Valpolicella Masi",
     "descripcion": "Hymie",
     "imagen": "",
-    "categoría": "Sitework & Site Utilities",
+    "categoria": "Sitework & Site Utilities",
     "precio": "$3.70",
     "oferta": false,
     "mas_pedidas": false
@@ -118,7 +118,7 @@
     "nombre": "Red Currant Jelly",
     "descripcion": "Charmain",
     "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAJpSURBVDjLpZNNSJRhEMd/z7vr9m7t2oopZl/UoVWpQ0RC0EFL6FAQ4a0OXbrVLaJDEdStjhEUFQVBHaIuSocIomtWJvYFRhb51eqaH7vu7vu8zzvTQbENvDkwDAzMj+E//zGqymrCY5URBxh6vm/Ar21rM6aapwSF7yORm90PBP9NGQAWskc/ujiAUa9ly4EHNcYY0MVhjMFV8jtyA1dGdKkLEEvUqkbhZHHi1XngSRwApxXErgl+3yKyMfBqMSaN33yI5vZrCVQBARVAMV6q6VvPgcv/AKHxVCyRTaCiSPkX4UKO4uRravyNoCGIRdUBjnTLhQQq25Y1wKgvrowtgdoFwsI86ZZT+PWtgKGU72du5CWNbWeJJVKYeAYiL/4PEHrEk41kWk8vraoogtgxwj8vmP7+gVTzEfKDl0jXCf7mixAoVQBVjSpIaRCN5tCogLpZJJxh/vcwaxu7qN24h+Evj0nEF/A1gLDaBwGq4pBwCrFTiM0hNoctjjE7kSO9IUM030PDrtPMTIRIFCwfdhFgVQ0R6v6gbhoN86ibZnZ0jPrsCaj00/fwEalMmULeY378E7gqgFqZcaXpubCYEFdK44IGivkk4u0kXVdCgh+gQlR8y/aOc4y960Ws2GUNtBJcH759vB2lC0MaYwjq6hJbO896UnqDSpm93VnEjuOvGyKz7SBTE/e/Lh5whWfqv9NxZkPrsZtNO5NExT5ULe+ffWVvdysmth6Sh3l379KkinSuCOi7sX9098lHm2LeT9TNUOVkwCOWzJL7PMBQ79Wn8ZU+zAXW77/bXVZRVKQqdbkigqo2/QXSf1oX6zFeUgAAAABJRU5ErkJggg==",
-    "categoría": "Casework",
+    "categoria": "Casework",
     "precio": "$2.30",
     "oferta": false,
     "mas_pedidas": false
@@ -128,7 +128,7 @@
     "nombre": "Soup - Knorr, Ministrone",
     "descripcion": "Noak",
     "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAE3SURBVDjLY/j//z8DJZhh6BgQMuWBQumq5xdaNr/84Nt1t4FkA5LnPd4A1Kjg1XaroWH98/9keyFx1sMLKfMePcAwoLy8/EBxcfGB3NzcA2lpaQfi4+MVwsPDD/j5+R1wdXU9AFJjX3GtIWzSvQvmOZcMMAwAag4Aav6QkpLyH6h5AkgMqLkBqHmBjY2NgnXRlQCn6msLTDIuCBgmX3DQiz+rgOEFoM0OQM3/IyMj/wM1F8BsBmHv1psH0uc+/J8868H/sIl3P+AMA6CzJwQGBv53c3P7D7RZgORoBNosANLs4uLy38jIaALJBoCcDbS5wNra+r+BgcF/BQUFB6IMANkMDbACEF9TU3MC0AX/JSQkPggKChoQNABq8wGQs4GaDYA2HwBqPgDUfICLi+sACwuLweDMTAA2jKFj5WHetwAAAABJRU5ErkJggg==",
-    "categoría": "Granite Surfaces",
+    "categoria": "Granite Surfaces",
     "precio": "$7.98",
     "oferta": false,
     "mas_pedidas": false
@@ -138,7 +138,7 @@
     "nombre": "Pate - Peppercorn",
     "descripcion": "Janifer",
     "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAD7SURBVDjLY/z//z8DJYCJgULAgi6gUvvEWEOVY6aqJJsxw79/DAxIDrxw+9ee/blirnhdYKjHtcpKmd1YiZ+JQZKbmeHivV97+j0EGEGaGf4T4QIZPiYlXhZGsM2g4Pn/FyL+/x+I/Ec4DEA2vv32jwEetjAa6B2YYXgNeHD/Z9iOM19XP3j3h+Hbz/9ATRBbwbH19z9hL9zrkn0PpMIUCh4Jaqpz7IZF8/8/DAwMWKIcZzQ+mCD3/tu3v+8Z/sC88h8aDgRcgAzAfoa54C9WB+A3AORnmCYw/ZdEA/4hO/kvAwMDyS74j4j6//+w6ifkBYQmXAmJccBzIwCU7Hm5Y0odkQAAAABJRU5ErkJggg==",
-    "categoría": "Glass & Glazing",
+    "categoria": "Glass & Glazing",
     "precio": "$6.63",
     "oferta": false,
     "mas_pedidas": false
@@ -149,7 +149,7 @@
     "nombre": "Soup Bowl Clear 8oz92008",
     "descripcion": "Lesli",
     "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAJVSURBVDjLlZPbS5NhHMd3tbvyov6HIJRuhKAFgRci5GXYVQkG0c6HJGvD1FVMjdxC22wlQ9iG7uBh0rtDmxtb77vFoh2c7KgMtiGbU9xdgezb3hf0Ii3cxZfngef5fn6H5/ewALD+Vv8Upeh7HfzdM+pb4QwT7PPunOg8M7tlPh63JtE/4UM3f7WnLUDL3NE7vgmFKYbeF050Di3dbQvQSrvjzogTIm0Yt0WrePp25VNbAHcgrLopXMOgyo/uR8v4bAnAbrdLLwSIRCLK1HYaHKEdnQ9MuHZ/Edv5MpYcHljc1K9Fgvo+uxqanLYEr5wBhMNhZTqdRr1ex6jOBz8VxzONC+VyGQcHB5g3rcFGZWH+lscrc9ArWdjseqzzXWLMFEWdmnO5HEwbEYzpvmKZ+IFKpYJSqQS/3w/l+4XmlCXYnHGmMfTBOzyg9lxmkSQ5RpsbjQYKhQKy2Syz7u/vM0Z6T5+73W44nU7IlOrmS9tPPJn3VfsmXVdZLfKbra0tVKtV7O7uYmdnh8mEBtCwVCqFRCIBgiCg0Wggk8ko7sdNCMwJ3JogRpgSHA6HOhqN4ujoCIeHh6jVashkMkgmk4jH4wgEApibm4NUKqVEIhH74awXrfSPbyi+dJ020Wg0vguFQtjb20M+n2eixmIxBqDX6+nIpFAoZMb63owHHCXhOvOMWq1W7fF4UCwWQZdFN9RqtdKRSYFAcPonrj/fGPznIKlUKvX6+jrTfZvNBolEQvL5fPaFJ5GWXC5XGwwGiMViksfjtfcbT9Rq1gCXy/2vmdYfaGviUGKvapgAAAAASUVORK5CYII=",
-    "categoría": "Framing (Wood)",
+    "categoria": "Framing (Wood)",
     "precio": "$8.52",
     "oferta": false,
     "mas_pedidas": false
@@ -160,7 +160,7 @@
     "nombre": "Hickory Smoke, Liquid",
     "descripcion": "Shaughn",
     "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAJtSURBVDjLjZPfS1NhGMfPXfh3OG/E/yBImNkqrYGCzAthh+WNgXihwQYb2CoYukGwsdRLoYUWQbRAhqzc2Q91IrrVhlhLqznL5Tyb23m3s317z1szBzM68Lk47/N9Pud5XjgcAK7OVfM7/a2piE87HalRoLVHStrp1VKvLVi7fE9wns/WaXi58UgoH4kl/CxIyOZ/cyRKSKRFmF/tw/B4p3jl7utLFwp6baHiySnBxheZUkHkM8HKrgSpUsVGWsaDN/tQG/1PLxT02EIlRbBJBZtfZaztlSF8JEgdFqBMdnh8im7LSqWpYHJysqXHFiS5AkGMfi12UP0zRRm+D6fwxvPI0dWu3Q8QvV7f0iCgzQZKnl4WjqkgcVDDeyrYpqLoXoWtsbxTpLUyrlsFDA4O5vv7+w1MQBu7Z2dnEY1GcXsqjCwVJDM1JCixb1Vs0VXCdIoAXSVLBTcfhhEIBDA+Pg6NRtOtCLbpg0wmA7PZ/F8oWUEQMDAwsKsIiCzLUFhfX4coiv8kFAqhnh8bG6txFosFhBDG4uIiUqkUEzVDqc3Pz5/leZ4HZzKZkEgkGG63G8lkEn6/vylKxuFwnOU7OzvBTUxMwOfzMex2O+LxOJaWlpoSi8VgtVrP8u3t7eDoHvB6vQyXywV6Jwyj0YjR0VE2Zl9fH7q6uqBWq9lZPd/W1gZuZGSk6vF42IHSuPD8JZbfBpvybOEFOjo6WHZubg6tra3gDAbDzNDQ0LZOpwPvCqNYIjg6IfhBOcxJSGdL2PtewKeMiKJUBu8MQ6VSKc1bFFPDv8C7ItXhJ2sYdv/lDmOVodR4Z6R6vucXuxIEyKz+W40AAAAASUVORK5CYII=",
-    "categoría": "Elevator",
+    "categoria": "Elevator",
     "precio": "$2.55",
     "oferta": false,
     "mas_pedidas": false
@@ -171,7 +171,7 @@
     "nombre": "Sugar - Splenda Sweetener",
     "descripcion": "Haily",
     "imagen": "",
-    "categoría": "Electrical and Fire Alarm",
+    "categoria": "Electrical and Fire Alarm",
     "precio": "$6.16",
     "oferta": false,
     "mas_pedidas": false
@@ -181,7 +181,7 @@
     "nombre": "Bar Nature Valley",
     "descripcion": "Tan",
     "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAJvSURBVDjLjdM/TFNRFMfx733vtdBa0QiUqFEHI3FRw4TooDGGuOpCHPy3sOji4OCgicTRERMHSWcGB/wDhmhwMEZDIkj8g0YFqmCtYJFi7Xv3z3GoUjAO3O0m59587j2/o0SE0dHRI8UH1wfM3DTm6wTtmfFWVrfyamRkZLe19onT5TU+lm83Ojnc82pVp4MgaA16e3vH29raztW+7s+k6gEBrfWKQuccIrJin0gkAPhHYMh3d3Lw5gsGn31kcrpIfkETBD6httQEfvVW5XBzr7uWBPGx/szatIADpRSTX4ocb99OMpn6L38x1NzsU5eDjo6Ondbabtd4Al8Zfjx8hFKKwqIjmUwxPrPA46kLrKubpRRpsvl69m26yt6dm1H4LAmCF/cydQ2CiKCUItIWAxjnSKXyJGIbcIS4+BRfCyWcOCJjWCY4ia8MhQcVQTzmIwLFUkShXMbKTxZ1yPdSmQIhSKWmKnh+N7O2UUBk6cdFoFh2TM3swNW8ZFGXmC9so7mpptrKquAUPobC4BAAobY4B/O/LHuaLtIydZ5X77LMH7iG0QYBIu2qAm/4TqYuLThLRSCCQhj7fBatNcNRRLQxRvSyA601x/cPI7JCcBoPw9zAEEop1qdiiI24cqyPPw9iWZbQWlMb85YJnt7OpNIObKWgecs6bg194MtsiSAeEEWWeNwHqQbJzL7tqiYxKq/xMExeOsPRwfc457DWYowhDENyuRwNDQ2k0+lqGJWqzIIxZlfLm/sfkxsSiMDExATGGIwxS3PgeR65XI5sNovneURRVLnkb8vONNcf2JqKH5r+qT/1vJsbW+04/wbW84QVgHdG+gAAAABJRU5ErkJggg==",
-    "categoría": "Roofing (Asphalt)",
+    "categoria": "Roofing (Asphalt)",
     "precio": "$1.79",
     "oferta": false,
     "mas_pedidas": false
@@ -191,7 +191,7 @@
     "nombre": "Wine - Sauvignon Blanc Oyster",
     "descripcion": "Tome",
     "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAALQSURBVDjLbZNdSFNhGMf/55xtx6P7aG1rbiSbORwpm/QJQeGQPq/SFmiFFZjBQiiF6CboUrxIUqioKIO66SYRQVAiBIkiilJGyJQGrjl1pq42c+ecnfUcEQrdgd/Fed/n/3+e533el2lvbw8riuIiFnp7eytQ4AsGg98kSaqQZfn70NDQ7v/3NCT05HK5F8SVpqamfCEDEqt0Eyc372lIyBNnyF2ytXTLRSwPUc5DVIBW232U6YHmG+81JK4lqjYbsCScIB4SkY/ax0JGSAlssVXIC1YhCr9gEuYEURSniefE+JYKSGgkagnZpP2Kscwn7Ofugs15MbzUgPEVH0TxskzZGwlTIQOJiNKmz84DByx6rIjXkF71Yyl1HJHfNrV/hVBj7FsMaFHcMKg+Ya+AjimGjHJkTEnA+RIKI+GpKGLDYG8hAyNx2m631wzfjBeYAUstiJVqjBpbyOAXMRCNRmXvnYF9Ak1BygEiDbTF+gg79QwOBT5PUpWDFBfcYkDuOtooJ7gP2U7sQSN0U3HYlyfwxWbGm4VpGI1GfTqdrqqvr6/s6+vLJxKJ5Xg83hkOhx9wbre7QxUTvOFoqjTxdgSHtUZcvHAOTqcTBtMO0D0xOBwOVygUEjweD2OxWNTRHiMTrdpCinhFhIqn1uCXqnGkrg4d924hFf4Jp8MBn8+n4zhO19PTg9nZ2ZzBYBhpa2s7NTMzc1VtoYbE5wm3NV6EbXrzem8HLyn5wetphq43zGYzqAUkk0nQe/mj0WjOUkjGZDLxqgFppSc6ne5Z7N0aOPePdYOx26uMIjHo6upCSUnJ+lomkwHLsjxV06/+UwtrjN/vnySDXcSEVqttph5fBwKB0rKyMoUybZ+fn0ckEgHP83C5XKBxgyayFIvF2NHR0Tkmn//3AL1eL0eH5aOM/XSANhJx6kVYXFxsVRNarVY1szabzeboLJJUUcNfnRWk+01xXkAAAAAASUVORK5CYII=",
-    "categoría": "Asphalt Paving",
+    "categoria": "Asphalt Paving",
     "precio": "$1.59",
     "oferta": false,
     "mas_pedidas": false
@@ -201,7 +201,7 @@
     "nombre": "Mustard - Pommery",
     "descripcion": "Ursuline",
     "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAH+SURBVBgZBcE9i11VGAbQtc/sO0OCkqhghEREAwpWAWUg8aMVf4KFaJEqQtAipTZWViKiCGOh2Ap2gmJhlSIWFsFOxUK0EsUM3pl79n4f12qHb3z3Fh7D83gC95GOJsDe0ixLk5Qq/+xv/Lw9Xd+78/HLX3Y8fXTr2nWapy4eCFKxG7Fby97SnDlYtMbxthyfzHO//nl85fNvfvnk8MbX5xa8IHx1518Vkrj54Q+qQms2vVmWZjdiu5ZR2rT01166/NCZg/2PFjwSVMU6yjoC1oq+x6Y3VbHdlXWExPd379nf7Nmejv2Os6OC2O4KLK0RNn3RNCdr2Z5GJSpU4o+/TkhaJ30mEk5HwNuvX7Hpi76wzvjvtIwqVUSkyjqmpHS0mki8+9mPWmuWxqYvGkbFGCUAOH/+QevYI9GFSqmaHr5wkUYTAlGhqiRRiaqiNes6SOkwJwnQEqBRRRJEgkRLJGVdm6R0GLMQENE0EkmkSkQSVVMqopyuIaUTs0J455VLAAAAAODW0U/GiKT0pTWziEj44PZ1AAAAcPPqkTmH3QiJrlEVDXDt0qsAAAAAapa5BqUnyaw0Am7//gUAAAB49tEXzTmtM5KkV/y2G/X4M5fPao03n/sUAAAAwIX7y5yBv9vhjW/fT/IkuSp5gJKElKRISYoUiSRIyD1tufs/IXxui20QsKIAAAAASUVORK5CYII=",
-    "categoría": "Epoxy Flooring",
+    "categoria": "Epoxy Flooring",
     "precio": "$2.02",
     "oferta": false,
     "mas_pedidas": false
