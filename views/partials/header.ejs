@@ -1,13 +1,13 @@
 <header>
 	<section class="arriba">
-		<a href="index"><img src="/images/logosb.png" class="logo"></a>
-		<h1 > <a class="pagina" href="index"> Scooby <br> Burger</a></h1>
+		<a href="/index"><img src="/images/logosb.png" class="logo"></a>
+		<h1 > <a class="pagina" href="/index"> Scooby <br> Burger</a></h1>
 		<div class="buscador">
 			<img src="/images/lupa.png" class="lupa">
 			<input class="inp_buscador" placeholder="Buscar Productos...">
 		</div>
 		<div class="contenedor_derecha">
-			<a href="/user/login"><img src="/images/persona.png" class="persona">
+			<a href="/login"><img src="/images/persona.png" class="persona">
 				<% if(locals.session){ %>
 					<h2>Hola <%= session.name%> </h2> 
 					<% } %> 
