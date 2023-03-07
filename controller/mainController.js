@@ -18,9 +18,10 @@ function getProducts() {
 const controller = {
   index: (req, res) => {
     const products = getProducts();
+    const slider = products.filter(product => product.slider == true)
     const oferta = products.filter(product => product.oferta == true)
     const masVendidas = products.filter(product => product.mas_pedidas == true)
-    res.render("index", { products, oferta, masVendidas });
+    res.render("index", { products, slider, oferta, masVendidas });
   },
   login: (req, res) => {
     const errors = validationResult(req);

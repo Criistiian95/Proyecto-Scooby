@@ -7,7 +7,8 @@
     "categoría": "Soft Flooring and Base",
     "precio": "$6.66",
     "oferta": true,
-    "mas_pedidas": false
+    "mas_pedidas": false,
+    "slider":true
   },
   {
     "id": 2,
@@ -17,7 +18,8 @@
     "categoría": "Asphalt Paving",
     "precio": "$3.16",
     "oferta": false,
-    "mas_pedidas": true
+    "mas_pedidas": true,
+    "slider":true
   },
   {
     "id": 3,
@@ -27,7 +29,8 @@
     "categoría": "Exterior Signage",
     "precio": "$5.68",
     "oferta": true,
-    "mas_pedidas": false
+    "mas_pedidas": false,
+    "slider":true
   },
   {
     "id": 4,
@@ -37,7 +40,8 @@
     "categoría": "Site Furnishings",
     "precio": "$1.23",
     "oferta": false,
-    "mas_pedidas": false
+    "mas_pedidas": false,
+    "slider":true
   },
   {
     "id": 5,
@@ -138,6 +142,7 @@
     "precio": "$6.63",
     "oferta": false,
     "mas_pedidas": false
+    
   },
   {
     "id": 15,
@@ -148,6 +153,7 @@
     "precio": "$8.52",
     "oferta": false,
     "mas_pedidas": false
+    
   },
   {
     "id": 16,
@@ -158,6 +164,7 @@
     "precio": "$2.55",
     "oferta": false,
     "mas_pedidas": false
+    
   },
   {
     "id": 17,

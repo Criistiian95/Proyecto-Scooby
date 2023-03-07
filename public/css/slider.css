@@ -29,7 +29,7 @@ top: 0;
 opacity: 0;
 width: inherit;
 height: inherit;
-transition: 0.5s;
+transition: opacity 0.7s;
 }
 
 .contenedor_slider > ul.slider li img{
