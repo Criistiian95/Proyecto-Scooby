@@ -1,0 +1,50 @@
+<%- include('./partials/head',{style:"edicYProd", title:"Editar productos"}) %>
+
+    <body>
+        <%- include('./partials/header') %>
+            <%- include('./partials/menu_arriba') %>
+                <main class="lis">
+                    <div class="conten">
+                        <a href="register">
+                            <h2>Subir Producto</h2>
+                        </a>
+                        <section class="formulario">
+                            <form class="form" action="/products" method="POST" enctype="multipart/form-data">
+                                <ul class="formUl">
+                                    <li class="form_input"><input type="text" name="nombre" placeholder="nombre"></li>
+                                    <li class="form_input"><input type="text" name="descripcion" placeholder="descripcion"></li>
+                                    <li class="form_input"><input type="file" name="image" placeholder=""></li>
+                                    <li class="form_input"><input type="number" name="precio" placeholder="precio"></li>
+                                    <p>elige una opcion</p>
+                                    <div class="menuSelect">
+                                        <input id="ham" type="radio" name="categoria" />
+                                        <label for="ham">
+                                            <p>menu hamburguesa</p>
+                                        </label>
+                                        <input id="veg" type="radio" name="categoria" />
+                                        <label for="veg">
+                                            <p>menu vegano</p>
+                                        </label>
+                                    </div>
+                                </ul>
+                                
+                                <div class="divBtn">
+                                    <button type="submit" class="button">
+                                        Subir producto
+                                    </button>
+                                    <button class="button">
+                                        Eliminar producto
+                                    </button>
+                                </div>
+                            </form>
+                        </section>
+                    </div>
+
+                </main>
+    </body>
+
+    <%- include('./partials/footer') %>
+
+
+
+        </html>

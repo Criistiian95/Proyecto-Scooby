@@ -23,31 +23,10 @@
 }
 
 
-.lista_fotos #foto4{
+.lista_fotos .product_item{
     position: relative;
     height: 115px;
     display: flex;
     margin-right: 0;
 }
-.lista_fotos #foto5{
-    position: relative;
-    height: 115px;
-    display: flex;
-}
-.lista_fotos #foto6{
-    position: relative;
-    height: 115px;
-    display: flex;
-}
 
-.lista_fotos #vegana2{
-    position: relative;
-    height: 115px;
-    display: flex;
-}
-
-.lista_fotos #vegana3{
-    position: relative;
-    height: 105px;
-    display: flex;
-}

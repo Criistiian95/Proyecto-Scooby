@@ -2,13 +2,25 @@ const fs = require("fs");
 const path = require("path");
 const { validationResult } = require("express-validator");
 
-const productJson = fs.readFileSync(path.join(__dirname, "../data/products.json"), "utf-8");
-const products = JSON.parse(productJson);
+const productsFilePath = path.join(__dirname, "../data/products.json")
+
+function getProducts() {
+  const productJson = fs.readFileSync(
+  productsFilePath,
+    "utf-8"
+  );
+  const products = JSON.parse(productJson);
+  return products
+}
+
 
 
 const controller = {
   index: (req, res) => {
-    res.render("index", { products });
+    const products = getProducts();
+    const oferta = products.filter(product => product.oferta == true)
+    const masVendidas = products.filter(product => product.mas_pedidas == true)
+    res.render("index", { products, oferta, masVendidas });
   },
   login: (req, res) => {
     const errors = validationResult(req);
@@ -39,3 +51,6 @@ const controller = {
 };
 
 module.exports = controller;
+
+// agregarle al form de crear un campo para las mas vendidas si o no 
+//

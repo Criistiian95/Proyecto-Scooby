@@ -38,21 +38,11 @@
 </div>
 <div class="foto_pedidas">
 	<ul class="lista_fotos">
-		<li id="foto4">
-			<img src="images/foto4.png">
+		<% masVendidas.forEach(product => { %>
+		<li class="product_item">
+			<img src="/images/<%= product.imagen %>">
 		</li>
-		<li id="foto5">
-			<img src="images/foto5.jpg">
-		</li>
-		<li id="foto6">
-			<img src="images/foto6.jpg">
-		</li>
-		<li id="vegana2">
-			<img src="images/vegana2.jpg">
-		</li>
-		<li id="vegana3">
-			<img src="images/vegana3.jpg">
-		</li>
+		<% }) %>
 	</ul>
 </div>
 </section>
