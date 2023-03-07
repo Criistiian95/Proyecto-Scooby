@@ -52,21 +52,11 @@
 	</div>
 	<div class="foto_oferta">
 	<ul class="lista_fotos2">
-		<li id="foto7">
-			<img src="images/foto7.jpg">
+		<% oferta.forEach(product => { %>
+		<li class="product_item">
+			<img src="/images/<%= product.imagen %>">
 		</li>
-		<li id="foto8">
-			<img src="images/foto8.jpg">
-		</li>
-		<li id="foto9">
-			<img src="images/foto9.jpg">
-		</li>
-		<li id="vegana4">
-			<img src="images/vegana4.jpg">
-		</li>
-		<li id="vegana5">
-			<img src="images/vegana5.jpg">
-		</li>
+	<% }) %>
 	</ul>
 	</div>
 </section>

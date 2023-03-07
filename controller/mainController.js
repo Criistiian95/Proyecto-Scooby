@@ -53,4 +53,3 @@ const controller = {
 module.exports = controller;
 
 // agregarle al form de crear un campo para las mas vendidas si o no 
-//
