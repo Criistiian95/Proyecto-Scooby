@@ -20,7 +20,9 @@ router.get("/productDetail/:id", productoController.detail);
 router.post("/", upload.single("image"), productoController.processCreate);
 router.get("/create", productoController.create);
 router.get("/:id/edit", productoController.edit);
+router.get("/product/delete/:id", productoController.delete);
+router.delete("/products/delete/:id", productoController.destroy);
 //router.put("/product/:id", productoController.);
-//router.get("/product/:id", productoController.);
+
 
 module.exports = router;
