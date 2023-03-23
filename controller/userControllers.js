@@ -38,14 +38,14 @@ const controller = {
     );
     res.redirect("/login");
   },
-  processLogin: (req, res) => {
+  processLogin: async (req, res) => {
     const emailForm = req.body.email;
     const passwordForm = req.body.contraseña;
     const resultError =  validationResult(req);
     if(!resultError.isEmpty()){
      return res.render("login", { errors: resultError.mapped() })
     }
-    const userFound = users.find((user) => {
+    const userFound = await users.find((user) => {
       return (
         emailForm == user.email &&
         bcrypt.compareSync(passwordForm, user.contraseña)
