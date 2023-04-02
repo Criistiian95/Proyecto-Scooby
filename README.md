@@ -5,7 +5,6 @@ Somos el Grupo 2, conformado por:
 - Fernandez, Cristian
 - Flores, Aldana Belén
 - Garay, Federico Eduardo
-- Ibañez, Gaspar
 - Maldonado, Alejandro
 - Saban, Brandon Nicolas
 
