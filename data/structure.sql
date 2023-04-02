@@ -35,7 +35,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `structure`.`categories` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `ofert` TINYINT NOT NULL,
+  `offer` TINYINT NOT NULL,
   `more_requests` TINYINT NOT NULL,
   `slider` TINYINT NOT NULL,
   PRIMARY KEY (`id`))
@@ -73,12 +73,12 @@ CREATE TABLE IF NOT EXISTS `structure`.`Users` (
   `last_name` VARCHAR(45) NOT NULL,
   `email` TEXT(100) NOT NULL,
   `password` TEXT NOT NULL,
-  `birthdate` DATETIME NOT NULL,
+  `birth_date` DATETIME NOT NULL,
   `tel` INT NOT NULL,
-  `pais` TEXT NOT NULL,
+  `country` TEXT NOT NULL,
   `province` TEXT NOT NULL,
   `city` TEXT NULL,
-  `postal_code` TEXT NULL,
+  `postal_code` INT NULL,
   `street` TEXT NULL,
   `number` INT NULL,
   PRIMARY KEY (`id`))

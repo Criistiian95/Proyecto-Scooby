@@ -30,7 +30,9 @@ const productoController = {
     }
   },
   create: async (req, res) => {
-    res.render("createProduct");
+
+res.render("createProduct");
+
   },
   processCreate: async (req, res) => {
     const errors = validationResult(req);
