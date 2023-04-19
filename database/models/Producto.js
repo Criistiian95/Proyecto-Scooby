@@ -11,7 +11,7 @@ id: {
     autoIncrement: true
 },
 name: {
-    type: dataTypes.VARCHAR(20),
+    type: dataTypes.TEXT(20),
     allowNull: false
 },
 description: {

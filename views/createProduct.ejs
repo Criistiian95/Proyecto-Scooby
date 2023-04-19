@@ -11,10 +11,26 @@
                         <section class="formulario">
                             <form class="form" action="/products" method="POST" enctype="multipart/form-data">
                                 <ul class="formUl">
-                                    <li class="form_input"><input type="text" name="nombre" placeholder="nombre"></li>
-                                    <li class="form_input"><input type="text" name="descripcion" placeholder="descripcion"></li>
-                                    <li class="form_input"><input type="file" name="image" placeholder=""></li>
-                                    <li class="form_input"><input type="number" name="precio" placeholder="precio"></li>
+                                    <div>
+                                        <label for="nombre">nombre</label>
+                                        <li class="form_input"><input type="text" name="nombre" placeholder="nombre" >
+                                        </li>
+                                    </div>
+                                    <div>
+                                        <label for="descripcion">descripcion</label>
+                                        <li class="form_input"><input type="text" name="descripcion" placeholder="descripcion" >
+                                        </li>
+
+                                    </div>
+                                    <div>
+                                        <label for="image">image</label>
+                                        <li class="form_input"><input type="file" name="image" placeholder="" ></li>
+                                    </div>
+                                    <div>
+                                        <label for="precio">precio</label>
+                                        <li class="form_input"><input type="number" name="precio" placeholder="precio" >
+                                        </li>
+                                    </div>
                                     <p>elige una opcion</p>
                                     <div class="menuSelect">
                                         <input id="ham" type="radio" name="categoria" />
@@ -27,7 +43,7 @@
                                         </label>
                                     </div>
                                 </ul>
-                                
+
                                 <div class="divBtn">
                                     <button type="submit" class="button">
                                         Subir producto

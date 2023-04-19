@@ -320,5 +320,19 @@
         "ciudad": "San Miguel",
         "codigo_postal": "1661",
         "calle_y_numero": "Catamarca 2567"
+    },
+    {
+        "id": 24,
+        "nombre": "",
+        "apellido": "",
+        "email": "",
+        "contraseña": "$2a$10$YE3UibT9SklMOvOLJeZdmeY5EGnvrSmPyDBE1ik0CyqKUMR.eZzfK",
+        "fecha_de_nacimiento": "",
+        "telefono": "",
+        "pais": "",
+        "provincia": "",
+        "ciudad": "",
+        "codigo_postal": "",
+        "calle_y_numero": ""
     }
 ]
