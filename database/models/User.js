@@ -8,11 +8,11 @@ module.exports = (sequelize, dataTypes) => {
       allowNull: false,
     },
     name: {
-      type: dataTypes.VARCHAR(45),
+      type: dataTypes.STRING(45),
       allowNull: false,
     },
     last_name: {
-      type: Sequelize.VARCHAR(45),
+      type: dataTypes.STRING(45),
       allowNull: false,
     },
     email: {
@@ -25,7 +25,7 @@ module.exports = (sequelize, dataTypes) => {
       allowNull: false,
     },
     birth_date: {
-      type: dataTypes.DATETIME,
+      type: dataTypes.DATE,
       allowNull: false,
     },
     tel: {
