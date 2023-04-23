@@ -9,26 +9,26 @@
                             <h2>Subir Producto</h2>
                         </a>
                         <section class="formulario">
-                            <form class="form" action="/products" method="POST" enctype="multipart/form-data">
+                            <form class="form" action="/createProducts" method="POST" enctype="multipart/form-data">
                                 <ul class="formUl">
                                     <div>
-                                        <label for="nombre">nombre</label>
-                                        <li class="form_input"><input type="text" name="nombre" placeholder="nombre" >
+                                        <label for="nya">nombre</label>
+                                        <li class="form_input"><input id="nya" type="text" name="nya" class="form-control" value="<% if(tipeof validaciones!= 'undefined') { %><%= valores.nya %><% } %>">
                                         </li>
                                     </div>
                                     <div>
                                         <label for="descripcion">descripcion</label>
-                                        <li class="form_input"><input type="text" name="descripcion" placeholder="descripcion" >
+                                        <li class="form_input"><input id="descripcion" type="text" name="descripcion" class="form-control" value="<% if(tipeof validaciones!= 'undefined') { %><%= valores.descripcion %><% } %>">
                                         </li>
 
                                     </div>
                                     <div>
                                         <label for="image">image</label>
-                                        <li class="form_input"><input type="file" name="image" placeholder="" ></li>
+                                        <li class="form_input"><input id="image" type="file" name="image" class="form-control" value="<% if(tipeof validaciones!= 'undefined') { %><%= valores.image %><% } %>"></li>
                                     </div>
                                     <div>
                                         <label for="precio">precio</label>
-                                        <li class="form_input"><input type="number" name="precio" placeholder="precio" >
+                                        <li class="form_input"><input id="precio" type="number" name="precio" class="form-control" value="<% if(tipeof validaciones!= 'undefined') { %><%= valores.precio %><% } %>">
                                         </li>
                                     </div>
                                     <p>elige una opcion</p>
@@ -53,6 +53,14 @@
                                     </button>
                                 </div>
                             </form>
+                            <% if(tipeof validaciones!= 'undefined') { %>
+                                <%validaciones.forEach((validacion)=>{%>
+                                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                        <strong><%=validacion.msg %></strong>
+                                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                      </div>
+                                    <% }) %>
+                            <% } %>
                         </section>
                     </div>
 

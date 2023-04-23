@@ -23,7 +23,7 @@ router.get("/create", productoController.create);
 router.get("/:id/edit", productoController.edit);
 router.get("/product/delete/:id", productoController.delete);
 router.delete("/products/delete/:id", productoController.destroy);
-router.post("/createProducts", productsValidations, productoController.create)
+router.post("/createProducts", [productsValidations], productoController.create)
 //router.put("/product/:id", productoController.);
 
 

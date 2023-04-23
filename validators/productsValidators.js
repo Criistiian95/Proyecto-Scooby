@@ -12,7 +12,17 @@ const productValidations=[
    body('precio', 'ingrese el precio del producto')
    .isNumeric()
    .exists()
-    ]
+    ];
+    (req,res)=>{
+      const errors = validationResult(req)
+      if(!errors.isEmpty()){
+         const valores = req.body
+         const validaciones = errors.array()
+         res.render('create', {validaciones: validaciones, valores})
+      }else{
+         res.send('¡validación exitosa!')
+      }
+    }
     
     
     module.exports= productValidations;

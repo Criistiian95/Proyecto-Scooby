@@ -3,6 +3,7 @@ const expressSession= require("express-session")
 const path = require("path");
 const cookieParser = require("cookie-parser");
 
+
 const mainRoutes = require("./routes/main");
 const adminRoutes = require("./routes/admin");
 const productRoutes = require("./routes/producto");
@@ -25,6 +26,7 @@ app.use("/", mainRoutes);
 app.use("/admin", adminRoutes);
 app.use("/products", productRoutes);
 app.use("/user", userRoutes);
+app.use("/products", productRoutes);
 
 app.use((req, res, next) => {
   res.send("Error 404! File Not Found");
