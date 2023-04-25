@@ -334,5 +334,33 @@
         "ciudad": "",
         "codigo_postal": "",
         "calle_y_numero": ""
+    },
+    {
+        "id": 25,
+        "nombre": "lkansdlnads",
+        "apellido": "lmasla",
+        "email": "nehuen_cf_@hotmail.com",
+        "contraseña": "$2a$10$ZM0Hzhl7WDe5s7wjQZE01uMguuqV84DOmQtod4rqu.QAHyReB5DuG",
+        "fecha_de_nacimiento": "1995-11-12",
+        "telefono": "12313168478974",
+        "pais": "argentina",
+        "provincia": "bs as ",
+        "ciudad": "san miguel",
+        "codigo_postal": "1661",
+        "calle_y_numero": "catamarca"
+    },
+    {
+        "id": 26,
+        "nombre": "nehuen",
+        "apellido": "fernandez",
+        "email": "nehuen@hotmail.com",
+        "contraseña": "$2a$10$BsiHt9/6DL8qfg9X.n3jB.8HqjB.bl6D9IgeCaGZDE8DkTRioVjZO",
+        "fecha_de_nacimiento": "1995-11-12",
+        "telefono": "1128166577",
+        "pais": "argentina",
+        "provincia": "bs as",
+        "ciudad": "san miguel",
+        "codigo_postal": "1661",
+        "calle_y_numero": "catamacara"
     }
 ]

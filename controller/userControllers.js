@@ -3,6 +3,12 @@ const path = require("path");
 const bcrypt = require("bcryptjs");
 const { validationResult } = require('express-validator');
 
+//requiero base de datos
+const db= require("../database/models/")
+
+//asocio el modelo
+const User= db.User
+
 const usersJson = fs.readFileSync(
   path.join(__dirname, "../data/users.json"),
   "utf-8"
@@ -39,39 +45,33 @@ const controller = {
     res.redirect("/login");
   },
   processLogin: async (req, res) => {
-    const emailForm = req.body.email;
-    const passwordForm = req.body.contraseña;
-    const resultError =  validationResult(req);
-    if(!resultError.isEmpty()){
-     return res.render("login", { errors: resultError.mapped() })
-    }
-    const userFound = await users.find((user) => {
-      return (
-        emailForm == user.email &&
-        bcrypt.compareSync(passwordForm, user.contraseña)
-      );
-    });
-    if (userFound){
-      req.session.user = { 
-        id: userFound.id,
-        nombre: userFound.nombre,
-        imagen: userFound.imagen,
-        email: userFound.email
+    try {
+      const user= await db.User.findOne({
+        where:{
+          email: req.body.email
+        }
+      });
+      if(!user){
+        return res.render("login",{errors: { unauthorize:{ msg: "Usuario y/o contraseña invalidos"}}});
+        }
+        if (!bcrypt.compareSync(req.body.password, user.password)){
+          return res.render("login", {errors:{unauthorize: { msg: "Usuario y/o contraseña invalidos"}}})
+        }
+        req.session.user={
+          id:user.id,
+          email: user.email,
+          provincia: user.provincia
+        };
+        res.redirect("/index");
+      } catch(error){
+        res.send(error)
       }
-      if (req.body.rememberme){
-        res.cookie("recordame", userFound.id, { maxAge: 60000 * 60 * 24 })
-      }
-      res.redirect("/")
-    } else {
-      res.render("login", { errorMsg: "Error, credenciales inválidas" });
-    }
-
-  },
+    },
   logout: (req, res) => {
-    req.session.destroy()
-    res.clearCookie("recordame")
-    res.redirect("/")
+   delete req.session.user;
+   res.redirect("/")
   }
-};
+}
+
 
 module.exports = controller;

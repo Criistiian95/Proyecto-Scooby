@@ -23,6 +23,10 @@ body {
 
 }
 
+.inp_buscador{
+    margin-top: 30px;
+}
+
 .persona {
     height: 40px;
     width: 40px;
@@ -83,6 +87,11 @@ input {
         margin-top: 20px;
         opacity: 1;
     }
+    .buscador {
+        display: flex;
+        margin-left: -10px;
+    
+    }
 
     input {
         background-color: #fff;
@@ -131,10 +140,10 @@ input {
 @media screen and (min-width: 992px) {
 
     .lupa {
-        height: 40%;
-        width: 40%;
-        margin-left: 40%;
-        margin-top: 34%;
+        height: 40px;
+        width: 40px;
+        margin-left: 40px;
+        margin-top: 34px;
         opacity: 3;
 
     }

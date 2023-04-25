@@ -1,8 +1,5 @@
-const { DataTypes } = require("sequelize");
-const { sequelize } = require(".");
-
 module.exports = (sequelize, dataTypes) => {
-    let alias = 'Producto'
+    let alias = 'Products'
     let cols = {
         id: {
             type: dataTypes.BIGINT(10).UNSIGNED,
@@ -34,7 +31,7 @@ module.exports = (sequelize, dataTypes) => {
         updatedAt: 'updated_at',
         deletedAt: false
     }
-    const Producto = sequelize.define(alias, cols, config)
+    const Products = sequelize.define(alias, cols, config)
 
-    return Producto
+    return Products
 }

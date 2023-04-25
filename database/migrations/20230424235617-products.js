@@ -3,38 +3,35 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up (queryInterface, Sequelize) {
-    /**
-     * Add altering commands here.
-     *
-     * Example:
-     * await queryInterface.createTable('users', { id: Sequelize.INTEGER });
-     */
-    await queryInterface.createTable("users", {
+    await queryInterface.createTable("products", {
       id: {
         type: Sequelize.INTEGER,
         AutoIncrement: true,
         primaryKey: true,
       },
       nombre: {
-        type: Sequelize.TEXT,
-        allowNull: false,
+        type: Sequelize.STRING(45),
       },
-      apellido: {
+      descripcion: {
         type: Sequelize.TEXT,
-        allowNull: false,
-      }, 
-      email: {
-        type: Sequelize.TEXT,
-        allowNull: false
       },
-      contraseña: {
+      imagen: {
         type: Sequelize.TEXT,
-        allowNull: false
       },
-      fecha_de_nacimiento: {
-        type: Sequelize.DATE
-      }
+      precio: {
+        type: Sequelize.DECIMAL(11, 2),
+      },
     });
+  },
+
+  async down(queryInterface, Sequelize) {
+    /**
+     * Add reverting commands here.
+     *
+     * Example:
+     * await queryInterface.dropTable('users');
+     */
+    await queryInterface.dropTable("products");
   },
 
   async down (queryInterface, Sequelize) {
