@@ -3,26 +3,17 @@ const app = express();
 const {body, validationResult} = require("express-validator");
 
 const productValidations=[
-   body('nombre', 'ingrese un nombre al producto')
-   .exists(),
-   body('descripcion', 'ingrese una descripción')
-   .exists(),
-   body('image', 'ingrese una imagen')
-   .exists(),
-   body('precio', 'ingrese el precio del producto')
+   body('nombre')
+   .notEmpty().withMessage('ingrese un nombre al producto'),
+   body('descripcion')
+   .notEmpty().withMessage('ingrese una descripción'),
+   body('image')
+   .notEmpty().withMessage('ingrese una imagen'),
+   body('precio')
    .isNumeric()
-   .exists()
+   .notEmpty().withMessage('ingrese el precio del producto')
     ];
-    (req,res)=>{
-      const errors = validationResult(req)
-      if(!errors.isEmpty()){
-         const valores = req.body
-         const validaciones = errors.array()
-         res.render('create', {validaciones: validaciones, valores})
-      }else{
-         res.send('¡validación exitosa!')
-      }
-    }
+    
     
     
     module.exports= productValidations;

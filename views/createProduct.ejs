@@ -13,22 +13,22 @@
                                 <ul class="formUl">
                                     <div>
                                         <label for="nya">nombre</label>
-                                        <li class="form_input"><input id="nya" type="text" name="nya" class="form-control" value="<% if(tipeof validaciones!= 'undefined') { %><%= valores.nya %><% } %>">
+                                        <li class="form_input"><input id="nya" type="text" name="nya" class="form-control" value="">
                                         </li>
                                     </div>
                                     <div>
                                         <label for="descripcion">descripcion</label>
-                                        <li class="form_input"><input id="descripcion" type="text" name="descripcion" class="form-control" value="<% if(tipeof validaciones!= 'undefined') { %><%= valores.descripcion %><% } %>">
+                                        <li class="form_input"><input id="descripcion" type="text" name="descripcion" class="form-control" value="">
                                         </li>
 
                                     </div>
                                     <div>
                                         <label for="image">image</label>
-                                        <li class="form_input"><input id="image" type="file" name="image" class="form-control" value="<% if(tipeof validaciones!= 'undefined') { %><%= valores.image %><% } %>"></li>
+                                        <li class="form_input"><input id="image" type="file" name="image" class="form-control" value=""></li>
                                     </div>
                                     <div>
                                         <label for="precio">precio</label>
-                                        <li class="form_input"><input id="precio" type="number" name="precio" class="form-control" value="<% if(tipeof validaciones!= 'undefined') { %><%= valores.precio %><% } %>">
+                                        <li class="form_input"><input id="precio" type="number" name="precio" class="form-control" value="">
                                         </li>
                                     </div>
                                     <p>elige una opcion</p>
@@ -53,14 +53,6 @@
                                     </button>
                                 </div>
                             </form>
-                            <% if(tipeof validaciones!= 'undefined') { %>
-                                <%validaciones.forEach((validacion)=>{%>
-                                <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                                        <strong><%=validacion.msg %></strong>
-                                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                                      </div>
-                                    <% }) %>
-                            <% } %>
                         </section>
                     </div>
 

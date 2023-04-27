@@ -37,7 +37,7 @@ res.render("createProduct");
   processCreate: async (req, res) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
-      return res.render("createProduct", { errors: errors.mapped() });
+      return res.send("createProduct", { errors: errors.mapped(), oldData: req.body });
     }
     try {
       const products = getProducts();
