@@ -3,8 +3,8 @@ const path = require("path");
 
 const { validationResult } = require("express-validator");
 
-const productsFilePath = path.join(__dirname, "../data/products.json");
 const db = require("../database/models");
+const productsFilePath = path.join(__dirname, "../data/products.json");
 function getProducts() {
   const productJson = fs.readFileSync(productsFilePath, "utf-8");
   const products = JSON.parse(productJson);
@@ -35,26 +35,21 @@ res.render("createProduct");
 
   },
   processCreate: async (req, res) => {
-    const errors = validationResult(req);
-    if (!errors.isEmpty()) {
-      return res.send("createProduct", { errors: errors.mapped(), oldData: req.body });
-    }
+    const newObject = {
+      nombre: req.body.nombre,
+      descripcion: req.body.descripcion,
+      imagen: req.file.filename,
+      precio: req.body.precio,
+      categoria: req.body.categoria,
+    };
+  
     try {
-      const products = getProducts();
-      const newObject = {
-        id: products[products.length - 1].id + 1,
-        nombre: req.body.nombre,
-        descripcion: req.body.descripcion,
-        imagen: req.file.filename,
-        precio: req.body.precio,
-        categoria: req.body.categoria,
-      };
-      await db.Product.create(newObject);
+    await db.Product.create(newObject);
       products.push(newObject);
-      fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
-      res.redirect("/");
+      //fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
+      res.redirect("/index");
     } catch (error) {
-      return res.send({ error });
+      console.log(error);
     }
   },
   edit: async (req, res) => {
