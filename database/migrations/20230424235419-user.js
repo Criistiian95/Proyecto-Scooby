@@ -9,11 +9,11 @@ module.exports = {
         AutoIncrement: true,
         primaryKey: true,
       },
-      nombre: {
+      name: {
         type: Sequelize.TEXT,
         allowNull: false,
       },
-      apellido: {
+      last_name: {
         type: Sequelize.TEXT,
         allowNull: false,
       }, 
@@ -21,12 +21,30 @@ module.exports = {
         type: Sequelize.TEXT,
         allowNull: false
       },
-      contraseña: {
+      password: {
         type: Sequelize.TEXT,
         allowNull: false
       },
-      fecha_de_nacimiento: {
+      birth_date: {
         type: Sequelize.DATE
+      },
+      tel: {
+        type: Sequelize.INTEGER
+      },
+      country: {
+        type: Sequelize.TEXT
+      },
+      province: {
+        type: Sequelize.TEXT
+      },
+      city: {
+        type: Sequelize.TEXT
+      },
+      postal_code: {
+        type: Sequelize.TEXT
+      },
+      street: {
+        type: Sequelize.TEXT
       }
     });
   },

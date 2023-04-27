@@ -4,16 +4,10 @@ const bcrypt = require("bcryptjs");
 const { validationResult } = require('express-validator');
 
 //requiero base de datos
-const db= require("../database/models/")
+const db = require("../database/models/")
 
 //asocio el modelo
-const User= db.User
 
-const usersJson = fs.readFileSync(
-  path.join(__dirname, "../data/users.json"),
-  "utf-8"
-);
-const users = JSON.parse(usersJson);
 
 const controller = {
   register: (req, res) => {
@@ -22,54 +16,55 @@ const controller = {
   login: (req, res) => {
     res.render("login");
   },
-  processRegister: (req, res) => {
+  processRegister: async (req, res) => {
     const newUser = {
-      id: users.length + 1,
-      nombre: req.body.nombre,
-      apellido: req.body.apellido,
+      name: req.body.nombre,
+      last_name: req.body.apellido,
       email: req.body.email,
-      contraseña: bcrypt.hashSync(req.body.contraseña),
-      fecha_de_nacimiento: req.body.fecha_de_nacimiento,
-      telefono: req.body.telefono,
-      pais: req.body.pais,
-      provincia: req.body.provincia,
-      ciudad: req.body.ciudad,
-      codigo_postal: req.body.codigo_postal,
-      calle_y_numero: req.body.calle_y_numero,
+      password: bcrypt.hashSync(req.body.contraseña),
+      birth_date: req.body.fecha_de_nacimiento,
+      tel: req.body.telefono,
+      country: req.body.pais,
+      province: req.body.provincia,
+      city: req.body.ciudad,
+      postal_code: req.body.codigo_postal,
+      street: req.body.calle_y_numero,
     };
-    users.push(newUser);
-    fs.writeFileSync(
-      path.join(__dirname, "../data/users.json"),
-      JSON.stringify(users, null, 4)
-    );
-    res.redirect("/login");
+    try {
+      await db.User.create(newUser)
+      res.redirect("/login");
+
+    } catch (error) {
+      console.log(error)
+    }
   },
   processLogin: async (req, res) => {
+    const errors = validationResult(req)
+    if (!errors.isEmpty()) {
+      return res.render("login", { errors: errors.mapped(), oldData: req.body })
+    }
     try {
-      const user= await db.User.findOne({
-        where:{
-          email: req.body.email
+      const user = await db.User.findOne({
+        where: {
+          email: req.body.email,
         }
       });
-      if(!user){
-        return res.render("login",{errors: { unauthorize:{ msg: "Usuario y/o contraseña invalidos"}}});
-        }
-        if (!bcrypt.compareSync(req.body.password, user.password)){
-          return res.render("login", {errors:{unauthorize: { msg: "Usuario y/o contraseña invalidos"}}})
-        }
-        req.session.user={
-          id:user.id,
-          email: user.email,
-          provincia: user.provincia
-        };
-        res.redirect("/index");
-      } catch(error){
-        res.send(error)
+      if (!user || !bcrypt.compareSync(req.body.password, user.password)) {
+        return res.render("login", { errorsmsg:"El usuario o la contraseña no existe" })
       }
-    },
+      req.session.user = {
+        id: user.id,
+        email: user.email,
+        provincie: user.province
+      };
+      res.redirect("/");
+    } catch (error) {
+      res.send(error)
+    }
+  },
   logout: (req, res) => {
-   delete req.session.user;
-   res.redirect("/")
+    delete req.session.user;
+    res.redirect("/")
   }
 }
 

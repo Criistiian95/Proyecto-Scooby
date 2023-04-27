@@ -1,49 +1,57 @@
 <%- include('./partials/head',{style:"login",title:"Login"}) %>
 
-<body>
-  <%- include('./partials/header') %>
-	<%- include('./partials/menu_arriba') %>
-  
-  <main>
-    <article>
-      <div class = 'formLoguin'>
-      <h2 id="log">Inicia Sesión</h2>
-      <div >
+  <body>
+    <%- include('./partials/header') %>
+      <%- include('./partials/menu_arriba') %>
 
-        <h2 id="log">Login</h2>
-      </div>
+        <main>
+          <article>
+            <div class='formLoguin'>
+              <h2 id="log">Inicia Sesión</h2>
+              <div>
+
+                <h2 id="log">Login</h2>
+              </div>
 
 
-      <p id="log">Inicia sesión en una cuenta existente</p>
-      <form class="formu" action="/user/login" method="POST">
-        <p id="log"><input  type="email" name="email" placeholder="Correo Electronico" class="email">
-          <% if (locals.errorMsg && locals.errorMsg.email) { %>  
-          <p> <%= errorMsg.email.msg %></p> 
-          <%}%> 
-          </p> 
-        <p id="log"><input  type="password" name="password" placeholder="Contraseña" class="password" >
-          <% if (locals.errorMsg && locals.errorMsg.password) { %> 
-            <p> <%= errorMsg.password.msg %></p>
-            <%}%>
-        </p>
-        <form>
-          <div id="log">
-            <div class="recordar">
-              <input id="log" class="rec" type="checkbox" name="rememberme" value="rememberme" id="tick"><p class="rememberme">RECUÉRDAME</p>
-            </div>
-            <div class="boton" id="log">
-              <button type="submit" id="login">LOGIN</button>
-            </div>
-        </form>
-        <% if (locals.errorMsg) { %>
-        <p><%= errorMsg %></p>
-        <% } %>
-        <a href="register"><h4 id="log">Crea una nueva cuenta</h4></a>
-        <h4 class="opciondos">Olvidé mi contraseña</h4>
-    </article>
-  </div>
-  </main>
-  <%- include('./partials/footer') %>
-</body>
+              <p id="log">Inicia sesión en una cuenta existente</p>
+              <form class="formu" action="/user/login" method="POST">
+                <p id="log"><input type="email" name="email" placeholder="Correo Electronico" class="email"></p>
+                <% if (locals.errors && locals.errors.email) { %>
+                  <p>
+                    <%= locals.errors.email.msg %>
+                  </p>
+                  <%}%>
 
-</html>
+                    <p id="log"><input type="password" name="password" placeholder="Contraseña" class="password">
+                      <% if (locals.errors && locals.errors.password) { %>
+                        <p>
+                          <%= locals.errors.password.msg %>
+                        </p>
+                        <%}%>
+                    </p>
+                    <div id="log">
+                      <div class="recordar">
+                        <input id="log" class="rec" type="checkbox" name="rememberme" value="rememberme" id="tick">
+                        <p class="rememberme">RECUÉRDAME</p>
+                      </div>
+                      <div class="boton" id="log">
+                        <button type="submit" id="login">LOGIN</button>
+                      </div>
+              </form>
+              <% if (locals.errorsmsg) { %>
+                <p>
+                  <%= locals.errorsmsg %>
+                </p>
+                <%}%>
+                  <a href="register">
+                    <h4 id="log">Crea una nueva cuenta</h4>
+                  </a>
+                  <h4 class="opciondos">Olvidé mi contraseña</h4>
+          </article>
+          </div>
+        </main>
+        <%- include('./partials/footer') %>
+  </body>
+
+  </html>

@@ -21,7 +21,7 @@ module.exports = (sequelize, dataTypes) => {
         allowNull: false,
       },
       password: {
-        type: dataTypes.TEXT,
+        type: dataTypes.TEXT,          
         allowNull: false,
       },
       birth_date: {
@@ -51,17 +51,12 @@ module.exports = (sequelize, dataTypes) => {
       street: {
         type: dataTypes.TEXT,
         allowNull: false,
-      },
-      number: {
-          type: dataTypes.INTEGER,
-          allowNull: false
-        },
+      }
     };
     let config = {
-      tableName: "users",
-      timestamps: true,
-      createdAt: "created_at",
-      updatedAt: "updated_at",
+        timestamps: false,
+      tableName: "users"
+      
     };
     const User = sequelize.define(alias, cols, config);
   
