@@ -1,6 +1,4 @@
-const express = require('express');
-const app = express();
-const {body, validationResult} = require("express-validator");
+const {body} = require("express-validator");
 
 const productValidations=[
    body('nombre')

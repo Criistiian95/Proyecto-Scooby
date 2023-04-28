@@ -9,26 +9,50 @@
                             <h2>Subir Producto</h2>
                         </a>
                         <section class="formulario">
-                            <form class="form" action="/createProducts" method="POST" enctype="multipart/form-data">
+                            <form class="form" action="products/create" method="POST">
                                 <ul class="formUl">
                                     <div>
                                         <label for="nya">nombre</label>
-                                        <li class="form_input"><input id="nya" type="text" name="nya" class="form-control" value="">
+                                        <li class="form_input"><input id="nya" type="text" name="nya"
+                                                class="form-control" value="">
+                                            <% if (locals.errors) { %>
+                                                <p>
+                                                    <%= locals.errors.nya.msg %>
+                                                </p>
+                                                <%}%>
                                         </li>
                                     </div>
                                     <div>
                                         <label for="descripcion">descripcion</label>
-                                        <li class="form_input"><input id="descripcion" type="text" name="descripcion" class="form-control" value="">
+                                        <li class="form_input"><input id="descripcion" type="text" name="descripcion"
+                                                class="form-control" value="">
+                                            <% if (locals.errors) { %>
+                                                <p>
+                                                    <%= locals.errors.descripcion.msg %>
+                                                </p>
+                                                <%}%>
                                         </li>
 
                                     </div>
                                     <div>
                                         <label for="image">image</label>
-                                        <li class="form_input"><input id="image" type="file" name="image" class="form-control" value=""></li>
+                                        <li class="form_input"><input id="image" type="file" name="image"
+                                                class="form-control" value=""></li>
+                                        <% if (locals.errors) { %>
+                                            <p>
+                                                <%= locals.errors.image.msg %>
+                                            </p>
+                                            <%}%>
                                     </div>
                                     <div>
                                         <label for="precio">precio</label>
-                                        <li class="form_input"><input id="precio" type="number" name="precio" class="form-control" value="">
+                                        <li class="form_input"><input id="precio" type="number" name="precio"
+                                                class="form-control" value="">
+                                            <% if (locals.errors) { %>
+                                                <p>
+                                                    <%= locals.errors.precio.msg %>
+                                                </p>
+                                                <%}%>
                                         </li>
                                     </div>
                                     <p>elige una opcion</p>

@@ -32,21 +32,21 @@ res.render("createProduct");
       return res.send("createProduct", { errors: errors.mapped(), oldData: req.body });
     }
     try {
-      const products = getProducts();
-      const newObject = {
-        id: products[products.length - 1].id + 1,
-        nombre: req.body.nombre,
-        descripcion: req.body.descripcion,
-        imagen: req.file.filename,
-        precio: req.body.precio,
-        categoria: req.body.categoria,
-      };
-      await db.Product.create(newObject);
+    const newObject = {
+      nombre: req.body.nombre,
+      descripcion: req.body.descripcion,
+      imagen: req.file.filename,
+      precio: req.body.precio,
+      categoria: req.body.categoria,
+    };
+  
+    try {
+    await db.Product.create(newObject);
       products.push(newObject);
-      fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
-      res.redirect("/");
+      //fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
+      res.redirect("/index");
     } catch (error) {
-      return res.send({ error });
+      console.log(error);
     }
   },
   edit: async (req, res) => {
