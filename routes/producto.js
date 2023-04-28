@@ -8,18 +8,20 @@ const productsValidations = require("../validators/productsValidators");
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, path.join(__dirname, "../public/images"));
+      const folder = path.join(__dirname, '../public/images');
+      cb(null, folder);
   },
   filename: (req, file, cb) => {
-    cb(null, Date.now() + "-product" + path.extname(file.originalname))
-  },
+      const fileName = `${Date.now()}-user${path.extname(file.originalname)}`;
+      cb(null, fileName);
+  }
 });
 
 const upload = multer({ storage });
 
 router.get("/list", productoController.list);
 router.get("/productDetail/:id", productoController.detail);
-router.post("/", upload.single("image"), productoController.processCreate);
+router.post("/create", upload.single("filename"), productoController.processCreate);
 router.get("/create", productoController.create);
 router.get("/:id/edit", productoController.edit);
 router.get("/product/delete/:id", productoController.delete);

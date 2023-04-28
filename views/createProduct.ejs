@@ -9,17 +9,13 @@
                             <h2>Subir Producto</h2>
                         </a>
                         <section class="formulario">
-                            <form class="form" action="products/create" method="POST">
+                            <form class="form" action="/products/create" method="POST">
                                 <ul class="formUl">
                                     <div>
                                         <label for="nya">nombre</label>
-                                        <li class="form_input"><input id="nya" type="text" name="nya"
+                                        <li class="form_input"><input id="nya" type="text" name="nombre"
                                                 class="form-control" value="">
-                                            <% if (locals.errors) { %>
-                                                <p>
-                                                    <%= locals.errors.nya.msg %>
-                                                </p>
-                                                <%}%>
+                                            
                                         </li>
                                     </div>
                                     <div>
@@ -36,7 +32,7 @@
                                     </div>
                                     <div>
                                         <label for="image">image</label>
-                                        <li class="form_input"><input id="image" type="file" name="image"
+                                        <li class="form_input"><input id="image" type="file" name="filename"
                                                 class="form-control" value=""></li>
                                         <% if (locals.errors) { %>
                                             <p>

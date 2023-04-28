@@ -26,7 +26,6 @@ app.use("/", mainRoutes);
 app.use("/admin", adminRoutes);
 app.use("/products", productRoutes);
 app.use("/user", userRoutes);
-app.use("/products", productRoutes);
 
 app.use((req, res, next) => {
   res.send("Error 404! File Not Found");

@@ -15,8 +15,8 @@ const productoController = {
   detail: async (req, res) => {
     try {
       const productId = await db.Product.findByPk(req.params.id);
-      const products = getProducts();
-      res.render("productDetail", { product });
+      const products = productId;
+      res.render("productDetail", { products });
     } catch (error) {
       res.send({ error });
     }
@@ -29,24 +29,20 @@ res.render("createProduct");
   processCreate: async (req, res) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
-      return res.send("createProduct", { errors: errors.mapped(), oldData: req.body });
+      return res.render("createProduct", { errors: errors.mapped(), oldData: req.body });
+    }
+    const newObject = {
+      name: req.body.nombre,
+       description: req.body.descripcion,
+       image: req.file.filename ? req.file.filename : 'default-image.png',
+       price: req.body.precio,
+       categories: req.body.categoria,
     }
     try {
-    const newObject = {
-      nombre: req.body.nombre,
-      descripcion: req.body.descripcion,
-      imagen: req.file.filename,
-      precio: req.body.precio,
-      categoria: req.body.categoria,
-    };
-  
-    try {
-    await db.Product.create(newObject);
-      products.push(newObject);
-      //fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
-      res.redirect("/index");
+      await db.Product.create(newObject);
+      res.redirect("/");
     } catch (error) {
-      console.log(error);
+     console.log(error)
     }
   },
   edit: async (req, res) => {

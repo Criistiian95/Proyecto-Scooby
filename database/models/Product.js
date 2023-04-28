@@ -15,8 +15,8 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.TEXT(100),
             allowNull: false
         },
-        imagen: {
-            type: dataTypes.BLOB,
+        image: {
+            type: dataTypes.TEXT,
             allowNull: false
         },
         price: {
@@ -31,11 +31,6 @@ module.exports = (sequelize, dataTypes) => {
     }
     const Product = sequelize.define(alias, cols, config);
 
-    Product.associate = (models) => {
-        User.belongsTo(models.Categories, {
-            as: 'category',
-            foreignKey: 'categories_id'
-        });
-        return Product
-    }
+    
+    return Product
 }
