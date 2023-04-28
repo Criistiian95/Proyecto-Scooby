@@ -1,15 +1,7 @@
-const fs = require("fs");
-const path = require("path");
-
 const { validationResult } = require("express-validator");
 
-const productsFilePath = path.join(__dirname, "../data/products.json");
 const db = require("../database/models");
-function getProducts() {
-  const productJson = fs.readFileSync(productsFilePath, "utf-8");
-  const products = JSON.parse(productJson);
-  return products;
-}
+
 
 const productoController = {
   list: async (req, res) => {
