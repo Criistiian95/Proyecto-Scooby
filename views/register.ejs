@@ -11,21 +11,93 @@
         <form method="POST" action="/user/register">
         <section class="formulario">
             <ul class="list1">
-                <li><input type="text" name="nombre" id="" placeholder="Nombre"></li>
-                <li><input type="text" name="apellido" id="" placeholder="Apellido"></li>
-                <li><input type="email" name="email" id="" placeholder="Email"></li>
-                <li><input type="password" name="contraseña" id="" placeholder="Contraseña"></li>
-                <li><input type="password" name="recontraseña" id="" placeholder="Repetir Contraseña"></li>
-                <li><p class="fecha">Fecha de nacimiento</p><input type="date" name="fecha_de_nacimiento" id="" placeholder="Fecha de Nacimiento">
+                <li><input type="text" name="nombre" id="" placeholder="Nombre" class="form-control <%= locals.errors && errors.nombre ? 'is-invalid' : null %>">
+                                        
+                <% if (locals.errors && errors.nombre) { %>
+                 <div class = "text-danger">
+                    <%= errors.nombre.msg %>
+                 </div>
+                <% } %>
+            </li>
+                <li><input type="text" name="apellido" id="" placeholder="Apellido" class="form-control <%= locals.errors && errors.apellido ? 'is-invalid' : null %>">
+                <% if (locals.errors && errors.apellido) { %>
+                    <div class = "text-danger">
+                       <%= errors.apellido.msg %>
+                    </div>
+                   <% } %>
+                </li>
+                <li><input type="email" name="email" id="" placeholder="Email" class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>">
+                <% if (locals.errors && errors.email) { %>
+                    <div class = "text-danger">
+                       <%= errors.email.msg %>
+                    </div>
+                   <% } %>
+                </li>
+                <li><input type="password" name="contraseña" id="" placeholder="Contraseña" class="form-control <%= locals.errors && errors.contraseña ? 'is-invalid' : null %>">
+                    <% if (locals.errors && errors.contraseña) { %>
+                        <div class = "text-danger">
+                           <%= errors.contraseña.msg %>
+                        </div>
+                       <% } %>
+                </li>
+                <li><input type="password" name="recontraseña" id="" placeholder="Repetir Contraseña" class="form-control <%= locals.errors && errors.recontraseña ? 'is-invalid' : null %>">
+                    <% if (locals.errors && errors.recontraseña) { %>
+                        <div class = "text-danger">
+                           <%= errors.recontraseña.msg %>
+                        </div>
+                       <% } %>
+                </li>
+                <li><p class="fecha">Fecha de nacimiento</p><input type="date" name="fecha_de_nacimiento" id="" placeholder="Fecha de Nacimiento" class="form-control <%= locals.errors && errors.fecha_de_nacimiento ? 'is-invalid' : null %>">
+                    <% if (locals.errors && errors.fecha_de_nacimiento) { %>
+                        <div class = "text-danger">
+                           <%= errors.fecha_de_nacimiento.msg %>
+                        </div>
+                       <% } %>
                 </li>
             </ul>
             <ul class="list2">
-                <li><input type="tel" name="telefono" id="" placeholder="Telefono"></li>
-                <li><input type="text" name="pais" id="" placeholder="Pais"></li>
-                <li><input type="text" name="provincia" id="" placeholder="Provincia"></li>
-                <li><input type="text" name="ciudad" id="" placeholder="Ciudad"></li>
-                <li><input type="number" name="codigo_postal" id="" placeholder="Codigo postal"></li>
-                <li><input type="text" name="calle_y_numero" id="" placeholder="Calle y numero"></li>
+                <li><input type="tel" name="telefono" id="" placeholder="Telefono" class="form-control <%= locals.errors && errors.telefono ? 'is-invalid' : null %>">
+                    <% if (locals.errors && errors.telefono) { %>
+                        <div class = "text-danger">
+                           <%= errors.telefono.msg %>
+                        </div>
+                       <% } %>
+                </li>
+                <li><input type="text" name="pais" id="" placeholder="Pais" class="form-control <%= locals.errors && errors.pais ? 'is-invalid' : null %>">
+                    <% if (locals.errors && errors.pais) { %>
+                        <div class = "text-danger">
+                           <%= errors.pais.msg %>
+                        </div>
+                       <% } %>
+                </li>
+                <li><input type="text" name="provincia" id="" placeholder="Provincia" class="form-control <%= locals.errors && errors.provincia ? 'is-invalid' : null %>">
+                    <% if (locals.errors && errors.provincia) { %>
+                        <div class = "text-danger">
+                           <%= errors.provincia.msg %>
+                        </div>
+                       <% } %>
+                </li>
+                <li><input type="text" name="ciudad" id="" placeholder="Ciudad" class="form-control <%= locals.errors && errors.ciudad ? 'is-invalid' : null %>">
+                    <% if (locals.errors && errors.ciudad) { %>
+                        <div class = "text-danger">
+                           <%= errors.ciudad.msg %>
+                        </div>
+                       <% } %>
+                </li>
+                <li><input type="number" name="codigo_postal" id="" placeholder="Codigo postal" class="form-control <%= locals.errors && errors.codigo_postal ? 'is-invalid' : null %>">
+                    <% if (locals.errors && errors.codigo_postal) { %>
+                        <div class = "text-danger">
+                           <%= errors.codigo_postal.msg %>
+                        </div>
+                       <% } %>
+                </li>
+                <li><input type="text" name="calle_y_numero" id="" placeholder="Calle y numero" class="form-control <%= locals.errors && errors.calle_y_numero ? 'is-invalid' : null %>">
+                    <% if (locals.errors && errors.calle_y_numero) { %>
+                        <div class = "text-danger">
+                           <%= errors.calle_y_numero.msg %>
+                        </div>
+                       <% } %>
+                </li>
             </ul>
         </section>
 

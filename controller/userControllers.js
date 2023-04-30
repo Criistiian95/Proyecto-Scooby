@@ -15,6 +15,10 @@ const controller = {
     res.render("login");
   },
   processRegister: async (req, res) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.render("register", { errors: errors.mapped(), oldData: req.body });
+    }
     const newUser = {
       name: req.body.nombre,
       last_name: req.body.apellido,
