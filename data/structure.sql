@@ -24,7 +24,7 @@ CREATE TABLE IF NOT EXISTS `structure`.`products` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(20) NOT NULL,
   `description` TEXT(100) NOT NULL,
-  `imagen` BLOB NOT NULL,
+  `image` BLOB NOT NULL,
   `price` INT NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;

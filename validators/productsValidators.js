@@ -6,7 +6,8 @@ const productValidations=[
    body('descripcion')
    .notEmpty().withMessage('ingrese una descripción'),
    body('precio')
-   .notEmpty().withMessage('ingrese el precio del producto')
+   .notEmpty().withMessage('ingrese el precio del producto'),
+   body('image').notEmpty().withMessage('ingrese imagen del producto'),
     ];
     
     

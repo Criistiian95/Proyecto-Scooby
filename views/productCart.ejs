@@ -7,7 +7,7 @@
 
                 <h1 class="pedidoTitulo">Mis pedidos</h1>
                 <section class="pedidos">
-                    <% if(products) { %>
+                    
                     <% locals.products.forEach((product)=> {%>
                     <div class="caja-1">
                             <h2>Pedido</h2>
@@ -42,7 +42,7 @@
                     </div>
 
                     <% }); %>
-                    <% }; %>
+
                 </section>
 
                 <a href="productDetail"><button>Modificar</button></a>

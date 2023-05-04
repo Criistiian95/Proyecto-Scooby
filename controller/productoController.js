@@ -9,8 +9,8 @@ const productoController = {
   list: async (req, res) => {
     try {
       const products = await db.Product.findAll();
-      res.locals.products= products;
-      res.render("productCart");
+      console.log(products);
+      res.render("productCart",{products});
     } catch (error) {
       res.send({ error });
     }
