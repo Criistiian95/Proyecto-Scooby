@@ -65,11 +65,18 @@ li span{
         padding: 0;
         margin: 0;
       }
+      .error{
+        font-size: 20px;
+        margin: 10px;
+      }
       
       .form_input {
        min-width: 90%;
         height: 30px;
         margin: 2rem;
+        display: flex;
+       flex-wrap: wrap;
+       justify-content: center;
       }
 
       .form_input input{

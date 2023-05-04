@@ -16,7 +16,7 @@
                                         <li class="form_input"><input id="nya" type="text" name="nombre"
                                                 class="form-control">
                                                 <% if (locals.errors && locals.errors.nombre) { %>
-                                                    <p>
+                                                    <p class="error">
                                                       <%= locals.errors.nombre.msg %>
                                                     </p>
                                                     <%}%>
@@ -28,7 +28,7 @@
                                         <li class="form_input"><input id="descripcion" type="text" name="descripcion"
                                                 class="form-control" value="">
                                                 <% if (locals.errors && locals.errors.descripcion) { %>
-                                                    <p>
+                                                    <p class="error">
                                                       <%= locals.errors.descripcion.msg %>
                                                     </p>
                                                     <%}%>
@@ -40,7 +40,7 @@
                                         <li class="form_input"><input id="image" type="file" name="filename"
                                                 class="form-control">
                                                 <% if (locals.errors && locals.errors.image) { %>
-                                                    <p>
+                                                    <p class="error">
                                                       <%= locals.errors.image.msg %>
                                                     </p>
                                                     <%}%>
@@ -51,7 +51,7 @@
                                         <li class="form_input"><input id="precio" type="text" name="precio"
                                                 class="form-control" >
                                                 <% if (locals.errors && locals.errors.precio) { %>
-                                                    <p>
+                                                    <p class="error">
                                                       <%= locals.errors.precio.msg %>
                                                     </p>
                                                     <%}%>
