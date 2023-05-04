@@ -2,21 +2,23 @@ const { validationResult } = require("express-validator");
 
 const db = require("../database/models");
 
+const Product = db.Product;
+
 
 const productoController = {
   list: async (req, res) => {
     try {
       const products = await db.Product.findAll();
-      res.render("productCart", { products: products });
+      res.locals.products= products;
+      res.render("productCart");
     } catch (error) {
       res.send({ error });
     }
   },
   detail: async (req, res) => {
     try {
-      const productId = await db.Product.findByPk(req.params.id);
-      const products = productId;
-      res.render("productDetail", { products });
+      const product = await db.Product.findByPk(req.params.id);
+      res.render("productDetail", { product:product });
     } catch (error) {
       res.send({ error });
     }
@@ -29,12 +31,13 @@ res.render("createProduct");
   processCreate: async (req, res) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
+      console.log(errors)
       return res.render("createProduct", { errors: errors.mapped(), oldData: req.body });
     }
     const newObject = {
       name: req.body.nombre,
        description: req.body.descripcion,
-       image: req.file.filename ? req.file.filename : 'default-image.png',
+       image: req.file ? req.file.filename : '',
        price: req.body.precio,
        categories: req.body.categoria,
     }

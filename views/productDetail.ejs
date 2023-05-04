@@ -8,17 +8,17 @@
 
     <section id="img-descrip">
             <div class="container">
-            <img src="/images/<%= product.imagen %>" class="img-hambur">
+            <img src="/images/<%= product.image %>" class="img-hambur">
             </div>
         <div class="img-descrip">
             <h2 class="nombre-hambur"></h2>
             
-            <p class="descrip"> <%= product.descripcion %>
+            <p class="descrip"> <%= product.description %>
             </p>
         </div>
     </section>
             <div class="comprar">
-                <h2 class="precio"></h2>
+                <h2 class="precio"> $<%= product.price %></h2>
             <button>Añadir a mi pedido</button>
             </div>
         

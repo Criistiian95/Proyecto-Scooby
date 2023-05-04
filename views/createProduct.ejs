@@ -14,7 +14,12 @@
                                     <div>
                                         <label for="nya">nombre</label>
                                         <li class="form_input"><input id="nya" type="text" name="nombre"
-                                                class="form-control" value="">
+                                                class="form-control">
+                                                <% if (locals.errors && locals.errors.nombre) { %>
+                                                    <p>
+                                                      <%= locals.errors.nombre.msg %>
+                                                    </p>
+                                                    <%}%>
                                             
                                         </li>
                                     </div>
@@ -22,33 +27,34 @@
                                         <label for="descripcion">descripcion</label>
                                         <li class="form_input"><input id="descripcion" type="text" name="descripcion"
                                                 class="form-control" value="">
-                                            <% if (locals.errors) { %>
-                                                <p>
-                                                    <%= locals.errors.descripcion.msg %>
-                                                </p>
-                                                <%}%>
+                                                <% if (locals.errors && locals.errors.descripcion) { %>
+                                                    <p>
+                                                      <%= locals.errors.descripcion.msg %>
+                                                    </p>
+                                                    <%}%>
                                         </li>
 
                                     </div>
                                     <div>
                                         <label for="image">image</label>
                                         <li class="form_input"><input id="image" type="file" name="filename"
-                                                class="form-control" value=""></li>
-                                        <% if (locals.errors) { %>
-                                            <p>
-                                                <%= locals.errors.image.msg %>
-                                            </p>
-                                            <%}%>
+                                                class="form-control">
+                                                <% if (locals.errors && locals.errors.image) { %>
+                                                    <p>
+                                                      <%= locals.errors.image.msg %>
+                                                    </p>
+                                                    <%}%>
+                                                </li>
                                     </div>
                                     <div>
                                         <label for="precio">precio</label>
-                                        <li class="form_input"><input id="precio" type="number" name="precio"
-                                                class="form-control" value="">
-                                            <% if (locals.errors) { %>
-                                                <p>
-                                                    <%= locals.errors.precio.msg %>
-                                                </p>
-                                                <%}%>
+                                        <li class="form_input"><input id="precio" type="text" name="precio"
+                                                class="form-control" >
+                                                <% if (locals.errors && locals.errors.precio) { %>
+                                                    <p>
+                                                      <%= locals.errors.precio.msg %>
+                                                    </p>
+                                                    <%}%>
                                         </li>
                                     </div>
                                     <p>elige una opcion</p>

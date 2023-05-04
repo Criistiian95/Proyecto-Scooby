@@ -21,12 +21,12 @@ const upload = multer({ storage });
 
 router.get("/list", productoController.list);
 router.get("/productDetail/:id", productoController.detail);
-router.post("/create", upload.single("filename"), productoController.processCreate);
+router.post("/create", upload.single("filename"),productsValidations, productoController.processCreate);
 router.get("/create", productoController.create);
 router.get("/:id/edit", productoController.edit);
 router.get("/product/delete/:id", productoController.delete);
 router.delete("/products/delete/:id", productoController.destroy);
-router.post("/create", productsValidations, productoController.processCreate)
+//router.post("/create", productsValidations, productoController.processCreate)
 //router.put("/product/:id", productoController.);
 
 

@@ -1,107 +1,54 @@
 <%- include('./partials/head',{style:"carrito",title:"carrito"}) %>
 
 
-<body>
-    <%- include('./partials/header') %>
-    <%- include('./partials/menu_arriba') %>
-    
-    <h1 class="pedidoTitulo">Mis pedidos</h1>
-    <section class="pedidos">
-        <div class="caja-1">
-            <h2>Pedido</h2>
-            <img src="images/foto1.jpg" alt="Foto de Hamburguesa" width="200px">
-        </div>
-        <div class="descripcion">
-            <h2>Descripción</h2>
-            <p class="burgerName">Cheese Burger</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum corrupti blanditiis dolorum vel, amet ipsam qui delectus? Labore molestias similique animi quo porro accusantium unde iure error saepe? Unde, excepturi.</p>
-        </div>
-        <div class="precio">
-            <h2>Precio</h2>
-            <p class="price">3000$</p>
-        </div>
-        <div class="cantidad">
-            <h2>Cantidad</h2>
-            <p class="cant">1</p>
-        </div>
-        <div class="total">
-            <h2>Total</h2>
-            <p class="price">3000$</p>
-        </div>
-    </section>
-    <section class="pedidos">
-        <div class="caja-1">
-            <h2>Pedido</h2>
-            <img src="images/foto2.jpg" alt="Foto de Hamburguesa" width="185px">
-        </div>
-        <div class="descripcion">
-            <h2>Descripción</h2>
-            <p class="burgerName">Cheese Burger</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum corrupti blanditiis dolorum vel, amet ipsam qui delectus? Labore molestias similique animi quo porro accusantium unde iure error saepe? Unde, excepturi.</p>
-        </div>
-        <div class="precio">
-            <h2>Precio</h2>
-            <p class="price">3000$</p>
-        </div>
-        <div class="cantidad">
-            <h2>Cantidad</h2>
-            <p class="cant">1</p>
-        </div>
-        <div class="total">
-            <h2>Total</h2>
-            <p class="price">3000$</p>
-        </div>
-    </section>
-    <section class="pedidos">
-        <div class="caja-1">
-            <h2>Pedido</h2>
-            <img src="images/foto3.jpg" alt="Foto de Hamburguesa" width="200px">
-        </div>
-        <div class="descripcion">
-            <h2>Descripción</h2>
-            <p class="burgerName">Cheese Burger</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum corrupti blanditiis dolorum vel, amet ipsam qui delectus? Labore molestias similique animi quo porro accusantium unde iure error saepe? Unde, excepturi.</p>
-        </div>
-        <div class="precio">
-            <h2>Precio</h2>
-            <p class="price">3000$</p>
-        </div>
-        <div class="cantidad">
-            <h2>Cantidad</h2>
-            <p class="cant">1</p>
-        </div>
-        <div class="total">
-            <h2>Total</h2>
-            <p class="price">3000$</p>
-        </div>
-    </section>
-    <section class="pedidos">
-        <div class="caja-1">
-            <h2>Pedido</h2>
-            <img src="images/foto4.png" alt="Foto de Hamburguesa" width="180px">
-        </div>
-        <div class="descripcion">
-            <h2>Descripción</h2>
-            <p class="burgerName">Cheese Burger</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum corrupti blanditiis dolorum vel, amet ipsam qui delectus? Labore molestias similique animi quo porro accusantium unde iure error saepe? Unde, excepturi.</p>
-        </div>
-        <div class="precio">
-            <h2>Precio</h2>
-            <p class="price">3000$</p>
-        </div>
-        <div class="cantidad">
-            <h2>Cantidad</h2>
-            <p class="cant">1</p>
-        </div>
-        <div class="total">
-            <h2>Total</h2>
-            <p class="price">3000$</p>
-        </div>
-    </section>
-    <a href="productDetail"><button>Modificar</button></a>
-    <a href="#"><button>Pagar</button></a>
+    <body>
+        <%- include('./partials/header') %>
+            <%- include('./partials/menu_arriba') %>
 
-</body>
-<%- include('./partials/footer') %>
+                <h1 class="pedidoTitulo">Mis pedidos</h1>
+                <section class="pedidos">
+                    <% if(products) { %>
+                    <% locals.products.forEach((product)=> {%>
+                    <div class="caja-1">
+                            <h2>Pedido</h2>
+                            <a href="/products/detail/<%= product.id %>">
+                                <img src="/images/<%= product.image %>" alt="Foto de Hamburguesa" width="200px">
+                            </a>
+                    </div>
+                    <div class="descripcion">
+                        <h2>Descripción</h2>
+                        <p class="burgerName">
+                            <%= product.name %>
+                        </p>
+                        <p>
+                            <%= product.description%>
+                        </p>
+                    </div>
+                    <div class="precio">
+                        <h2>Precio</h2>
+                        <p class="price">
+                            <%= product.price %>
+                        </p>
+                    </div>
+                    <div class="cantidad">
+                        <h2>Cantidad</h2>
+                        <p class="cant">1</p>
+                    </div>
+                    <div class="total">
+                        <h2>Total</h2>
+                        <p class="price">3000$</p>
+                        
+                       
+                    </div>
 
-</html>
+                    <% }); %>
+                    <% }; %>
+                </section>
+
+                <a href="productDetail"><button>Modificar</button></a>
+                <a href="#"><button>Pagar</button></a>
+
+    </body>
+    <%- include('./partials/footer') %>
+
+        </html>
