@@ -45,10 +45,10 @@ const controller = {
   },
   create: (req, res) => {
     Products.create({
-      name: req.body.name,
-      description: req.body.description,
-      price: req.body.price,
-      image: req.body.image,
+      name: req.body.nombre,
+      description: req.body.descripcion,
+      price: req.body.precio,
+      image: req.file ? req.file.filename : '',
       category: req.body.category,
     })
       .then((confirm) => {
