@@ -25,7 +25,8 @@ const adminRoutes = require("./routes/admin");
 const productRoutes = require("./routes/producto");
 const userRoutes = require("./routes/user");
 
-const apiProductsRouter = require('./routes/api/productsRouter')
+const apiProductsRouter = require('./routes/api/productsRouter');
+const apiUsersRouter = require('./routes/api/usersRouter');
 
 const app = express();
 
@@ -49,7 +50,8 @@ app.use("/admin", adminRoutes);
 app.use("/products", productRoutes);
 app.use("/user", userRoutes);
 
-app.use('/api/products', apiProductsRouter)
+app.use('/api/products', apiProductsRouter);
+app.use('/api/users', apiUsersRouter);
 
 app.use((req, res, next) => {
   res.send("Error 404! File Not Found");
