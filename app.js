@@ -32,6 +32,8 @@ app.use((req, res, next) => {
   next
 });
 
+const apiProductsRouter = require('./routes/api/productsRouter')
+app.use('/api/products', apiProductsRouter)
 
 // Server Init
 const port = process.env.PORT || 3000;
