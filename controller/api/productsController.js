@@ -43,39 +43,6 @@ const controller = {
       res.status(500).send(error);
     }
   },
-  create: (req, res) => {
-    Products.create({
-      name: req.body.nombre,
-      description: req.body.descripcion,
-      price: req.body.precio,
-      image: req.file ? req.file.filename : '',
-      category: req.body.category,
-    })
-      .then((confirm) => {
-        let respuesta;
-        if (confirm) {
-          respuesta = {
-            meta: {
-              status: 200,
-              total: confirm.length,
-              url: "api/products/create",
-            },
-            data: confirm,
-          };
-        } else {
-          respuesta = {
-            meta: {
-              status: 204,
-              total: confirm.length,
-              url: "api/products/create",
-            },
-            data: confirm,
-          };
-        }
-        res.json(respuesta);
-      })
-      .catch((error) => res.send(error));
-  },
-};
+}
 
 module.exports = controller;
