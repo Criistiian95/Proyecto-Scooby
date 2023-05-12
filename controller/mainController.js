@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const { validationResult } = require("express-validator");
-
+const db = require('../database/models')
 const productsFilePath = path.join(__dirname, "../data/products.json")
 
 function getProducts() {
@@ -37,10 +37,17 @@ const controller = {
     console.log(req.session);
     res.render("login", { session: req.session });
   },
-  productCart: (req, res) => {
-    res.render("productCart");
+  productCart: async (req, res) => {
+    try {
+      const products = await db.Product.findAll();
+      console.log(products);
+      res.render("productCart",{products});
+    } catch (error) {
+      res.send({ error });
+    }
   },
   productDetail: (req, res) => {
+    
     res.render("productDetail");
   },
   register: (req, res) => {
