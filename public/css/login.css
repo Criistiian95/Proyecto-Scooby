@@ -68,3 +68,6 @@ body {
 p{
   text-align: center;
 }
+locals.error.msg{
+color: red;
+}

@@ -17,13 +17,13 @@
               <p id="log">Inicia sesión en una cuenta existente</p>
               <form class="formu" action="/user/login" method="POST">
                 <p id="log"><input type="email" name="email" placeholder="Correo Electronico" class="email"></p>
-                <% if (locals.errors && locals.errors.email) { %>
+                <%if (locals.errors && locals.errors.email) { %>
                   <p>
                     <%= locals.errors.email.msg %>
                   </p>
                   <%}%>
-
                     <p id="log"><input type="password" name="password" placeholder="Contraseña" class="password">
+
                       <% if (locals.errors && locals.errors.password) { %>
                         <p>
                           <%= locals.errors.password.msg %>
