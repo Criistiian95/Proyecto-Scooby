@@ -5,12 +5,9 @@ html{
 
 }
 body{
+  background: url(../images/fondo5.jpg);
     height: 100vh;
-    background-color: rgb(65, 52, 100);
-    display: flex; 
     margin: 0;
-    font-family: 'Roboto Condensed', sans-serif;
-
     display: grid;
     grid-template-rows: auto 1fr auto;
 }
@@ -131,7 +128,7 @@ li span{
 }
 
 .button{
-    background-color: rgb(45, 49, 51);;
+  background-color: #5c0341;
     color: #e8e6e3;
     border-radius: 2px;
     opacity: 60%;
@@ -166,7 +163,9 @@ li span{
     margin: 0;
     text-align: center;
 }
-
+label{
+  font-size: 30px;
+}
 
 
 @media screen and (max-width: 500px) {
@@ -179,7 +178,7 @@ li span{
 
 }
 .conten{
-    background-color: rgb(49, 34, 86);
+  background-color: rgb(255, 154, 2);
     text-align: center;
     margin: 10%;
     justify-content: center;
