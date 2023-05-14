@@ -7,9 +7,9 @@
 		</div>
 		<div class="contenedor_derecha">
 			<a href="/login"><img src="/images/persona.png" class="persona">
-				<% if(locals.session){ %>
-					<h2>Hola <%= session.name%> </h2> 
-					<% } %> 
+				<a> <% if(locals.session){ %>
+					<h2 class="hola">Hola <%= session.name%> </h2> 
+					<% } %> </a>
 			</a>
 			<a href="productCart"><img src="/images/carrito.png" class="carrito"></a>
 		</div>
