@@ -1,5 +1,5 @@
 .Nuestras_ofertas {
-    background-color: #6352A3;
+    background-color: rgb(238, 144, 4);
     color: #1E150E;
     margin: 60px 0px 0px 0px;
     box-shadow: 0 2px 5px rgb(0 0 0 / 15%);
@@ -13,12 +13,13 @@
 
 .lista_fotos2 {
     display: flex;
-    height: 60px;
+    height: 115px;
     overflow: initial;
     gap: 30px;
     width: 20%;
     align-items: baseline;
     position: relative;
+    margin-bottom: 0;
 }
 
 
@@ -27,5 +28,10 @@
     height: 115px;
     display: flex;
     margin-right: 0;
+}
+
+.fondo{
+    background: url(../images/fondo5.jpg);
+    background-position: center center;
 }
 

@@ -1,6 +1,10 @@
+.slider_principal{
+    background: url(../images/fondo5.jpg);
+    background-position: center center;
+}
 .contenedor_slider{
     margin: auto;
-    background-color:rgb(45, 49, 51);
+    background-color:rgb(238, 144, 4);
     max-width: 800px;
     padding: 38px;
     box-sizing: border-box;

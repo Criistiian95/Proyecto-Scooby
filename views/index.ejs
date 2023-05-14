@@ -1,72 +1,74 @@
 <%- include('./partials/head',{title:"Home"}) %>
 
 
-<body>
-	<%- include('./partials/header') %>
-	<%- include('./partials/menu_arriba') %>
+	<body>
+		<%- include('./partials/header') %>
+			<%- include('./partials/menu_arriba') %>
 
-<section class="slider_principal">
-	<h4 class="contenedor_slider">
-		<ul class="slider">
-			<li id="foto1">
-				<img src="/images/foto1.jpg">
-			</li>
-			<li id="foto2">
-				<img src="/images/foto2.jpg">
-			</li>
-			<li id="foto3">
-				<img src="/images/foto3.jpg">
-			</li>
-			<li id="vegana">
-				<img src="/images/vegana.jpg">
-			</li>
-		</ul>
+				<section class="slider_principal">
+					<h4 class="contenedor_slider">
+						<ul class="slider">
+							<li id="foto1">
+								<img src="/images/foto1.jpg">
+							</li>
+							<li id="foto2">
+								<img src="/images/foto2.jpg">
+							</li>
+							<li id="foto3">
+								<img src="/images/foto3.jpg">
+							</li>
+							<li id="vegana">
+								<img src="/images/vegana.jpg">
+							</li>
+						</ul>
 
-		<ul class="menu">
-			<li>
-				<a href="#foto1"></a>
-			</li>
-			<li>
-				<a href="#foto2"></a>
-			</li>
-			<li>
-				<a href="#foto3"></a>
-			</li>
-			<li>
-				<a href="#vegana"></a>
-			</li>
-		</ul>
-	</h4>
-</section>
-<section class="pedidas">
-<div class="mas_pedidas">
-	<p>MAS PEDIDAS</p>
-</div>
-<div class="foto_pedidas">
-	<ul class="lista_fotos">
-		<% masVendidas.forEach(product => { %>
-		<li class="product_item">
-			<img src="/images/<%= product.imagen %>">
-		</li>
-		<% }) %>
-	</ul>
-</div>
-</section>
-<section class="ofertas">
-	<div class="Nuestras_ofertas">
-		<p> NUESTRAS OFERTAS</p>
-	</div>
-	<div class="foto_oferta">
-	<ul class="lista_fotos2">
-		<% oferta.forEach(product => { %>
-		<li class="product_item">
-			<img src="/images/<%= product.imagen %>">
-		</li>
-	<% }) %>
-	</ul>
-	</div>
-</section>
-</body>
-<%- include('./partials/footer') %>
+						<ul class="menu">
+							<li>
+								<a href="#foto1"></a>
+							</li>
+							<li>
+								<a href="#foto2"></a>
+							</li>
+							<li>
+								<a href="#foto3"></a>
+							</li>
+							<li>
+								<a href="#vegana"></a>
+							</li>
+						</ul>
+					</h4>
+				</section>
+				<section class="fondo">
+					<section class="pedidas">
+						<div class="mas_pedidas">
+							<p>MAS PEDIDAS</p>
+						</div>
+						<div class="foto_pedidas">
+							<ul class="lista_fotos">
+								<% masVendidas.forEach(product=> { %>
+									<li class="product_item">
+										<img src="/images/<%= product.imagen %>">
+									</li>
+									<% }) %>
+							</ul>
+						</div>
+					</section>
+					<section class="ofertas">
+						<div class="Nuestras_ofertas">
+							<p> NUESTRAS OFERTAS</p>
+						</div>
+						<div class="foto_oferta">
+							<ul class="lista_fotos2">
+								<% oferta.forEach(product=> { %>
+									<li class="product_item">
+										<img src="/images/<%= product.imagen %>">
+									</li>
+									<% }) %>
+							</ul>
+						</div>
+					</section>
+				</section>
+	</body>
+	<%- include('./partials/footer') %>
 
-</html>
+		</html>

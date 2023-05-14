@@ -1,10 +1,9 @@
 .footer{
-    margin-top: 70px;
     display: flex;
     min-height: 100px;
     width: 100%;
     height: auto;
-    background-color: rgb(79, 66, 130);
+    background-color: #5c0341;
 }
 
 h4{

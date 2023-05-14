@@ -5,7 +5,6 @@
 
 body {
     margin: 0;
-    background-color: rgb(65, 52, 100);
     opacity: 90%;
 }
 
@@ -13,31 +12,23 @@ body {
 .lupa {
     height: 40px;
     width: 40px;
-    margin-top: 15px;
-    opacity: 0;
 }
 
 .buscador {
-    display: flex;
-    margin-left: -10px;
+    justify-content: center;
+    align-items: center;
 
 }
 
-.inp_buscador{
-    margin-top: 30px;
-}
 
 .persona {
     height: 40px;
     width: 40px;
-    margin-left: 40px;
-    margin-top: 20px;
 }
 
 .carrito {
     height: 40px;
     width: 40px;
-    margin-top: 20px;
 }
 
 div.contenedor_derecha {
@@ -51,48 +42,48 @@ div.contenedor_derecha {
 }
 
 .arriba {
-    background-color: rgb(79, 66, 130);
+    background-color: #5c0341;
     display: flex;
-    justify-content: flex-start;
-    height: 20%;
-    /*     box-sizing: border-box;
- */
+    height: 90px;
     box-shadow: 0 2px 5px rgb(0 0 0 / 15%);
     width: 100%;
 }
 
 .logo {
-    width: 80px;
+    width: 165px;
     height: 80px;
-    margin-right: 20px;
 }
 
 input {
     background-color: #fff;
     border: 1px solid #000;
-    outline: none;
-    margin-top: 20px;
     border-radius: 15px;
     border: 2px solid #000;
-    padding: 5px;
-    display: flex;
     height: 30px;
 }
 
 @media (min-width: 576px) and (max-width:991px) {
+    .arriba {
+        background-color: #5c0341;
+        display: flex;
+        height: 90px;
+        box-shadow: 0 2px 5px rgb(0 0 0 / 15%);
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .buscador {
+            display: flex;
+    }
     .lupa {
-        height: 40px;
-        width: 40px;
+        height: 5%;
+        width: 5%;
         margin-left: 40px;
         margin-top: 20px;
         opacity: 1;
+        
     }
-    .buscador {
-        display: flex;
-        margin-left: -10px;
     
-    }
-
     input {
         background-color: #fff;
         border: 1px solid #000;
@@ -103,12 +94,6 @@ input {
         padding: 5px;
         display: flex;
         height: 30px;
-    }
-
-    .buscador {
-        display: flex;
-        margin-left: 70px;
-
     }
 
     div.contenedor_derecha {
@@ -138,14 +123,14 @@ input {
 }
 
 @media screen and (min-width: 992px) {
-
+    .arriba {
+        background-color: #5c0341;
+    }
     .lupa {
         height: 40px;
         width: 40px;
-        margin-left: 40px;
-        margin-top: 34px;
         opacity: 3;
-
+        display: flex;
     }
 
     input {
