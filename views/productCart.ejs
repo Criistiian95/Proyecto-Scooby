@@ -7,10 +7,11 @@
 
                 <section class="fonfo-pedidos">
                     <h1 class="pedidoTitulo">Hamburguesas</h1>
-                    <section class="pedidos">
-
+                  
+                    
+                      
                         <% locals.products.forEach((product)=> {%>
-                            
+                            <section class="pedidos">
                             <div class="caja-1">
                                 <a href="/products/detail/<%= product.id %>">
                                     <img src="/images/<%= product.image %>" alt="Foto de Hamburguesa" width="150px" height="200px">
@@ -41,10 +42,10 @@
 
 
                             </div>
-
+                        </section>
                             <% }); %>
-
-                    </section>
+                       
+                  
                     <a href="productDetail"><button>Modificar</button></a>
                     <a href="#"><button>Pagar</button></a>
                 </section>
