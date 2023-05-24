@@ -1,6 +1,7 @@
 const express = require("express");
 const expressSession= require("express-session")
 const path = require("path");
+const methodOverride =  require('method-override');
 const cookieParser = require("cookie-parser");
 let cors = require("cors");
 var corsOptions = {
@@ -38,6 +39,7 @@ app.use(cors(corsOptions));
 app.use(allowCrossDomain);
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
+app.use(methodOverride('_method'));
 
 app.use(express.static(path.resolve(__dirname, "./public")));
 console.log(path.resolve(__dirname, "./public"));

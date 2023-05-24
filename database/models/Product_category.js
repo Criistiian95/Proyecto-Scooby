@@ -12,17 +12,12 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
         }
     }
-    /*let config = {
-        tableName: 'Categories',
+    let config = {
         timestamps: false,
-        deletedAt: false
-    };*/
-    const Category = sequelize.define(alias, cols);
-    /*Category.associate = (models)=>{
-        Category.hasMany(models.Product, {
-            as : 'products',
-            foreignKey : 'categories_id'
-        })
-    }*/
+        
+    }
+    const Category = sequelize.define(alias, cols, config);
+
+
     return Category;
 }

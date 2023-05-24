@@ -4,6 +4,7 @@ const loginValidations = require("../validators/loginValidators");
 const registerValidations = require("../validators/registerValidators");
 const router = express.Router();
 
+
 router.get("/login", userController.login);
 router.post("/login", loginValidations, userController.processLogin);
 router.get("/register", userController.register);

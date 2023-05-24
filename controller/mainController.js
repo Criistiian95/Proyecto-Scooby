@@ -4,6 +4,8 @@ const { validationResult } = require("express-validator");
 const db = require('../database/models')
 const productsFilePath = path.join(__dirname, "../data/products.json")
 
+const Product= db.Product
+
 function getProducts() {
   const productJson = fs.readFileSync(
   productsFilePath,
@@ -16,26 +18,17 @@ function getProducts() {
 
 
 const controller = {
-  index: (req, res) => {
+  index: async (req, res) => {
+    try{
     const products = getProducts();
     const slider = products.filter(product => product.slider == true)
     const oferta = products.filter(product => product.oferta == true)
     const masVendidas = products.filter(product => product.mas_pedidas == true)
-    res.render("index", { products, slider, oferta, masVendidas });
-  },
-  login: (req, res) => {
-    const errors = validationResult(req);
-    if (!errors.isEmpty()) {
-      return res.render("login", {
-        session: req.session,
-        errors: errors.mapped(),
-      });
-    }
-    const { email, password } = req.body;
-    req.session.email = email;
-    req.session.password = password;
-    console.log(req.session);
-    res.render("login", { session: req.session });
+    
+    res.render("index", { products, slider, oferta, masVendidas});
+  }catch(error){
+    res.send({ error });
+  }
   },
   productCart: async (req, res) => {
     try {

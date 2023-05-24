@@ -1,0 +1,59 @@
+<%- include('./partials/head',{style:"edicYProd", title:"Eliminar producto"}) %>
+
+    <body>
+        <%- include('./partials/header') %>
+            <%- include('./partials/menu_arriba') %>
+                <main>
+                    <form action="/products/delete/<%= productiDFound.id %>?_method=DELETE" method="POST">
+                        <div class="row product-detail">
+                            <h2 style="font-size: 30px;">Estas por eliminar el producto: <%= productiDFound.name %> </h2>
+                            <div class="col-12 col-md-6">
+
+                                <label for="name" class="form-label">Nombre del producto:<%= productiDFound.name %>
+                                        </label>
+                            </div>
+                            <div class="inputs">
+                                <input value="<%= productiDFound.name %>" type="text" id="name" name="name"
+                                    placeholder="Ej: Zapatillas Reebok" class="form-input">
+                            </div>
+                            <div class="col-12">
+                                <label for="description" class="form-label">Descipción:</label>
+                            </div>
+                            <div>
+                                <textarea name="description" id="description"
+                                    class="input-description"><%= productiDFound.description %></textarea>
+                            </div>
+                            <div class="inputs">
+                                <label for="image">Imagen</label>
+                                <input id="image" type="file" name="filename" class="form-control"
+                                    value="<%= productiDFound.image %>">
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <label for="price" class="form-label">Precio del producto:</label>
+                            </div>
+                            <div class="inputs">
+                                <input value="<%= productiDFound.price %>" type="text" id="price" name="price"
+                                    placeholder="Ej: 5678" class="inputs">
+                            </div>
+                            <label for="category" class="form-label">Categoría:</label>
+                            <div class="inputs">
+                                <select name="category" id="category" class="form-input">
+                                    <option value="">Elegí</option>
+                                    <option value="1" <%=productiDFound.products_categories_id==='1' ? 'selected' : null %>>Tradicional
+                                    </option>
+                                    <option value="2" <%=productiDFound.products_categories_id==='2' ? 'selected' : null %>>Vegana
+                                    </option>
+                                </select>
+                            </div>
+
+                            <div class="divBtn">
+                                <button type="submit" class="button" onclick="return confirm('¿Estás seguro de que deseas eliminar este producto?')">Eliminar Producto</button>
+                                
+                            </div>
+                        </div>
+                    </form>
+                </main>
+    </body>
+
+
+    <%- include('./partials/footer') %>

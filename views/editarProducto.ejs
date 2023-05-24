@@ -1,36 +1,59 @@
 <%- include('./partials/head',{style:"edicYProd", title:"Editar producto"}) %>
 
-<body>
-    <%- include('./partials/header') %>
-    <%- include('./partials/menu_arriba') %>
-    <main>
-        <div>
-            <h2>Editando producto <%= productoEdit.nombre %> </h2>
-        </div>
-        <section class="formulario">
-            <ul class="list1">
-                <li><input type="text" name="" id="" placeholder="nombre"></li>
-                <li><input type="text" name="" id="" placeholder="descripcion"></li>
-                <li><input type="file" name="" id="" placeholder="imagen"></li>
-                <li><input type="number" name="" id="" placeholder="precio"></li>
-                <form ...>
+    <body>
+        <%- include('./partials/header') %>
+            <%- include('./partials/menu_arriba') %>
+                <main>
+                    <form action="/products/<%= productToEdit.id %>?_method=PUT" method="POST">
+                        <div class="row product-detail">
+                            <h2 style="font-size: 30px;">Estas editando el producto: <%= productToEdit.name %> </h2>
+                            <div class="col-12 col-md-6">
 
-                    <p>elige una opcion</p>
-                    <p><input type="radio" name="estacion" value="con carne"/> menu Hamburguesas</p>
-                    <p><input type="radio" name="estacion" value="vegano"/> menu vegano </p>
-                      
-                 </form>
-            </ul>
-        </section>
+                                <label for="name" class="form-label">Nombre del producto:<%= productToEdit.name %>
+                                        </label>
+                            </div>
+                            <div class="inputs">
+                                <input value="<%= productToEdit.name %>" type="text" id="name" name="name"
+                                    placeholder="Ej: Zapatillas Reebok" class="form-input">
+                            </div>
+                            <div class="col-12">
+                                <label for="description" class="form-label">Descipción:</label>
+                            </div>
+                            <div>
+                                <textarea name="description" id="description"
+                                    class="input-description"><%= productToEdit.description %></textarea>
+                            </div>
+                            <div class="inputs">
+                                <label for="image">Imagen</label>
+                                <input id="image" type="file" name="filename" class="form-control"
+                                    value="<%= productToEdit.image %>">
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <label for="price" class="form-label">Precio del producto:</label>
+                            </div>
+                            <div class="inputs">
+                                <input value="<%= productToEdit.price %>" type="text" id="price" name="price"
+                                    placeholder="Ej: 5678" class="inputs">
+                            </div>
+                            <label for="category" class="form-label">Categoría:</label>
+                            <div class="inputs">
+                                <select name="category" id="category" class="form-input">
+                                    <option value="">Elegí</option>
+                                    <option value="1" <%=productToEdit.products_categories_id==='1' ? 'selected' : null %>>Tradicional
+                                    </option>
+                                    <option value="2" <%=productToEdit.products_categories_id==='2' ? 'selected' : null %>>Vegana
+                                    </option>
+                                </select>
+                            </div>
 
-        <div class="divBtn">
-            <button class="button">
-                Subir producto
-            </button>
-        </div>
-
-    </main>
-</body>
+                            <div class="divBtn">
+                                <button type="submit" class="button">Guardar producto</button>
+                                
+                            </div>
+                        </div>
+                    </form>
+                </main>
+    </body>
 
 
     <%- include('./partials/footer') %>

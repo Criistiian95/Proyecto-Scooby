@@ -15,23 +15,23 @@
                                         <label for="nya">nombre</label>
                                         <li class="form_input"><input id="nya" type="text" name="nombre"
                                                 class="form-control">
-                                                <% if (locals.errors && locals.errors.nombre) { %>
-                                                    <p class="error">
-                                                      <%= locals.errors.nombre.msg %>
-                                                    </p>
-                                                    <%}%>
-                                            
+                                            <% if (locals.errors && locals.errors.nombre) { %>
+                                                <p class="error">
+                                                    <%= locals.errors.nombre.msg %>
+                                                </p>
+                                                <%}%>
+
                                         </li>
                                     </div>
                                     <div>
                                         <label for="descripcion">descripcion</label>
                                         <li class="form_input"><input id="descripcion" type="text" name="descripcion"
                                                 class="form-control" value="">
-                                                <% if (locals.errors && locals.errors.descripcion) { %>
-                                                    <p class="error">
-                                                      <%= locals.errors.descripcion.msg %>
-                                                    </p>
-                                                    <%}%>
+                                            <% if (locals.errors && locals.errors.descripcion) { %>
+                                                <p class="error">
+                                                    <%= locals.errors.descripcion.msg %>
+                                                </p>
+                                                <%}%>
                                         </li>
 
                                     </div>
@@ -39,35 +39,30 @@
                                         <label for="image">image</label>
                                         <li class="form_input"><input id="image" type="file" name="filename"
                                                 class="form-control">
-                                                <% if (locals.errors && locals.errors.image) { %>
-                                                    <p class="error">
-                                                      <%= locals.errors.image.msg %>
-                                                    </p>
-                                                    <%}%>
-                                                </li>
+                                            <% if (locals.errors && locals.errors.image) { %>
+                                                <p class="error">
+                                                    <%= locals.errors.image.msg %>
+                                                </p>
+                                                <%}%>
+                                        </li>
                                     </div>
                                     <div>
                                         <label for="precio">precio</label>
                                         <li class="form_input"><input id="precio" type="text" name="precio"
-                                                class="form-control" >
-                                                <% if (locals.errors && locals.errors.precio) { %>
-                                                    <p class="error">
-                                                      <%= locals.errors.precio.msg %>
-                                                    </p>
-                                                    <%}%>
+                                                class="form-control">
+                                            <% if (locals.errors && locals.errors.precio) { %>
+                                                <p class="error">
+                                                    <%= locals.errors.precio.msg %>
+                                                </p>
+                                                <%}%>
                                         </li>
                                     </div>
                                     <p>elige una opcion</p>
-                                    <div class="menuSelect">
-                                        <input id="ham" type="radio" name="categoria" />
-                                        <label for="ham">
-                                            <p>menu hamburguesa</p>
-                                        </label>
-                                        <input id="veg" type="radio" name="categoria" />
-                                        <label for="veg">
-                                            <p>menu vegano</p>
-                                        </label>
-                                    </div>
+                                    <label for="categoria">Categoría:</label>
+                                    <select id="categoria" name="categoria">
+                                        <option value="1">Tradicional</option>
+                                        <option value="2">Vegana</option>
+                                    </select>
                                 </ul>
 
                                 <div class="divBtn">
@@ -75,7 +70,7 @@
                                         Subir producto
                                     </button>
                                     <button class="button">
-                                        Eliminar producto
+                                        Limpiar Campos
                                     </button>
                                 </div>
                             </form>

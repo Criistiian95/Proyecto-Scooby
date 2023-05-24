@@ -45,6 +45,13 @@ module.exports = {
       },
       street: {
         type: Sequelize.TEXT
+      },
+      roles_id:{
+        type:Sequelize.INTEGER,
+        references:{
+          model:"roles",
+          key:"id"
+        }
       }
     });
   },

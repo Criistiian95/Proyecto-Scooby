@@ -51,14 +51,20 @@ module.exports = (sequelize, dataTypes) => {
       street: {
         type: dataTypes.TEXT,
         allowNull: false,
-      }
-    };
+      },
+      roles_id:{
+        type:dataTypes.INTEGER,
+    }
+}
     let config = {
-        timestamps: false,
-      tableName: "users"
-      
-    };
+        timestamps: false,  
+    }
     const User = sequelize.define(alias, cols, config);
-  
+   User.associate = (models)=>{
+        User.belongsTo(models.Role, {
+            as : 'role',
+            foreignKey : 'roles_id'
+        })
+    }
     return User;
   };

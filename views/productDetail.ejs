@@ -19,7 +19,7 @@
     </section>
             <div class="comprar">
                 <h2 class="precio"> $<%= product.price %></h2>
-            <button>Añadir a mi pedido</button>
+          
             </div>
         
         
@@ -49,6 +49,9 @@
                     <span class="ingredientes">Mostaza y Ketchup</span>
                 </li>
             </ul>
+            <button>Añadir a mi pedido</button>
+            <button><a href="/products/<%= product.id %>/edit"> Editar producto</a></button>
+            <button><a href="/products/delete/<%= product.id %>">Eliminar Producto</a></button>
         </div>
     </section>
 

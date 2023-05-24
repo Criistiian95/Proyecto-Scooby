@@ -30,11 +30,12 @@ const controller = {
       province: req.body.provincia,
       city: req.body.ciudad,
       postal_code: req.body.codigo_postal,
-      street: req.body.calle_y_numero,
+      street: req.body.calle_y_numero
+
     };
     try {
       await db.User.create(newUser)
-      res.redirect("/login");
+      res.redirect("/user/login");
 
     } catch (error) {
       console.log(error)
@@ -47,6 +48,7 @@ const controller = {
     }
     try {
       const user = await db.User.findOne({
+        include: ['role'],
         where: {
           email: req.body.email,
         }
@@ -54,12 +56,14 @@ const controller = {
       if (!user || !bcrypt.compareSync(req.body.password, user.password)) {
         return res.render("login", { errorsmsg:"El usuario o la contraseña no existe" })
       }
+      console.log(req.body)
       req.session.user = {
         id: user.id,
         email: user.email,
-        provincie: user.province
+        provincie: user.province,
+        role: user.role.name,
       };
-      res.redirect("/");
+      res.redirect("/index");
     } catch (error) {
       res.send(error)
     }

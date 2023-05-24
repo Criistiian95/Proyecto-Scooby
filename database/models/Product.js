@@ -22,14 +22,25 @@ module.exports = (sequelize, dataTypes) => {
         price: {
             type: dataTypes.INTEGER,
             allowNull: false
-        }
+        },
+        products_categories_id: {
+            type: dataTypes.INTEGER
+        },
+        
     }
     let config = {
-        tableName: 'products',
         timestamps: false,
-        deletedAt: false
+       
+       
     }
-    const Product = sequelize.define(alias, cols, config);
+    const Product = sequelize.define(alias, cols);
+   Product.associate = (models)=>{
+        Product.belongsTo(models.Category, {
+            as : 'product_category',
+            foreignKey : 'products_categories_id'
+        })
+    }
+    
 
     
     return Product
