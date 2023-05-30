@@ -1,0 +1,32 @@
+<%- include('./partials/head',{style:"carrito",title:"carrito"}) %>
+
+
+    <body>
+        <%- include('./partials/header') %>
+            <%- include('./partials/menu_arriba') %>
+            <section>
+           <ul class="list-admin">
+            <li>
+               <button> <a class="list-admin2" href="/products/create">Crear Producto</a></button>
+            </li>
+            
+                <% if (locals.productId <=0 ) { %>
+                    <p class="sin-productos">No existen productos</p>
+                    <% }else{ %>
+                        
+            <% locals.productId.forEach((product) => { %>
+                <li>
+                    <p class="list-product">Producto: <%= product.name %></p>
+                <button>   <a class="list-admin2" href="/products/<%= product.id %>/edit">Editar Producto</button></a>
+            </li>
+            <li>
+                <button>   <a class="list-admin2" href="/products/<%= product.id %>/edit">Eliminar Producto</button></a>
+                <% }); %>
+            <% }; %>
+                </li>
+           </ul>
+        </section>
+    </body>
+    <%- include('./partials/footer') %>
+
+        </html>

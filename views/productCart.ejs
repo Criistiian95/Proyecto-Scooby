@@ -4,32 +4,40 @@
     <body>
         <%- include('./partials/header') %>
             <%- include('./partials/menu_arriba') %>
-
+            <% if (locals.products >=0 ) { %>
+            <p class="sin-productos">No hay productos seleccionados</p>
+            <% }else{ %>
                 <section class="fonfo-pedidos">
                     <h1 class="pedidoTitulo">Hamburguesas</h1>
                   
                     
                       
                         <% locals.products.forEach((product)=> {%>
+                          
+                               
                             <section class="pedidos">
                             <div class="caja-1">
                                 <a href="/products/detail/<%= product.id %>">
                                     <img src="/images/<%= product.image %>" alt="Foto de Hamburguesa" width="150px" height="200px">
                                 </a>
                             </div>
-                            <div class="descripcion">
+                            <div>
+                        </div>
+                        <div>
+                        <p class="burgerName">
+                            <%= product.name %>
+                        </p>
+                    </div>
                                 <h2 class="burgerdescription">Descripción</h2>
-                                <p class="burgerName">
-                                    <%= product.name %>
-                                </p>
-                                <p>
+                                
+                                <p class="description">
                                     <%= product.description%>
                                 </p>
                             </div>
                             <div class="precio">
                                 <h2 class="burgerdescription">Precio</h2>
                                 <p class="price">
-                                    <%= product.price %>
+                                    $ <%= product.price %>
                                 </p>
                             </div>
                             <div class="cantidad">
@@ -44,10 +52,14 @@
                             </div>
                         </section>
                             <% }); %>
+                            <% }; %>
                        
-                  
-                    <a href="productDetail"><button>Modificar</button></a>
+                  <div>
+                    <% locals.products.forEach((product) => { %>
+                        <a href="/products/<%= product.id %>/edit"><button>Modificar</button></a>
+                    <% }); %>
                     <a href="#"><button>Pagar</button></a>
+                </div>
                 </section>
 
     </body>

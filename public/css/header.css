@@ -25,6 +25,15 @@ body {
     height: 40px;
     width: 40px;
 }
+.username{
+    font-size: 13px;
+    font-weight: bolder
+}
+.logout{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px
+}
 
 .carrito {
     height: 40px;
@@ -37,6 +46,8 @@ div.contenedor_derecha {
     margin: 0;
     position: absolute;
     right: 13px;
+    width: 25%;
+    height: 88px;
     display: inline-flex;
     align-items: center;
 }
@@ -60,6 +71,22 @@ input {
     border-radius: 15px;
     border: 2px solid #000;
     height: 30px;
+}
+.btn-logout{
+    border: none;
+    width: 150px;
+    height: 30px;
+    background-color: rgb(238, 144, 4);
+    color: #ebebeb;
+    box-shadow: none;
+    top: 0px;
+}
+.user-info{
+    margin: 5px;
+    gap: 7px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column
 }
 
 @media (min-width: 576px) and (max-width:991px) {
@@ -102,7 +129,7 @@ input {
         margin: 0;
         align-items: center;
         justify-content: space-between;
-        width: 212px;
+        width: 25%;
         height: 88px;
     }
 
@@ -148,12 +175,11 @@ input {
 
     div.contenedor_derecha {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         margin: 0;
-        align-items: center;
-        justify-content: space-between;
-        width: 212px;
+        width: 25%;
         height: 88px;
+        flex-wrap: wrap
     }
     }
 

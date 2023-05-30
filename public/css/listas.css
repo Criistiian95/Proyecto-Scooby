@@ -50,6 +50,7 @@ li.desplegable{
 
 .contenedor_desplegable a:hover{
 	background-color: rgb(218, 215, 210);
+	color: rgb(45, 49, 51);
 }
 
 
@@ -66,7 +67,7 @@ li a{
 
 }
 
-li a:hover{
+.menu_de_arriba a:hover{
 	background-color:rgb(218, 215, 210); ;
 	color: rgb(45, 49, 51);
 }

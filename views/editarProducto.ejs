@@ -3,6 +3,9 @@
     <body>
         <%- include('./partials/header') %>
             <%- include('./partials/menu_arriba') %>
+            <% if (locals.products >=0 ) { %>
+                <p class="sin-productos">No existen productos</p>
+                <% }else{ %>
                 <main>
                     <form action="/products/<%= productToEdit.id %>?_method=PUT" method="POST">
                         <div class="row product-detail">
@@ -17,7 +20,7 @@
                                     placeholder="Ej: Zapatillas Reebok" class="form-input">
                             </div>
                             <div class="col-12">
-                                <label for="description" class="form-label">Descipción:</label>
+                                <label for="description" class="form-label">Descripción:</label>
                             </div>
                             <div>
                                 <textarea name="description" id="description"
@@ -45,13 +48,17 @@
                                     </option>
                                 </select>
                             </div>
-
+                            <% }; %>
                             <div class="divBtn">
                                 <button type="submit" class="button">Guardar producto</button>
+                            </form>
+                                <form action="/products/delete/<%= productToEdit.id %>?_method=DELETE" method="POST">
+                                <button type="submit" class="button" onclick="return confirm('¿Estás seguro de que deseas eliminar este producto?')">Eliminar Producto</button>
+                                </form>
                                 
                             </div>
                         </div>
-                    </form>
+                   
                 </main>
     </body>
 

@@ -1,7 +1,7 @@
 <section class="menu">
 	<h3>
 		<ul class="lista">
-			<li><a href="/index" class="activo">Inicio</a></li>
+			<li class ="menu_de_arriba"><a href="/index" class="activo">Inicio</a></li>
 			<div class="listas">
 			<li class="desplegable"> <!--dropdown-->
 			<a href="javascript:Void(0)" class="desplegada"> Productos</a> <!--dropbtn-->
@@ -13,8 +13,14 @@
 			</div>
 		</li>
 		</div>
-			<li><a href="/products/list"> Mis Pedidos</a></li>
-			<li><a href="sucursales">Sucursales</a></li>
+			<li class ="menu_de_arriba"><a href="/products/list"> Mis Pedidos</a></li>
+			
+			<% if (user && user.role === 'Administrador') { %>
+				<li class ="menu_de_arriba"><a href="/admin">Boton Administrador</a></li>
+			  <% } %>
 			</ul>
 			</h3>
+			
 		</section>
+
+	

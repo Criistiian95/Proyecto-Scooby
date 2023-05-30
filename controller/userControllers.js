@@ -1,5 +1,6 @@
 const bcrypt = require("bcryptjs");
 const { validationResult } = require('express-validator');
+const jwt = require("jsonwebtoken")
 
 //requiero base de datos
 const db = require("../database/models/")
@@ -35,6 +36,13 @@ const controller = {
     };
     try {
       await db.User.create(newUser)
+
+      
+
+      const token= jwt.sign({id: newUser.id},"SECRET",{
+        expiresIn: 86400
+      })
+      console.log(token)
       res.redirect("/user/login");
 
     } catch (error) {
@@ -48,29 +56,45 @@ const controller = {
     }
     try {
       const user = await db.User.findOne({
-        include: ['role'],
         where: {
           email: req.body.email,
-        }
+        },
+        include: [{ model: db.Role, as: 'role' }]
       });
       if (!user || !bcrypt.compareSync(req.body.password, user.password)) {
         return res.render("login", { errorsmsg:"El usuario o la contraseña no existe" })
       }
-      console.log(req.body)
+      const roleName = user.role ? user.role.name : null;
+
       req.session.user = {
         id: user.id,
+        name: user.name,
         email: user.email,
         provincie: user.province,
-        role: user.role.name,
+        role: roleName
       };
+      if(req.body.recordarme){
+        res.cookie('email',req.session.user.email,{maxAge: 1000 * 60 * 60 * 24})
+      }
+      req.session.save((err) => {
+        if (err) {
+          console.log(err);
+        }
       res.redirect("/index");
+      })
     } catch (error) {
       res.send(error)
     }
   },
   logout: (req, res) => {
-    delete req.session.user;
-    res.redirect("/")
+    req.session.destroy((err) => {
+      if (err) {
+        console.log(err);
+      }
+      res.clearCookie('email');
+      console.log("Cierre exitoso");
+      res.redirect('/');
+    });
   }
 }
 

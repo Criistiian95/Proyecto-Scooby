@@ -39,10 +39,14 @@ const controller = {
       res.send({ error });
     }
   },
-  productDetail: (req, res) => {
-    
-    res.render("productDetail");
-  },
+  admin:async (req, res) => {
+    try{
+      const productId = await Product.findAll();
+      res.render("administrador", { productId });
+  }catch(error){
+    res.send(error)
+  }
+},
   register: (req, res) => {
     res.render("register");
   },
@@ -53,4 +57,3 @@ const controller = {
 
 module.exports = controller;
 
-// agregarle al form de crear un campo para las mas vendidas si o no 

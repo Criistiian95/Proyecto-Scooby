@@ -1,8 +1,13 @@
 const express = require("express");
+//const createRoles= require("./services/initialSetup")
 const expressSession= require("express-session")
 const path = require("path");
 const methodOverride =  require('method-override');
 const cookieParser = require("cookie-parser");
+const authenticationMiddleware = require('./services/authentication');
+const morgan = require("morgan")
+const app = express();
+
 let cors = require("cors");
 var corsOptions = {
   origin: "*"
@@ -19,18 +24,7 @@ let allowCrossDomain = function(req, res, next) {
 
 const bodyParser = require('body-parser');
 
-
-
-const mainRoutes = require("./routes/main");
-const adminRoutes = require("./routes/admin");
-const productRoutes = require("./routes/producto");
-const userRoutes = require("./routes/user");
-
-const apiProductsRouter = require('./routes/api/productsRouter');
-const apiUsersRouter = require('./routes/api/usersRouter');
-
-const app = express();
-
+//app.use(createRoles());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(expressSession({secret:"SECRET"}));
@@ -40,6 +34,24 @@ app.use(allowCrossDomain);
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 app.use(methodOverride('_method'));
+app.use(morgan("dev"))
+app.use(authenticationMiddleware);
+
+app.use((req,res,next)=>{
+app.locals.user= req.session.user
+next();
+});
+
+const mainRoutes = require("./routes/main");
+const adminRoutes = require("./routes/admin");
+const productRoutes = require("./routes/producto");
+const userRoutes = require("./routes/user");
+
+const apiProductsRouter = require('./routes/api/productsRouter');
+const apiUsersRouter = require('./routes/api/usersRouter');
+
+
+
 
 app.use(express.static(path.resolve(__dirname, "./public")));
 console.log(path.resolve(__dirname, "./public"));

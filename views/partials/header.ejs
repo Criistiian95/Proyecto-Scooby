@@ -1,15 +1,27 @@
 <header>
 	<section class="arriba">
-		<a href="/index"><img src="/images/logosb.png" class="logo"></a>
+		<a href="/cliente"><img src="/images/logosb.png" class="logo"></a>
 		<div class="buscador">
 			<img src="/images/lupa.png" class="lupa">
 			<input class="inp_buscador" placeholder="Buscar Productos...">
 		</div>
 		<div class="contenedor_derecha">
-			<a href="/user/login"><img src="/images/persona.png" class="persona">
+			
+			<% if (user) { %>
+				<div class="user-info">
+					<li class="username">Bienvenido, <%= user.name %>
+					</li>
+					<li class="username">Eres un: <%= user.role ? user.role : 'Rol no definido' %></li>
+					
+					<form action="/user/logout" method="GET" class="logout">
+						<button class="btn-logout" type="submit"> Cerrar sesion</button>
+					</form>
+				</div>
+					<% }else{ %>
+						<a href="/user/login"><img src="/images/persona.png" class="persona"></a>
+					<% } %>
 				
-			</a>
-			<a href="productCart"><img src="/images/carrito.png" class="carrito"></a>
+				<a href="productCart"><img src="/images/carrito.png" class="carrito"></a>
 		</div>
 	</section>
 </header>
