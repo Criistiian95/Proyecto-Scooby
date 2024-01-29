@@ -43,7 +43,7 @@ const controller = {
         expiresIn: 86400
       })
       console.log(token)
-      res.redirect("/user/login");
+      res.redirect("/");
 
     } catch (error) {
       console.log(error)

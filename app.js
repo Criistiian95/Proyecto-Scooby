@@ -76,5 +76,5 @@ app.use((req, res, next) => {
 
 
 // Server Init
-const port = process.env.PORT || 3000;
-app.listen(port, () => console.log('Server escuchando en puerto http://localhost:3000'));
+const port = process.env.PORT || 3001;
+app.listen(port, () => console.log('Server escuchando en puerto http://localhost:3001'));

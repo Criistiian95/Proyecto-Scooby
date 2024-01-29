@@ -47,8 +47,8 @@ const controller = {
     res.send(error)
   }
 },
-  register: (req, res) => {
-    res.render("register");
+  carrito: (req, res) => {
+    res.render("carrito");
   },
   edicYProd: (req, res) => {
     res.render("edicYProd");

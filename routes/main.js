@@ -8,6 +8,7 @@ const {isAdmin,isClient}= require("../validators/rolesMidllewares")
 
 router.get("/", mainController.index);
 router.get("/index", mainController.index);
+router.get("/carrito", mainController.carrito)
 router.get("/edicYProd", mainController.edicYProd);
 router.get('/cliente', isClient, (req, res) => {
     res.send('Bienvenido, cliente');
